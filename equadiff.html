@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MP : Équations différentielles linéaires</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<p id="title">MATHS</p>
+		<a href="sommaire.html" id="home">Retour au sommaire</a>
+		<h1>Équations différentielles linéaires</h1>
+		<h2>Equations différentielles linéaires scalaires d'ordre 1</h2>
+		<p>K = R ou C</p>
+		<div class="def">Équadiff
+			<p class="tl">
+				I intervalle<br/>
+				a,b,c : I&rarr;K continues<br/>
+				(E) a(t)x'+b(t)x = c(t)<br/>
+				Une solution de (E) est<br/>
+				f:I&rarr;K dérivable tq<br/>
+				&forall;t&in;I, a(t)f'(t) + b(t)f(t) = c(t)
+		</div>
+
+		<div class="def">Equation homogène associée à E
+			<p class="tl">
+				(EH) a(t)x'+b(t)x = 0 est l'<em>équation homogène</em><br/>
+				(E) est l'équation complète avec second membre
+			</p>
+		</div>
+
+		<div class="def">Courbe intégrale
+			<p class="tl">graphe d'une fonction. ie. {(t,f(t)), t&in;I}
+			</p>
+		</div>
+
+		<div class="prop">Solutions homogènes
+			<ul class="tl">
+				<li>a,b : I&rarr;K continues</li>
+				<li>&forall;t&in;I, a(t) &ne; 0</li>
+				<li class="then">L'ensemble des solutions de (EH) est la droite vectorielle engendrée par t&mapsto;e<sup>&minus;F(t)</sup>, où F est une primitive de <div class="frac">b<span class="bottom">a</span></div></li>
+			</ul>
+		</div>
+
+		<h3>Problème de Cauchy, solutions de (E)</h3>
+		<div class="prop">Théorème de Cauchy-Lipschitz 
+			<ul class="tl">
+				<li>a,b,c : I&rarr;K continues</li>
+				<li>&forall;t&in;I, a(t) &ne; 0</li>
+				<li>t<sub>0</sub>&in;I, x<sub>0</sub>&in;K</li>
+				<li class="then">Il existe une unique solution au problème (P) :
+					<ul>
+						<li>a(t)x' + b(t)x = c(t)</li>
+						<li>x(t<sub>0</sub>) = x<sub>0</sub></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="prop">Problème de Cauchy
+			<div class="tl">
+				x(t<sub>0</sub>) = &lambda;(t<sub>0</sub>)e<sup>&minus;F(t<sub>0</sub>)</sup><br/>
+				On veut x(t<sub>0</sub>) = x<sub>0</sub>, donc &lambda;(t<sub>0</sub>) = e<sup>F(t<sub>0</sub>)</sup>x<sub>0</sub><br/>
+				Finalement, la solution de P est x(t) = (e<sup>F(t<sub>0</sub>)</sup>x<sub>0</sub> + <div class="indexed">
+							<span class="top">t</span>
+							&int;
+							<span class="bottom">t<sub>0</sub>
+						</div>
+				<div class="frac">c(u)<span class="bottom">a(u)</span></div>
+				e<sup>F(u)</sup>du)&middot;e<sup>&minus;F(t)</sup>
+			</div>
+		</div>
+		<div class="ex">Exemple
+			<p class="tl"></p>
+		</div>
+
+		<p id="signature">jz</p>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<meta charset="utf-8"/>
+	<style>
+		/*span{outline:solid black 1px;}*/
+
+		.frac {
+		    display: inline-block;
+		    position: relative;
+		    vertical-align: middle;
+		    letter-spacing: 0.001em;
+		    text-align: center;
+		}
+		.frac > span {
+		    display: block;
+		    padding: 0.1em;
+		}
+		.frac span.bottom {
+		    border-top: thin solid #005;
+		}
+		.frac span.symbol {
+		    display: none;
+		}
+	/**/
+		.indexed {
+		    display: inline-block;
+		    position: relative;
+		    vertical-align: middle;
+		    letter-spacing: 0.1em;
+		    text-align: center;
+		}
+
+		.indexed > span {display:block;}
+
+		.indexed span.top, .indexed span.bottom {font-size:70%;}
+		.indexed span.bottom {
+			position:relative;
+			padding-top:20%;
+		}
+
+		.sqrt{
+			border-top:thin solid;
+		}
+
+		.sqrt::before{
+			content:"√";
+			border-top:thin solid #fff;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="frac">
+		<span>551</span><span class="bottom">551321453</span>
+	</div><br/>
+	<div class="indexed">
+		<span class="top">5</span>
+		<span>L</span>
+		<span class="bottom">k=0</span>
+	</div>
+	<span>bla</span>
+	<span class="sqrt">36</span>
+	<var>x</var>
+	<span class="indexed"><span class="top">a</span>&int;<span class="bottom">b</span></span></span>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Maths : Intégrales à paramètres</title>
+		<meta charset = "utf-8" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<p id="title">MATHS</p>
+		<a href="sommaire.html" id="home">Retour au sommaire</a>
+		<h1>Intégrales à paramètres</h1>
+			<h2>I. TCD, TITAT</h2>
+				<p>
+					f<sub>n</sub>: I &rarr; K <br />
+					f : I &rarr; K<br />
+					I un intervalle de R<br />
+					K = R ou C
+				</p>
+
+				<div class="prop">Théorème de la convergence dominée
+					<ul class="tl">
+						<li>f<sub>n</sub> et f continues par morceaux</li>
+						<li>(f<sub>n</sub>)<sub>n</sub> converge simplement vers f sur I</li>
+						<li><em>Il existe φ : I &rarr; R positive, continue par morceaux intégrable sur I telle que<br/>
+						&forall;n&in;N, &forall;x&in;I, |f<sub>n</sub>(x)| &le; φ(x)</em></li>
+						<li class="then">Alors pour tout n&in;N, f<sub>n</sub> et f intégrables sur I</li>
+						<li class="then">De plus, &int;<sub>I</sub>f<sub>n</sub>&rarr;&int;<sub>I</sub>f</li>
+					</ul>
+				</div>
+				<div class="ex">Exemples
+					<ul class="tl">
+						<li>...</li>
+						<li>...</li>
+						<li>...</li>
+					</ul>
+				</div>
+
+				<div class="prop">Théorème de la convergence dominée : Extension
+					<ul class="tl">
+						<li>J quelconque intervalle de R</li>
+						<li>α&in;J ou α borne de J</li>
+						<li>(f<sub>λ</sub>)<sub>λ</sub></li>
+						<li>f<sub>λ</sub> et f continues par morceaux</li>
+						<li>&forall;x&in;I, f<sub>λ</sub>(x)&rarr;<sub>λ&rarr;α</sub>f(x)</li>
+						<li><em>Il existe φ : I &rarr; R positive, continue par morceaux intégrable sur I telle que<br/>
+						&forall;λ&in;J, &forall;x&in;I, |f<sub>λ</sub>(x)| &le;φ(x)</em></li>
+						<li class="then">Alors pour tout λ&in;J, f<sub>λ</sub> et f intégrables sur I</li>
+						<li class="then">De plus, &int;<sub>I</sub>f<sub>λ&rarr;α</sub>&rarr;&int;<sub>I</sub>f</li>
+					</ul>
+				</div>
+
+				<div class="prop">Théorème d'intégration terme à terme
+					<ul class="tl">
+						<li>f<sub>n</sub> continue par morceaux sur I<br/>
+						<li>Σf<sub>n</sub> converge simplement sur I<br/>
+						<li>Σ<sup>&infin;</sup><sub>n=0</sub> f<sub>n</sub> continue par morceaux<br/>
+						<li><em>Σ&int;<sub>I</sub>|f<sub>n</sub>| converge</em><br/>
+						<li class="then">Alors Σ<sup>&infin;</sup><sub>n=0</sub> f<sub>n</sub> est intégrable sur I<br/>
+						<li class="then">De plus, &int;<sub>I</sub>Σ<sup>&infin;</sup><sub>n=0</sub> f<sub>n</sub> = Σ<sup>&infin;</sup><sub>n=0</sub> &int;<sub>n</sub>f<sub>n</sub>
+					</ul>
+				</div>
+
+				<div class="ex">Exemple
+					<ul class="tl">
+						<li>...</li>
+						<li>...</li>
+					</ul>
+				</div>
+
+			<h2>II. Fonctions d'une intégrale</h2>
+				<p>f:AxI&rarr;K<br/>
+					&nbsp;(x,t)&mapsto;f(x,t)<br/>
+					t est la variable d'intégration<br/>
+					x est le paramètre
+				</p>
+				<div class="prop">Théorème de continuité
+					<ul class="tl">
+						<li>&forall;t&in;I, x&mapsto;f(x,t) continue sur A</li>
+						<li>&forall;x&in;A, t&mapsto;f(x,t) continue par morceaux sur I</li>
+						<li><em>Il existe φ : I &rarr; R positive, intégrable sur I telle que
+						&forall;x&in;A, &forall;t&in;I, |f(x,t))| &le; φ(x)</em></li>
+						<li class="then">Alors &forall;x&in;A, f intégrable</li>
+						<li class="then">x&mapsto;&int;<sub>I</sub>f(x,t)dt est continue</li>
+					</ul>
+				</div>
+
+				<p class="rq">
+					Remarque : Dans l'hypothèse de domination,<br/>
+					pour montrer la continuité en a&in;A, il est possible de remplacer par &forall;x&in;V&cup;A, V&in;V(a)<br />
+					pour montrer la continuité sur A, il est possible de la remplacer par une domination sur tout K, K compact de A
+				</p>
+
+				<p>
+					Rappel : dérivées partielles...
+				</p>
+
+				<div class="prop">Théorème de dérivation
+					<ul class="tl">
+						<li>&forall;t&in;I, x&mapsto;f(x,t) intégrable sur I</li>
+						<li>&forall;x&in;A, t&mapsto;f(x,t) C<sup>1</sup> sur J</li>
+						<li>&forall;t&in;I, x&mapsto;<div class="frac"><span>&part;f(x,t)</span><span class="bottom">&part;x</span></div> continue par morceaux</li>
+						<li><em>Il existe φ : I &rarr; R positive, intégrable sur I telle que
+						&forall;x&in;K, &forall;t&in;I, |<div class="frac"><span class="top">&part;f(x,t)</span><span class="bottom">&part;x</span></div>| &le; φ<sub>K</sub>(x)</em></li>
+						<li class="then">x&mapsto;&int;<sub>I</sub>f(x,t)dt de classe C<sup>1</sup> sur J</li>
+						<li class="then">de dérivée égale à &forall;x&in;J, x&mapsto;&int;<sub>J</sub><div class="frac"><span>&part;f(x,t)</span><span class="bottom">&part;x</span></div> dt</li>
+					</ul>
+				</div>
+
+				<p class="rq">Extension :...</p>
+				<p class="rq">Remarque...</p>
+				<div class="ex">Exercice : Fonction &Gamma;
+					<p class="tl">
+						&Gamma;(x) =<span class="indexed"><span class="top">&infin;</span>&int;<span class="bottom">0</span></span>t<sup>x-1</sup>e<sup>-t</sup> dt
+					</p>
+				</div>
+				<div class="prop">Dérivée d'ordre supérieur
+					<p class="tl">...
+					</p>
+				</div>
+				<div class="ex">Exercice, suite de la fonction &Gamma;
+					<p class="tl">...
+					</p>
+				</div>
+				<div class="ex">Exercice
+					<p class="tl">...
+					</p>
+				</div>
+
+		<p id="signature">jz<p>
+	</body>
+</html>

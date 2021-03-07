@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Espace Vectoriel</title>
+		<meta charset="utf-8" />
+		<style>
+			body{font-family:"Liberation Serif";
+				padding-left:15px;}
+
+			.f{color:blue;}
+
+			dd{border-left:solid currentcolor 1px;
+			padding-left:3px;
+			margin-bottom:2px;}
+
+			dt,em{font-weight:bold;}
+
+			sub{
+				position:relative;
+				bottom:-3px;
+			}
+			/*Fractions, source : https://stackoverflow.com/questions/7525977/how-to-write-fraction-value-using-html, inspiration for indexed */
+			.frac {
+			    display: inline-block;
+			    position: relative;
+			    vertical-align: middle;
+			    letter-spacing: 0.001em;
+			    text-align: center;
+			}
+			.frac > span {
+			    display: block;
+			    padding: 0.1em;
+			}
+
+			.frac span.bottom {border-top: thin solid #005;}
+			.frac span.symbol {display: none;}
+
+			.indexed {
+			    display: inline-block;
+			    position: relative;
+			    vertical-align: middle;
+			    letter-spacing: 0.001em;
+			    text-align: center;
+			}
+
+			.indexed > span {display:block;}
+
+			.indexed span.top, .indexed span.bottom {font-size:70%;}
+			.indexed span.bottom {
+				position:relative;
+				padding-top:20%;
+			}
+		</style>
+	</head>
+	<body>
+		<span><a href="sommaire.html">retour</a></span>
+		<h1>Espace Vectoriel</h1>
+		<span class="f">En bleu, dimension finie</span>
+		<dl>
+			<dt>Structure du sous-espace vectoriel</dt>
+			<dd>K un corps. E muni d'une l.c.i + et d'une l.c.e ., noté (E,+,.) est un K-ev si
+				<ul>
+					<li>(E,+) est un groupe abélien</li>
+				</ul>
+				<span>&forall;&lambda;,&mu;&in;K, &forall;x,y&in;E,</span>
+				<ul>
+					<li>(&lambda;+&mu;)x = &lambda;x+&mu;x</li>
+					<li>(&lambda;&mu;)x = &lambda;(&mu;x)</li>
+					<li>&lambda;(x+y) = &lambda;x + &lambda;y</li>
+					<li>1<sub>K</sub>.x = x</li>
+				</ul>
+			</dd>
+
+			<dt class="f">Espace vectoriel de dimension finie</dt>
+			<dd class="f">E de dimension finie n s'il admet une famille génératrice finie</dd>
+			<dd class="f">Alors
+				<ul>
+					<li>E admet des bases</li>
+					<li>Toutes les bases ont le même cardinal n, appelé dimension de E, noté dim(E)</li>
+					<li>Tout sous-espace de E admet des supplémentaires</li>
+					<li>E de dimension finie, F ev<br/>
+						E et F sont isomorphes &hArr; F est de dimension finie et dimE=dimF
+					</li>
+				</ul>
+			</dd>
+
+			<dt>Famille libre</dt>
+			<dd>(u<sub>i</sub>)<sub>i&in;I</sub> est libre si pour tout (&lambda;<sub>i</sub>)<sub>i&in;I</sub>&in;K<sup>(I)</sup><br/>
+				<span class="indexed">&sum;<span class="bottom">i&in;I</span></span>
+				&lambda;<sub>i</sub>u<sub>i</sub> = 0 &rArr; &forall;i&in;I, &lambda;<sub>i</sub>=0 <br/>
+			</dd>
+			<dd>Pour montrer qu'une famille infinie est libre, on montre que toute sous-famille est libre <br/>
+				&not;libre &rarr; <em>liée</em>
+			</dd>
+			<span class="f">
+			<dd><dl>
+				<dt>Théorème de la base incomplète</dt>
+			<dd>F famille libre de E, G famille génératrice de E</dd>
+			<dd>Alors on peut <em>compléter</em> F en une base de E à l'aide d'éléments de G</dd></dl>
+			<dd>F famille libre &rArr; Card(F) &le; n</dd>
+			<dd>F est une base &hArr; Card(F) = n</dd>
+			</span>
+
+			<dt>Famille génératrice</dt>
+			<dd>(u<sub>i</sub>)<sub>i&in;I</sub> est génératrice si &forall;x&in;E,<br/> &exist;(&lambda;<sub>i</sub>)<sub>i&in;I</sub>&in;K<sup>(I)</sup>, x = 
+				<div class="indexed">
+					<span>&sum;</span>
+					<span class="bottom">i&in;I</span>
+				</div>
+			&lambda;<sub>i</sub>u<sub>i</sub>
+			</dd>
+			<span class="f">
+				<dd>G engendre E &rArr; Card(G) &ge; n</dd>
+				<dd>G est une base &hArr; Card(G) = n</dd>
+			</span>
+
+			<dt>Base</dt>
+			<dd>C'est une famille libre génératrice</dd>
+			<dd>Si B = (u<sub>i</sub>)<sub>i&in;I</sub> est une base de E</dd>
+			<dd>Alors &forall;x&in;E, &exist;!(&lambda;<sub>i</sub>)<sub>i&in;I</sub>&in;K<sup>(I)</sup>, x =
+				<div class="indexed">
+					<span>&sum;</span>
+					<span class="bottom">i&in;I</span>
+				</div>
+				&lambda;<sub>i</sub>u<sub>i</sub>
+			<dd>Les &lambda;<sub>i</sub> s'appellent les <em>coordonnées</em> de x dans la base B.
+			</dd>
+
+			<dt>Sous-espace vectoriel</dt>
+			<dd>F&sub;E est un s.e.v de E si
+				<ul>
+					<li>F &ne; &empty; &hArr; 0<sub>E</sub>&in;F</li>
+					<li>&forall;x,y&in;F, &forall;&lambda;&in;K, &lambda;x+y&in;F</li>
+				</ul>
+			</dd>
+			<span class="f">
+			<dd>F sev de E</dd>
+			<dd>
+				Alors F de dimension finie<br/>
+				dim(F)&le;dim(E)<br/>
+				F = E &hArr; dim(F) = dim(E)
+			</dd>
+			</span>
+
+			<dt>Sous-espace vectoriel engendré par une partie</dt>
+			<dd>L'intersection de sev de E est un sev de E</dd>
+			<dd>A&sub;E<br/>
+				<div class="indexed">
+					<span>&cap;</span>
+					<span class="bottom">F sev de E<br/>F&sup;A</span>
+				</div>
+				F est le plus petit sev de E, contenant A. On l'appelle <em>sev engendré</em> par A, noté Vect(A)
+			</dd>
+			<dd> Vect(A) est l'ensemble des combinaisons linéaires des élements de A</dd>
+
+			<dt>Somme de sous-espaces</dt>
+			<dd>
+				E ev, F<sub>1</sub>,&hellip;,F<sub>p</sub> sev de E<br/>
+				F<sub>1</sub>,&hellip;,F<sub>p</sub> =
+				<div class="indexed">
+					<span>&sum;</span>
+					<span class="bottom">i&in;I</span>
+				</div>F<sub>i</sub>
+				= Vect(F<sub>1</sub>&cup;&hellip;&cup;F<sub>p</sub>)
+			</dd>
+			<span class="f">
+				<dd>dim(F+G) = dim(F) + dim(G) - dim(F&cap;G)</dd>
+			</span>
+
+			<dt>Somme directe</dt>
+			<dd>
+				On dit que <div class="indexed"><span class="top">p</span><span>&sum;</span><span class="bottom">i=1</span></div>F<sub>i</sub> est directe si pour tout (x<sub>1</sub>,&hellip;,x<sub>p</sub>)&in;F<sub>1</sub>&times;&hellip;&times;F<sub>p</sub><br/>
+				x<sub>1</sub>+&hellip;+x<sub>p</sub>=0 &rArr; &forall;1 &le; i &le; p, x<sub>i</sub>=0
+			</dd>
+			<dd>On note alors <div class="indexed"><span class="top">p</span><span>&oplus;</span><span class="bottom">i=1</span></div>F<sub>i</sub></dd>
+			<dd>Si <div class="indexed"><span class="top">p</span><span>&sum;</span><span class="bottom">i=1</span></div>F<sub>i</sub> est directe<br/>
+				alors &forall;x&in;<div class="indexed"><span class="top">p</span><span>&oplus;</span><span class="bottom">i=1</span></div>F<sub>i</sub>, &exist;!(x<sub>1</sub>,&hellip;,x<sub>p</sub>)&in;<div class="indexed"><span class="top">p</span><span>&prod;</span><span class="bottom">i=1</span></div>F<sub>i</sub> tel que x = <div class="indexed"><span class="top">p</span><span>&oplus;</span><span class="bottom">i=1</span></div>F<sub>i</sub>
+			</dd>
+			<span class="f">
+			<dd>E de dimension finie &hArr; &forall;i, E<sub>i</sub> de dimension finie</dd>
+			<dd>dim(E)=<div class="indexed"><span class="top">p</span><span>&sum;</span><span class="bottom">i=1</span></div>dim F<sub>i</sub></dd>
+
+			<dt>En dimension 2</dt>
+			<dd>F + G est directe &hArr; F&cap;G={0<sub>E</sub>}</dd>
+			</span>
+
+			<dt>Base adaptée à une somme directe</dt>
+			<dd>
+				F<sub>1</sub>&times;&hellip;&times;F<sub>p</sub> sous-espaces de E<br/>
+				<div class="indexed">
+					<span>&sum;</span>
+					<span class="bottom">i&in;I</span>
+				</div> F<sub>i</sub> est directe<br/>
+				Pour tout i, B<sub>i</sub> est une base de F<sub>i</sub>
+			</dd>
+			<dd>Alors B=<div class="indexed"><span class="top">p</span><span>&cup;</span><span class="bottom">i=1</span></div>B<sub>i</sub> est une base de <div class="indexed">
+					<span>&oplus;</span>
+					<span class="bottom">i&in;I</span>
+				</div>F<sub>i</sub>
+			</dd>
+			<dd>On dit que la base est adaptée à la somme directe</dd>
+		</dl>
+		<h1>Applications linéaires</h1>
+		<dl>
+			<dt>Application linéaire / Morphisme d'espace vectoriel</dt>
+			<dd>
+				f:E&rarr;F est linéaire si<br/>
+				&forall;x,y&in;E, &forall;&lambda;&in;K, f(&lambda;x+y)=&lambda;f(x)+f(y)
+			</dd>
+			<dd>L(E,F) ensemble des applications linéaires de E vers F</dd>
+			<dd>L(E,F) sev de F(E,F) (=F<sup>E</sup>)</dd>
+			<br/>
+			<dd>f(<div class="indexed"><span class="top">n</span><span>&sum;</span><span class="bottom">i=1</span></div>&lambda;<sub>i</sub>x<sub>i</sub>) = <div class="indexed"><span class="top">n</span><span>&sum;</span><span class="bottom">i=1</span></div>&lambda;<sub>i</sub>f(x<sub>i</sub>)</dd>
+			<dd>V sev de E &rArr; f(V) sev de F, en particulier Im(f)=f(E)</dd>
+			<dd>W sev de F &rArr; f<sup>-1</sup>(W) sev de E, en particulier Ker(f)=f<sup>-1</sup>({0})</dd>
+
+			<dt>Caractérisation par l'image d'une base</dt>
+			<dd>(e<sub>i</sub>)<sub>i&in;I</sub> base de E<br/>
+				(y<sub>i</sub>)<sub>i&in;I</sub> &in; F<sub>I</sub></dd>
+			<dd>Alors &exist;!f&in;L(E,F) tq &forall;i&in;I, f(e<sub>i</sub>)=y<sub>i</sub></dd>
+
+			<dt>Lien famille, isomorphisme</dt>
+			<dd>
+				(e<sub>i</sub>)<sub>i&in;I</sub> base de E<br/>
+				(y<sub>i</sub>)<sub>i&in;I</sub> &in; F<sup>I</sup><br/>
+				f&in;L(E,F) tq &forall;i&in;I, f(e<sub>i</sub>)=y<sub>i</sub>
+			</dd>
+			<dd>
+				f injective &hArr; (y<sub>i</sub>)<sub>i&in;I</sub> est libre<br/>
+				f surjective &hArr; (y<sub>i</sub>)<sub>i&in;I</sub> est génératrice de F<br/>
+				f isomorphisme &hArr; (y<sub>i</sub>)<sub>i&in;I</sub> est une base de F<br/>
+			</dd>
+
+			<dt>Projections</dt>
+			<dd>E = F &oplus; G<br/>
+				&forall;x&in;E, &exist;(x<sub>F</sub>,x<sub>G</sub>)&in;F&times;G, x = x<sub>F</sub> + x<sub>G</sub><br/>
+				p : {<div style="display:inline-block; vertical-align:middle;">E &rarr; E<br/>x &mapsto; x<sub>F</sub></div> projection sur F parallèlement à G
+			</dd>
+			<dd>Im(p)=F, Ker(p)=G, p&compfn;p=p</dd>
+
+			<dt>Induction et isomorphisme</dt>
+			<dd>f&in;L(E,F)<br/>
+			On suppose &exist;S tq E = Ker(f) &oplus; S</dd>
+			<dd>Alors f<sub>|S</sub> induit un isomorphisme de S sur Im(f)</dd>
+
+			<dt>Application linéaire et somme directe</dt>
+			<dd>E = E<sub>1</sub> &oplus; &hellip; &oplus; E<sub>p</sub></dd>
+			<dd>Alors &theta;:{<div style="display:inline-block; vertical-align:middle;">L(E,F) &rarr; L(E<sub>1</sub>,F) &times; &hellip; &times; L(E<sub>p</sub>,F)<br/>f &mapsto; (f<sub>|E<sub>1</sub></sub>,&hellip;,f<sub>|E<sub>p</sub></sub>)</div> est un isomorphisme d'espace vectoriel</dd>
+
+			<span class="f">
+			<dt>Rang</dt>
+			<dd>f&in;L(E,F)<br/>
+				f est dit de rang fini si Im(f) de rang fini.<br/>
+				Alors rg(f)=dim(Im(f))
+			</dd>
+			<dd>F ou E fini &rArr; f de rang fini</dd>
+
+			<dt>Théorème du rang</dt>
+			<dd>E de dimension fini<br/>
+			f&in;L(E,F)</dd>
+			<dd>Alors dim(E)=dim(Ker(f))+rg(f)</dd>
+
+			<dt>Application: Interpolation de Lagrange</dt>
+			<dd>K&sub;C<br/>
+				a<sub>0</sub>,&hellip;,a<sub>n</sub>&in;K deux à deux distincts<br/>
+				&alpha;<sub>0</sub>,&hellip;,&alpha;<sub>n</sub>&in;K
+			</dd>
+			<dd>Alors &exist;!P&in;K<sub>n</sub>[X] tq &forall; 0 &le; i &le; n, P(a<sub>i</sub>)=&alpha;<sub>i</sub></dd>
+
+			<dt>Isomorphisme</dt>
+			<dd>dim(E)=dim(F)<br/>
+				&fnof;&in;L(E,F)</dd>
+			<dd>&fnof; injective &hArr; &fnof; surjective &hArr; &fnof; isomorphisme</dd>
+
+			<dt>Rang de la composée</dt>
+			<dd>f&in;L(E,F)<br/>
+			g&in;L(F,G)</dd>
+			<dd>rg(g&compfn;f) &le; min(rg(f), rg(g))</dd>
+			<dd>La composition par un endomorphisme conserve le rang</dd>
+			</span>
+		</dl>
+		<h1>Hyperplans</h1>
+		<h1>Matrices</h1>
+		<h1>Déterminant</h1>
+	</body>
+</html>

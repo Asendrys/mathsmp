@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Espaces préhilbertiens réels, espaces euclidiens</title>
+		<meta charset = "utf-8" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<p id="title">MATHS</p>
+		<a href="sommaire.html" id="home">Retour au sommaire</a>
+		<h1>Espaces préhilbertiens réels, espaces euclidiens</h1>
+		<a href=#ee>Voir II. Espaces euclidiens</a>
+		<h2>I. Espaces préhilbertiens</h2>
+		<h3>1)Produit Scalaire</h3>
+			<div class="def">Produit Scalaire
+				<div class="tl"> Un produit scalaire &phi; : E &times; E &rarr; R est une forme bilinéaire symétrique définie positive.<br/>ie.
+					<ul>
+						<li>&forall;y&in;E, x &mapsto;&phi;(x,y) linéaire (Linéarité à gauche)</li>
+						<li>&forall;x&in;E, y &mapsto;&phi;(x,y) linéaire (Linéarité à droite)</li>
+						<li>&forall;x,y&in;E, &phi;(x,y) = &phi;(y,x) (Symétrie)</li>
+						<li>&forall;x&in;E, &phi;(x,x)&ge;0 (Positivité)</li>
+						<li>&forall;x&in;E, &phi;(x,x)=0 &rArr; x=0 (Définie)</li>
+					</ul>
+					Il est noté (x|y), x&middot;y, &lt;x,y&gt;
+				</div>
+			</div>
+			(E, (.|.)) est un espace préhilbertien réel.
+			<div class="ex">Exemples de produits scalaires
+				<div class="tl">
+					<ol type="i">
+						<li>R<sup>n</sup>, B base canonique :<br/> (x|y)=<div class="indexed"><span class="top">n</span><span>&sum;</span><span class="bottom">i=1</span></div>x<sub>i</sub>y<sub>i</sub>=<sup>t</sup>XY</li>
+						<li>C<sup>0</sup>([a,b],R) :<br/> (f|g) = <div class="indexed"><span class="top">b</span><span>&int;</span><span class="bottom">a</span></div>f(t)g(t)dt</li>
+						<li>I un intervalle de R, L<sup>2</sup>(I)={f:I&rarr;R|f<sup>2</sup> intégrable et continue sur I} :<br/>
+						(f|g)=&int;<sub>I</sub> fg</li>
+						<li>I dénombrable, E = {(a<sub>i</sub>)<sub>i&in;I</sub>&in;R<sup>I</sup> | (a<sub>i</sub><sup>2</sup>)<sub>i&in;I</sub> sommable :<br/>
+							(a|b)=<div class="indexed"><span class="top">&nbsp;</span><span>&sum;</span><span class="bottom">i&in;I</span></div>a<sub>i</sub>b<sub>i</sub></li>
+						<li>M<sub>n</sub>(R):<br/> (A|B)=Tr(<sup>t</sup>A&middot;B)</li>
+					</ol>
+				</div>
+			</div>
+			<div class="prop">Inégalité de Cauchy-Schwarz
+				<div class="tl">&forall;x,y&in;E, |(x|y)|&le;<span class="sqrt">(x|x)</span><span class="sqrt">(y|y)</span><br/>
+				Avec égalité &hArr; (x,y) est une famille liée</div>
+			</div>
+			<p class="rq">Remarque : Fonctionne aussi avec seulement une forme bilinéaire symétrique positive</p>
+			<div class="prop">Norme associée
+				<div class="tl">x&mapsto;<span class="sqrt">(x,x)</span> = &Vert;x&Vert; est une norme de E</div>
+			</div>
+
+			<div class="prop">Inégalité triangulaire : cas d'égalité
+				<div class="tl">&Vert;x+y&Vert; = &Vert;x&Vert;+&Vert;y&Vert; &hArr; x=0 ou &exist;&lambda;&in;R<sup>+</sup> tq y = &lambda;x (ie. <em>(x,y) est positivement liée</em>)</div>
+			</div>
+
+			<div class="prop">Formules
+				<div class="tl"><ul>
+					<li>&Vert;x+y&Vert;<sup>2</sup> = &Vert;x&Vert;<sup>2</sup> + 2 (x|y) + &Vert;y&Vert;<sup>2</sup></li>
+					<li>&Vert;x+y&Vert;<sup>2</sup> &minus; &Vert;x-y&Vert;<sup>2</sup> = 4(x|y)</li>
+					<li>&Vert;x+y&Vert;<sup>2</sup> + &Vert;x-y&Vert;<sup>2</sup> = 2&Vert;x&Vert;<sup>2</sup> + 2 &Vert;y&Vert;<sup>2</sup> <em>Identité du parallélogramme</em></li>
+				</ul></div>
+			</div>
+		<h3>2)Orthogonalité</h3>
+			<div class="def">Vecteurs orthogonaux
+				<p class="tl">x&perp;y si: (x|y)=0</p>
+			</div>
+			<div class="prop">Théorème de Pythagore
+				<div class="tl">x&perp;y &hArr; &Vert;x+y&Vert;<sup>2</sup> =  &Vert;x&Vert;<sup>2</sup> +  &Vert;y&Vert;<sup>2</sup></div>
+			</div>
+			<div class="def">Orthogonal d'une partie
+				<div class="tl">A&sub;E<br/>
+					A<sup>&perp;</sup> = {x&in;E|&forall;a&in;A, (a|x)=0}</div>
+			</div>
+			<div class="prop">Propriétés de l'orthogonal d'une partie
+				<div class="tl"><ul>
+					<li>{0}<sup>&perp;</sup>=E</li>
+					<li>E<sup>&perp;</sup>={0}</li>
+					Soit A<sup>&perp;</sup> un s.e.v. de E
+					<li>A&sub;B &rArr; B<sup>&perp;</sup>&sub;A<sup>&perp;</sup></li>
+					<li>A<sup>&perp;</sup> = (Vect A)<sup>&perp;</sup></li>
+					Soit F un s.e.v. de E
+					<li>F&cap;F<sup>&perp;</sup> = {0}</li>
+					<li>F&sub;F<sup>&perp;</sup><sup>&perp;</sup>, avec égalité en dimension finie</li>
+				</ul></div>
+			</div>
+			<div class="ex">Exercice : F,G s.e.v. de E, montrer que (F+G)<sup>&perp;</sup> = F<sup>&perp;</sup>&cap;G<sup>&perp;</sup>
+				<div class="tl">...
+				</div>
+			</div>
+			<div class="ex">Exercice : F = {P&in;R[X] | P(1) = 0}, F<sup>&perp;</sup> ?
+				<div class="tl">...
+				</div>
+			</div>
+			
+			<div class="prop">Somme directe orthogonale
+				<div class="tl">
+					(F<sub>i</sub>)<sub>1&le;i&le;p</sub> sous-espaces de E
+					<ul class="tl">
+						<li>&forall;i&ne;j, &forall;x&in;F<sub>i</sub>, &forall;y&in;F<sub>j</sub>, (x|y) = 0 (ie. F<sub>i</sub>&perp;F<sub>j</sub>)
+						<li class="then">&sum;F<sub>i</sub> est directe, on dit que la somme est <em>directe orthogonale</em>, noté <div class="indexed"><span class="top">&perp;</span>&oplus;<span class="bottom">1&le;i&le;p</span></div>F<sub>i</sub></li>
+					</ul>
+				</div>
+			</div>
+			<div class="prop">Propriété de la somme directe orthogonale
+				<ul class="tl">
+					<li>On suppose que &sum;F<sub>i</sub> est directe orthogonale</li>
+					<li>Soit (x<sub>1</sub>,&hellip;,x<sub>p</sub>) &in; F<sub>1</sub> &times; &hellip; &times; F<sub>p</sub></li>
+					<li class="then">Alors &Vert; <div class="indexed"><span class="top">p</span>&sum;<span class="bottom">i</span></div>x<sub>i</sub>&Vert;<sup>2</sup> = <div class="indexed"><span class="top">p</span>&sum;<span class="bottom">i</span></div> &Vert;x<sub>i</sub>&Vert;<sup>2</sup></li>
+				</ul>
+			</div>
+			<div class="def">Projection orthogonale
+				<div class="tl">
+					Soit F un sev de E,<br/>
+					On suppose que E = F&oplus;F<sup>&perp;</sup>
+					On dispose alors de p<sub>F</sub> la <em>projection sur F parallèlement à F<sup>&perp;</sup></em> : appelé <em>Projection orthogonale sur F</em>
+				</div>
+			</div>
+			<div class="prop">Caractérisation de la projection orthogonale
+				<div class="tl">x&in;E<br/><br/>
+					(y = p<sub>F</sub>(x))<br/>
+					&hArr;(y&in;F, &forall;z&in;F, (x|z) = (y|z))<br/>
+					&hArr;(y&in;F, &forall;z&in;F, &Vert;x-z&Vert; &ge; &Vert;x-y&Vert;)
+				</div>
+			</div>
+			<p class="rq">Remarque : &Vert;x-p<sub>F</sub>(x)&Vert; = d(x,F)</p>
+		<h3>3)Familles orthogonales, orthonormales</h3>
+			<div class="def">Famille orthogonale
+				<div class="tl">
+					(e<sub>i</sub>)<sub>i&in;I</sub> famille d'éléments de E, orthogonale si :<br/>
+					&forall;i,j&in;I, i&ne;j &rArr; (e<sub>i</sub>|e<sub>j</sub>)=0
+				</div>
+			</div>
+			<div class="def">Famille orthonormale
+				<div class="tl">
+					(e<sub>i</sub>)<sub>i&in;I</sub> famille d'éléments de E, orthonormale si :<br/>
+					&forall;i,j&in;I, (e<sub>i</sub>|e<sub>j</sub>)=&delta;<sub>i,j</sub>
+				</div>
+			</div>
+			<div class="prop">Liberté
+				<ul class="tl">
+					<li>(e<sub>i</sub>)<sub>i&in;I</sub> orthogonale</li>
+					<li>&forall;i&in;I, e<sub>i</sub> &ne; 0</li>
+					<li class="then">(e<sub>i</sub>)<sub>i&in;I</sub> libre</li>
+				</ul>
+			</div>
+			<h4>Calculs en base orthonormale</h4>
+			<p>
+				(e<sub>i</sub>)<sub>i&in;I</sub> base orthonormale de E<br/>
+				Soit x,y&in;E, x = <span class="indexed"><span class="top">&nbsp;</span>&sum;<span class="bottom">i&in;I</span></span>x<sub>i</sub>, y = <span class="indexed"><span class="top">&nbsp;</span>&sum;<span class="bottom">j&in;I</span></span>y<sub>j</sub><br/>
+				Alors (x|y) = <span class="indexed"><span class="top">&nbsp;</span>&sum;<span class="bottom">i&in;I</span></span>x<sub>i</sub>y<sub>i</sub><br/>
+				En particulier, &Vert;x<sub>i</sub>&Vert;<sup>2</sup> = <span class="indexed"><span class="top">&nbsp;</span>&sum;<span class="bottom">i&in;I</span></span>x<sub>i</sub><sup>2</sup>
+			</p>
+			<div class="prop">Orthonormalisation de Schmidt
+				<ul class="tl">
+					<li>(e<sub>1</sub>,&hellip;,e<sub>n</sub>) famille libre de E</li>
+					<li class="then">&exist;!(&epsilon;<sub>1</sub>,&hellip;,&epsilon;<sub>n</sub>) famille orthonormale telle que<br/>
+						&forall;1&le;k&le;n,
+						<ul>
+							<li>Vect(&epsilon;<sub>1</sub>,&hellip;,&epsilon;<sub>k</sub>) = Vect(e<sub>1</sub>,&hellip;,e<sub>k</sub>)</li>
+							<li>(e<sub>k</sub>|&epsilon;<sub>k</sub>) > 0</li>
+						</ul>
+					</li>
+				<div class="prop">Généralisation (Orthonormalisation de Schmidt)
+				<ul class="tl">
+					<li>(e<sub>n</sub>)<sub>n&in;N</sub> suite libre de E</li>
+					<li class="then">&exist;!(&epsilon;<sub>n</sub>)<sub>n&in;N</sub> famille orthonormale telle que<br/>
+						&forall;n&in;N,
+						<ul>
+							<li>Vect(&epsilon;<sub>0</sub>,&hellip;,&epsilon;<sub>n</sub>) = Vect(e<sub>0</sub>,&hellip;,e<sub>n</sub>)</li>
+							<li>(e<sub>n</sub>|&epsilon;<sub>n</sub>) > 0</li>
+						</ul>
+					</li>
+				</div>
+			</div>
+			
+			<div class="ex">Exemple : Polynômes de Legendre
+				<div class="tl">
+					E = R[X], (P|Q) = <span class="indexed"><span class="top">1</span>&int;<span class="bottom">0</span></span> P(t)Q(t) dt<br/>
+					(X<sup>n</sup>)<sub>n&in;N</sub> base de E.<br/>
+					Il existe une unique famille (P<sub>n</sub>)<sub>n&in;N</sub> telle que
+					<ul>
+						<li>(P<sub>n</sub>)<sub>n</sub> orthonormale</li>
+						<li>&forall;n&in;N, Vect(P<sub>0</sub>,&hellip;,P<sub>n</sub>) = Vect(1,X,&hellip;,X<sup>n</sup>)</li>
+						<li>&forall;n&in;N, (P<sub>n</sub>|X<sup>n</sup>) > 0</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="prop">Projection orthogonale sur un sous-espace de dimension finie
+				<ul class="tl">
+					<li>F s.e.v. de E, F de dimension finie</li>
+					<li class="then">E = F&oplus;F<sup>&perp;</sup></li>
+					<li class="then">si (&epsilon;<sub>1</sub>,&hellip;,&epsilon;<sub>p</sub>) est une base orthonormale de F,
+						<br/>alors &forall;x&in;E, p<sub>F</sub>(x) = <span class="indexed"><span class="top">p</span>&sum;<span class="bottom">i=1</span></span>(x|&epsilon;<sub>i</sub>)&epsilon;<sub>i</sub></li>
+				</ul>
+			</div>
+			<div class="prop">Inégalité de Bessel
+				<ul class="tl">
+					<li>(e<sub>n</sub>)<sub>n&in;N</sub> orthonormale</li>
+					<li class="then">&forall;x&in;E, &sum;(e<sub>n</sub>|x)<sup>2</sup> converge</li>
+					<li class="then"><span class="indexed"><span class="top">&infin;</span>&sum;<span class="bottom">n=0</span></span>(e<sub>n</sub>|x)<sup>2</sup> &le; &Vert;x&Vert;<sup>2</sup>
+				</ul>
+			</div>
+			<div class="def">Suite totale
+				<div class="tl">(u<sub>n</sub>)<sub>n&in;N</sub> est <em>totale</em> si: E = Vect(u<sub>n</sub>)<sub>n&in;N</sub><br/>
+					(ie. Vect(u<sub>n</sub>)<sub>n</sub> est dense dans E pour la norme &Vert;&middot;&Vert; associée à (&middot;|&middot;) )
+				</div>
+			</div>
+			<div class="prop">Inégalité de Bessel : cas d'égalité
+				<ul class="tl">
+					<li>(e<sub>n</sub>)<sub>n&in;N</sub> orthonormale, totale</li>
+					<li>p<sub>n</sub> la projection orthogonale sur Vect(e<sub>0</sub>,&hellip;e<sub>n</sub>)</li>
+					<li class="then">&forall;x&in;E,<br/>
+						p<sub>n</sub><span class="indexed"><span class="top">&nbsp;</span>&rarr;<span class="bottom">n &rarr; &infin;</span></span> x dans (E,&Vert;&nbsp;&Vert;)</li>
+					<li class="then">&Vert;x&Vert;<sup>2</sup> = <span class="indexed"><span class="top">&infin;</span>&sum;<span class="bottom">n=0</span></span>(e<sub>n</sub>|x)<sup>2</sup></li>
+				</ul>
+			</div>
+			<p class="rq">Remarque :<br/>
+				p<sub>n</sub>(x) = <span class="indexed"><span class="top">n</span>&sum;<span class="bottom">k=1</span></span>(x|&epsilon;<sub>k</sub>)&epsilon;<sub>k</sub><br/>
+				Donc x = <span class="indexed"><span class="top">&infin;</span>&sum;<span class="bottom">i=0</span></span>(x|&epsilon;<sub>i</sub>)&epsilon;<sub>i</sub>
+			</p>
+			<div class="ex">La famille des polynômes de Legendre est-elle totale ?
+				<div class="tl">
+					wip, utliser le théorème de Stone-Weierstrass...
+				</div>
+			</div>
+	<h2 id="ee">II. Espaces euclidiens</h2>
+			<p>Un espace euclidien est un espace pré-hilbertien réel de dimension finie</p>
+			<div class="prop">Propriété des espaces euclidiens
+				<ul class="tl">
+					<li>Tout espace euclidien E&ne;{&empty;} admet des bases orthonormales</li>
+					<li>E euclidien, F sev de E <br/>
+					&rArr; alors E = F&oplus;F<sup>&perp;</sup> et F = F<sup>&perp;&perp;</sup></li>
+					<li>Toute famille northonormale peut être complétée en une base orthonormale</li>
+				</ul>
+			</div>
+		<h3>1)Groupe orthogonal</h3>
+			<div class="def">Groupe orthogonal de E
+				<div class="tl">u&in;L(E) est dite <em>orthogonale</em> si: &forall;x,y&in;E, (u(x)|u(y)) = (x|y)
+				</div>
+			</div>
+			<div class="prop">Caractérisation du groupe orthogonal
+				<div class="tl">u est <em>orthogonale</em> &hArr; &forall;x&in;E, &Vert;u(x)&Vert; = &Vert;x&Vert;
+				</div>
+			</div>
+			<div class="prop">Sous-groupe
+				<div class="tl">O(E) = {u&in;L(E)|u orthogonale} est un sous-groupe de GL(E), dit <em>groupe orthogonal</em>
+				</div>
+			</div>
+			<p class="rq">Remarque :<br/>
+				u&in;O(E). Soit &lambda;&in;Sp(u), soit x&in;E<sub>&lambda;</sub>(u)\{0}<br/>
+				&Vert;u(x)&Vert; = &Vert;&lambda;x&Vert; = |&lambda;|&Vert;x&Vert;<br/>
+				or &Vert;u(x)&Vert; = &Vert;x&Vert;<br/>
+				Donc |&lambda;| = 1, puis Sp(u) &sub; {&minus;1,1}
+			</p>
+			<div class="prop">Groupe orthogonal et bases
+				<div class="tl">u&in;L(E). On a l'équivalence des assertions suivantes :
+					<ol type='i'>
+						<li>u&in;O(E)</li>
+						<li>&exist;B base orthonormale de E tq u(B) base orthonormale de E</li>
+						<li>&forall;B base orthonormale de E, u(B) est une base orthonormale de E</li>
+					</ol>
+				</div>
+			</div>
+			<div class="ex">Symétrie orthogonale
+				<div class="tl">...
+				</div>
+			</div>
+		<h3>2)Matrices orthogonales</h3>
+			<div class="def">Matrice orthogonale
+				<div class="tl">M&in;M<sub>n</sub>(R)<br/>
+					M est <em>orthogonale</em> s: <sup>t</sup>MM = I<sub>n</sub>
+				</div>
+			</div>
+			<div class="prop">Matrice transposée orthogonale
+				<div class="tl">
+					M est orthogonale &hArr; <sup>t</sup>M est orthogonale
+				</div>
+			</div>
+			<div class="prop">Sous-groupe
+				<div class="tl">O(n) = {M&in;M<sub>n</sub>(R)|<sup>t</sup>MM = I<sub>n</sub>} est un sous-groupe de GLn(R), dit <em>groupe orthogonal</em>
+				</div>
+			</div>
+			<div class="prop">Colonnes - Base orthonormale de R<sup>n</sup> euclidien canonique
+				<div class="tl">M&in;O(n) &hArr; Les colonnes de M&in;M<sub>n</sub>(R) forment une base orthonormale de R<sup>n</sup> euclidien canonique 
+				</div>
+			</div>
+			<div class="prop">Lien endomorphisme orthonormal, matrice orthonormale
+				<div class="tl">Soit u&in;L(E), B une base orthonormale de E, alors <br/>
+					u&in;O(E) &hArr; M<sub>B</sub>(u)&in;O(n)
+				</div>
+			</div>
+			<p class="csq">Conséquence :</p>
+			<div class="prop">Matrices de passage
+				<div class="tl">Soit M&in;M<sub>n</sub>(R)<br/>
+					M&in;O(n) &hArr; &exist;B, B' des b.o.n. de E tq M = P<sub>B&rarr;B'</sub> = P<sub>B</sub><sup>B'</sup>
+				</div>
+			</div>
+			<h4>Orientation d'un espace euclidien</h4>
+			<p>...</p>
+		<h3>3)O(2), O(3)</h3>
+			<h4>O(2)</h4>...
+			<p>R<sub>&theta;</sub> =., &Sigma;<sub>&theta; =.
+			</p>
+
+			<div class="prop">
+				<div class="tl">SO(2) est un groupe commutatif</div>
+			</div>
+
+			<p>Angle d'une rotation...</p>
+			<p class="rq">Remarque...</p>
+			<h4>O(3)</h4>
+				<h5>Produit mixte...</h5>
+		<h3>4)Isomorphisme canonique entre E et E*</h3>
+			<p>a&in;E<br/>
+				<div></div>
+				&phi;<sub>a</sub> : <div class="funct">E &rarr;R<br/>x &mapsto; (a|x)</div><br/>
+				&phi;<sub>a</sub>&in;E*<br/>
+				&theta; : <div class="funct">E &rarr; E*<br/>a &mapsto; &phi;<sub>a</sub></div>
+			</p>
+			<div class="prop">
+				<div class="tl">&theta; est un isomorphisme</div>
+			</div>
+
+			<div class="ex">Application : Produit vectoriel
+				<div class="tl">...
+				</div>
+			</div>
+			<div class="prop">Produit vectoriel
+				<div class="tl">...
+				</div>
+			</div>
+			<div class="prop">Produit vecetoriel, n=3
+				<div class="tl">...
+				</div>
+			</div>
+		<h3>5)Réduction orthogonale dans O(n),O(E)</h3>
+			<div class="prop">Stabilité de l'orthogonal par l'endomorphisme orthogonal
+				<ul class="tl">
+					<li>Soit u&in;O(E) F un sev de E</li>
+					<li>F stable par u</li>
+					<li class="then">F<sup>&perp;</sup> stable par u</li>
+				</ul>
+			</div>
+			<div class="prop">Lemme : Droite stable, Plan stable
+				<ul class="tl">
+					<li>Soit E un espace vectoriel réel de dimension finie n&ge;1</li>
+					<li>u&in;L(E)</li>
+					<li class="then">il existe au moins une droite (propre) stable par u ou un plan stable par u</li>
+				</ul>
+			</div>
+			<div class="prop">Théorème : Réduction orthogonale
+				<div class="tl">u&in;O(E)<br/>
+					&exist;B une b.o.n. dans laquelle<br/>
+					M<sub>B</sub>(u) = <img style="max-width:20%;height:auto;vertical-align:middle;" src="reduction_orthogonale.png"/>, 
+					où R<sub>&theta;</sub> = <img style="max-width:12%;height:auto;vertical-align:middle;" src="matrice_rotation.png" /> avec &theta; &notin; &pi;&Zopf;
+				</div>
+			</div>
+			<div class="ex">Exercice : SO(n) est connexe par arcs
+				<div class="tl">...
+				</div>
+			</div>
+		<h3>6)Endomorphismes symétriques</h3>
+			<div class="def">Endomorphisme symétrique
+				<div class="tl">u&in;L(E) est dit <em>symétrique</em> si: &forall;x,y&in;E, (u(x)|y) = (x|u(y))
+				</div>
+			</div>
+			<div class="prop">Stabilité de l'orthogonal par l'endomorphisme symétrique
+				<ul class="tl">
+					<li>Soit u&in;L(E) symétrique, F un sev de E</li>
+					<li>F stable par u</li>
+					<li class="then">F<sup>&perp;</sup> stable par u</li>
+				</ul>
+			</div>
+			<div class="prop">Projecteur orthogonal
+				<div class="tl">
+					Soit p&in;L(E) un projecteur (ie. p&compfn;p=p)<br/>
+					p symétrique &hArr; p est un projecteur orthogonal
+				</div>
+			</div>
+			<div class="prop">Lien endomorphisme symétrique, matrice symétrique
+				<div class="tl">
+					Soit u&in;L(E), B une b.o.n. de E<br/>
+					u symétrique &hArr; M<sub>B</sub>(u) est symétrique
+				</div>
+			</div>
+			<div class="prop">Théorème spectral
+				<ul class="tl">
+					<li>Soit u&in;L(E) symétrique</li>
+					<li class="then">Alors u est diagonalisable</li>
+					<li class="then">
+						De plus, E = 
+						<div class="indexed"><span class="top">&perp;</span>&oplus;<span class="bottom">&lambda;&in;Sp(u)</span></div>
+						E<sub>&lambda;</sub>(u)
+					</li>
+					<li class="then">En particulier, il existe une b.o.n. propre pour u</li>
+				</ul>
+			</div>
+			<div class="prop">Théorème spectral : Version matricielle
+				<ul class="tl">
+					<li>Soit A&in;M<sub>n</sub>(R) symétrique</li>
+					<li class="then">Alors A est diagonalisable</li>
+					<li class="then">A est orthogonalement semblable à une matrice diagonale, ie.<br/>
+						&exist;P&in;O(n), D diagonale telle que A = PDP<sup>&minus;1</sup> = PD<sup>t</sup>P
+					</li>
+				</ul>
+			</div>
+		<p id="signature">jz</p>
+	</body>
+</html>

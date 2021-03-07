@@ -1,0 +1,204 @@
+body {
+	font-family: "Arial";
+	background-color:#5af; /*arrière plan bleu clair*/
+	color:#005; /*texte en bleu foncé*/
+}
+
+#title { /*en haut de la page*/
+	color:#fff;
+	font-weight:bold;
+	font-size:150%;
+	text-align:center;
+}
+
+a {
+	font-size:0.8em;
+	color:#fff;
+	text-decoration:underline;
+}
+
+#home {
+	position:sticky;
+	top:0px;
+}
+/*.sommaire:visited {
+	color:#06F;
+}*/
+
+.sommaire>a:hover {
+	background-color:#000;
+	color:#fff;
+	padding:5px 1em 10px 1em;
+}
+
+h1, .sommaire a{ /*Titres des chapitres*/
+	font:2em "Segoe UI Black";
+	color:#FF0;
+	text-decoration:underline;
+	}
+
+h1, .sommaire {text-align:center;}
+
+.rq{
+	margin-left:10%;
+}
+
+.def,.prop,.ex { /*Paragraphes encadrés*/
+	margin:auto;
+	margin-bottom:1em;
+	max-width:900px;
+	transition:1s;
+	border-radius:15px;
+	box-shadow:2px 2px 3px #035;
+	padding-top:3px; /*Bordure haute du titre*/
+
+	background-color: #068; /*Anciennement titre et Boite séparées, désormais fusionnés*/
+	font-weight:bold;
+	color:#fff;
+	border-radius:15px;
+	border:1px solid #068;
+}
+
+.def::before, .prop::before, .ex::before{
+	content:"\00a0";
+}
+
+.def:hover,.prop:hover { /*Effet zoom*/
+	font-size:120%;
+	max-width:1080px;
+	transition:.3s;
+}
+
+.def {
+	box-shadow:2px 2px 3px #C00;
+	background-color:#E00;
+	border:1px solid #E00;
+}
+
+.ex {
+	box-shadow:none;
+	background-color:#0A0;
+	border:1px solid #0A0;
+}
+
+.tl{ /*Corps des paragraphes encadrés*/
+	margin-bottom:0;
+	margin-top:5px; /*Bordure basse du titre*/
+	font-weight:initial;
+	color:#005;
+	/*padding-left:5px;*/
+	padding:10px 1em 10px 1em;
+	background-color:#CFF;
+	border-radius: 0 0 15px 15px;
+	list-style-type:">";
+}
+
+.def > .tl{
+	border-color:#C00;
+	background-color:#E8E8E8;
+	color:#500;
+}
+
+em {font-weight : bold;color:#03F;}
+.def .tl > em{color:#C00;}
+
+ol.order_1 {
+	list-style-type:upper-roman; /*I*/
+}
+ol.order_2 {
+	list-style-type:upper-latin;/*A*/
+}
+ol.order_3 {
+	list-style-type:decimal; /*1*/
+}
+
+/*.order_3>::marker {
+	color:black;
+}*/
+
+ol.order_4 {
+	list-style-type:lower-roman; /*i*/
+}
+
+ul.nobullet {
+	list-style-type:none;
+}
+
+li.then {
+	list-style-type:"\21D2";
+}
+
+#signature {
+	color:#222;
+	text-align:right;
+	font-size:1em;
+	bottom:5px;
+	position:sticky;
+}
+
+/*Fractions, source : https://stackoverflow.com/questions/7525977/how-to-write-fraction-value-using-html */
+.frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+}
+.frac > span {
+    display: block;
+    padding: 0.1em;
+}
+.frac span.bottom {
+    border-top: thin solid #005;
+}
+.frac span.symbol {
+    display: none;
+}
+
+/*.indexed {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.indexed > span {display:block;}
+
+.indexed span.top, .indexed span.bottom {font-size:70%;}*/
+.indexed {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+}
+
+.indexed > span {display:block;}
+
+.indexed span.top, .indexed span.bottom {font-size:70%;}
+.indexed span.bottom {
+	position:relative;
+	padding-top:20%;
+}
+
+.sqrt{
+	border-top:thin solid;
+}
+
+.sqrt::before{
+	content:"√";
+	border-top:thin solid #fff;
+}
+/**/
+
+.funct{
+	display:inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.funct > span {
+	display:block;
+}

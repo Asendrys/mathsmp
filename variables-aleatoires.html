@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MP : Variables aléatoires</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<p id="title">MATHS</p>
+		<a href="sommaire.html" id="home">Retour au sommaire</a>
+		<h1>Variables aléatoires</h1>
+		<h2>wip</h2>
+		<div class="def">Variables aléatoires discrètes sur (&Omega;,T,P)
+			<div class="tl">
+				X:&Omega;&rarr;E est une <em>Variable aléatoire discrète</em> si:
+				<ul>
+					<li>X(&Omega;) est finie ou dénombrable</li>
+					<li>&forall;x&in;X(&Omega;), X<sup>&minus;1</sup>({x})&in;T</li>
+				</ul>
+			</div>
+		</div>
+		<p>(X=a) = {&omega;&in;&Omega;,X(&omega; = a)} = X<sup>&minus;1</sup>({a})</p>
+
+		<div class="def">Loi de probabilité de X
+			<div class="tl">
+				<div class="funct">
+					<span>X(&Omega;) &rarr;[0,1]</span>
+					<span>x &mapsto; P(X=x)</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="prop">Proposition
+			<div class="tl">
+				P<sub>X</sub>:
+				<div class="funct">
+					<span>P(X(&Omega;)&rarr;[0,1]</span>
+					<span>A&mapsto;P(X&in;A)</span>
+				</div>
+				est une probabilité sur (X(&Omega;), P(X(&Omega;)))
+			</div>
+		</div>
+
+		<div class="prop">Proposition
+			<div class="tl">
+				Soit I fini ou dénombrable<br/>
+				et (x<sub>i</sub>,p<sub>i</sub>)<sub>i&in;I</sub> famille de R<sup>n</sup>&times;R, (x<sub>i</sub>)<sub>i&in;I</sub> étant deux à deux distincts<br/>
+				(x<sub>i</sub>,p<sub>i</sub>)<sub>i&in;I</sub> est la loi de probabilité d'une variable aléatoire
+				<ul>
+					&hArr;
+					<li>&forall;i&in;I, p<sub>i</sub> &ge; 0</li>
+					<li>
+						<div class="indexed">
+							<span class="top">&nbsp;</span>
+							&sum;
+							<span class="bottom">i&in;I
+						</div>
+						p<sub>i</sub> = 1
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div class="prop not">Notation
+			<p class="tl">
+				La variable aléatoire X suit la loi L : X~L<br/>
+				X et Y suivent la même loi : X~Y
+			</p>
+		</div>
+
+		<div class="prop">Variables aléatoires finies
+			<ul class="tl">
+				X(&Omega;) est fini
+				<li><em>Loi uniforme</em> :<br/>
+					&Omega; fini.<br/>
+					&forall;&omega;&in;&Omega;, P({&omega;}) = 
+					<div class="frac">1<span class="bottom">|&Omega;|</span></div><br/>X~U(n)
+				</li>
+				<li><em>Loi de Bernoulli</em> : p&in;[0,1] <br/>
+					<ul>
+						<li>X(&Omega;) = {0,1}</li>
+						<li>P(X=1) = p</li>
+						<li>P(X=0) = 1-p</li>
+					</ul>
+					X~B(p)
+				</li>
+				<li><em>Loi binômiale</em> : p&in;[0,1], n&in;N*<br/>
+					<ul>
+						<li>X(&Omega;) = [[0,n]]</li>
+						<li>&forall;1&le;k&le;n, P(X=k) = (n k)p<sup>k</sup>(1-p)<sup>n-k</sup> (( (n k) = binome n k  ...))</li>
+					</ul>
+					X~B(n,p)
+				</li>
+			</ul>
+		</div>
+
+		<div class="ex">Exercice : Loi hypergéométrique
+			<p class="tl">...
+			</p>
+		</div>
+
+		<div class="prop">Variables aléatoires discrètes
+			<ul class="tl">
+				<li><em>Loi géométrique</em> : p&in;]0,1[
+					<ul>
+						<li>X(&Omega;) = N<sup>*</sup></li>
+						<li>&forall;k&in;N<sup>*</sup>, P(X=k) = p(1-p)<sup>k-1</sup></li>
+					</ul>
+					X~G(p)
+				<li><em>Loi de Poisson</em> : &lambda;>0
+					<ul>
+						<li>X(&Omega;) = N</li>
+						<li>&forall;k&in;N, P(X=k) = e<sup>&minus;&lambda;</sup>&middot;<div class="frac">&lambda;<sup>k</sup><span class="bottom">k!</span></div></li>
+					</ul>
+					X~P(&lambda;)
+				</li>
+			</ul>
+		</div>
+		<p>...</p>
+		<div class="prop">Propriétés de L<sup>1</sup>(&Omega;)
+			<ul class="tl">
+				<li>X&in;L<sup>1</sup> &hArr; |X|&in;L<sup>1</sup></li>
+				<li>|X|&le;Y, Y&in;L<sup>1</sup> &rArr; X&in;L<sup>1</sup></li>
+				<li>X,Y&in;L<sup>1</sup>, a,b&in;R &rArr; aX+bY&in;L<sup>1</sup> et E(aX+bY) = aE(X) + bE(Y)</li>
+				<li>X(&Omega;)&sub;R<sup>+</sup>, X&in;L<sup>1</sup> &rArr; E(X) &ge; 0</li>
+				<li>Si X=a presque sûrement alors E(X) = a</li>
+				<li>X,Y&in;L<sup>1</sup> indépendantes &rArr; XY&in;L<sup>1</sup> et E(XY) = E(X)E(Y)</li>
+				<li>X,Y&in;L<sup>1</sup>, X&le;Y &rArr; E(X) &le; E(Y)</li>
+			</ul>
+		</div>
+
+		<div class="prop">Propriété de la variance
+			<ul class="tl">
+				<li>X&in;L<sup>2</sup>(&Omega;)</li>
+				<li>a,b&in;R</li>
+				<li class="then">aX+b&in;L<sup>2</sup>(&Omega;)</li>
+				<li class="then">V(aX+b) = a<sup>2</sup>V(X)</li>
+			</ul>
+		</div>
+
+		<div class="prop">Série génératrice (WIP)
+			<div class="tl">
+				G<sub>X</sub>(t) = E(t<sup>X</sup>) = 
+						<div class="indexed">
+							<span class="top">&infin;</span>
+							&sum;
+							<span class="bottom">n = 0
+						</div>
+				t<sup>n</sup>P(X=n)<br/>
+				...<br/>
+				Sous réserve d'existence,<br/>
+				E(X) = G<sub>X</sub>'(1)<br/>
+				V(X) = G<sub>X</sub>"(1) + G<sub>X</sub>'(1) - G<sub>X</sub>'(1)<sup>2</sup>
+			</div>
+		</div>
+		...
+		<div class="prop">Inégalité de Markov
+			<div class="tl">
+				Z variable aléatoire discrète positive, admettant une espérance &rArr; &forall;&alpha;&gt;0, P(Z&ge;&alpha;) &le; <div class="frac">E(Z)<span class="bottom">&alpha;</span></div>
+			</div>
+		</div>
+
+		<div class="prop">Inégalité de Bienaymé-Tchébychev
+			<div class="tl">
+				X variable aléatoire discrète positive, admettant une variance &rArr; &forall;&epsilon;&gt;0, P(|X-E(X)|&ge;&epsilon;) &le; <div class="frac">V(X)<span class="bottom">&epsilon;<sup>2</sup></span></div>
+			</div>
+		</div>
+
+		<div class="prop">Inégalité de Cauchy-Schwarz
+			<div class="tl">
+				X,Y&in;L<sup>2</sup>(&Omega;) &rArr; XY&in;L<sup>2</sup>(&Omega;) et |E(XY)| &le; <span class="sqrt">E(X<sup>2</sup>)</span><span class="sqrt">E(Y<sup>2</sup>)</span>
+			</div>
+		</div>
+
+		<div class="prop">Loi faible des grands nombres
+			<ul class="tl">
+				<li>(X<sub>n</sub>)<sub>n&in;N</sub> réelles discrètes, 2 à 2 indépendantes, de même loi, admettant un moment d'ordre 2</li>
+				<li>m = E(X<sub>i</sub>)</li>
+				<li>V = V(X<sub>i</sub>)</li>
+				<li>S<sub>n</sub> =<div class="indexed">
+							<span class="top">n</span>
+							&sum;
+							<span class="bottom">k = 1
+						</div>X<sub>k</sub>
+				<li class="then">&forall;&epsilon;>0, P(|<div class="frac">S<sub>n</sub><span class="bottom">n</span></div> &minus; m| &ge; &epsilon;) &le; <div class="frac">V<span class="bottom">n&epsilon;<sup>2</sup></span></div></li>
+
+			En particulier, P(|<div class="frac">S<sub>n</sub><span class="bottom">n</span></div> &minus; m| &ge; &epsilon;) &rarr; 0
+			</ul>
+		</div>
+
+		<div class="prop">Loi binômiale, loi de Poisson
+			<ul class="tl">
+				<li>(p<sub>n</sub>)<sub>n&in;N</sub> &in; [0,1]<sub>N</sub></li>
+				<li>&lambda;>0. On suppose que np<sub>n</sub> &rarr; &lambda;</li>
+				<li>(X<sub>n</sub>)<sub>n&in;N</sub>, &forall;n&in;N, X<sub>n</sub> ~ B(n,p<sub>n</sub>)</li>
+				<li class="then">&forall;k&in;N, P(X<sub>n</sub>=k) &rarr;<sub>n&rarr;&infin;</sub>e<sup>&minus;&lambda;&middot;<div class="frac">&lambda;<sup>k</sup><span class="bottom">k!</span></div></sup></li>
+			</ul>
+		</div>
+		<p id="signature">jz</p>
+	</body>
+</html>
