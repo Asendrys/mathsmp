@@ -27,33 +27,32 @@ header h1{
 	text-align:right;
 }
 
-nav{
+nav{ /*positionner le nav en haut a gauche*/
 	display:inline-block;
 	position:absolute;
 	top:5px;
 }
 
-nav .but{
+nav .but{ /*boutton [o]*/
 	display:inline-block;
-	line-height:2em;
+	line-height:2em; /*centrer le o verticalement*/
 	width:2em;
 	height:2em;
 	border:#005 solid 2px;
 	text-align:center;
-	vertical-align:baseline;
 	vertical-align:middle;
 }
 
 nav .bar{
 	display:none;
-}
-
-nav:hover .bar{
-	display:block;
 	margin:0;
 	background-color:#fff;
 	list-style-type:none;
 	padding:0px;
+}
+
+nav:hover .bar{
+	display:block;
 }
 
 .bar li{
