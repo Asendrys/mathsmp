@@ -29,11 +29,10 @@
 							<li><a href="404.html">17 Calcul différentiel</a></li>
 					</ul>
 				</nav>
-			<p id="title">MATHS</p>
+			<p id="title"><a href="sommaire.html">MATHS</a></p>
 			<h1>Équations différentielels linéaires</h1>
-			<div id="home"><a href="sommaire.html">Retour au sommaire</a></div>
 		</header>
-		<h2>Equations différentielles linéaires scalaires d'ordre 1</h2>
+		<h2>I. Équations différentielles linéaires scalaires d'ordre 1</h2>
 		<p>K = R ou C</p>
 		<div class="def">Équadiff
 			<p class="tl">
@@ -94,7 +93,190 @@
 			</div>
 		</div>
 		<div class="ex">Exemple
-			<p class="tl"></p>
+			<p class="tl">Résoudre x(1&minus;x)y' + y = x sur ]&minus;&infin;,0[ ou ]0,1[ ou ]1,+&infin;[</p>
 		</div>
+		<h2>II. Équations différentielles linéaires. Théorie générale</h2>
+		<h3>1) Équations différentielles linéaires d'ordre 1</h3>
+		<p>I intervalle de R, F evn de dimension finie sur K</p>
+		<div class="def">Définition
+			<p class="tl">
+				(E) x' = a(t)x + b(t)<br/>
+				où a : I &rarr; L(F) continue<br/>
+				et b : I &rarr; F continue<br/>
+				Solution de (E) : &phi; : I &rarr; F de classe C<sup>1</sup> telle que <br/>
+				&forall;t&in;I, &phi;'(t) = a(t)(&phi;(t)) + b(t)
+			</p>
+
+		</div>
+		<div class="def">Problème de Cauchy
+			<p class="tl">
+				t<sub>0</sub> &in; I, x<sub>0</sub>&in;F<br/>
+				On note (P)<br/>
+				x' = a(t)x + b(t)<br/>
+				x(t<sub>0</sub> = x<sub>0</sub>)<br/>
+				Problème de Cauchy
+			</p>
+		</div>
+		<p class="rq">Remarque : Soit x...</p>
+		<div class="prop">Équation homogène associée
+			<p class="tl">
+				(E) x' = a(t)x + b(t) <br/>
+				(EH) x' = a(t)x équation homogène associée
+			</p>
+		</div>
+		<div class="prop">Version matricielle
+			<div class="tl">
+				B = (e<sub>1</sub>,&hellip;,e<sub>n</sub>) base de F<br/>
+				&forall;t&in;I, A(t) = M<sub>B'</sub>(a(t)), B(t) = M<sub>B</sub>(b(t))<br/>
+				x:I &rarr; F<br/>
+				X(t) = M<sub>B</sub>(x(t))<br/>
+				t&mapsto;A(t) continue<br/>
+				t&mapsto;B(t) continue<br/>
+				x est solution de (E) si et seulement si<br/>
+				&forall;t&in;I, X'(t) = A(t)X(t) + B(t)<br/>
+				X(t) = (<div style="display:inline-block;vertical-align:middle;">x<sub>1</sub>(t)<br/>x<sub>2</sub>(t)</div>)<br/>
+				x(t) = <div class="indexed"><span class="top">n</span>&sum;<span class="bottom">i=1</span></div>x<sub>i</sub>(t)e<sub>i</sub><br/>
+				&forall;1&le;i&le;n, x'<sub>i</sub>(t) = a<sub>i,1</sub>(t)x<sub>1</sub>(t) + &hellip; + a<sub>1,n</sub>x<sub>n</sub>(t) + b<sub>i</sub>(t)<br/>
+				On obtient un système différentiel linéaire d'ordre 1
+			</div>
+		</div>
+
+		<div class="prop">Théorème de Cauchy-Lipschitz
+			<ul class="tl">
+				<li>a : I&rarr;L(F), b : I&rarr;F continues</li>
+				<li>t<sub>0</sub>&in;I, x<sub>0</sub>&in;F</li>
+				<li class="then">Il existe une unique solution au problème (P) :<br>
+					x' = a(t)x + b(t)<br/>
+					x(t<sub>0</sub>) = x<sub>0</sub>
+				</li>
+			</ul>
+		</div>
+		<div class="prop">&Phi;<sub>t<sub>1</sub></sub>
+			<div class="tl">
+				t<sub>1</sub>&in;I.<br/>
+				&Phi;<sub>t<sub>1</sub></sub> : {<div class="funct">S<sub>H</sub>&rarr;F<br/>
+					x&mapsto;x(t<sub>1</sub>)</div> est un isomorphisme d'espace vectoriel<br/>
+					En particulier, S<sub>H</sub> est un K-ev de dimension dimF
+			</div>
+		</div>
+		<div class="prop">Structure de l'ensemble des solutions
+			<p class="tl">
+				Soit y&in;S<br/>
+				S = y + S<sub>H</sub><br/>
+				S est un espace affine, dirigé par S<sub>H</sub>
+			</p>
+		</div>
+		<h4>Système fondamental de solutions</h4>
+		<p>B = (e<sub>1</sub>,&hellip;,e<sub>n</sub>) base de F<br/>
+		x<sub>1</sub>,&hellip;,x<sub>n</sub> des solutions de (EH)</p>
+		<div class="prop">Proposition
+			<div class="tl">Les énoncés suivants sont équivalents :
+				<ul type="i">
+					<li>(x<sub>1</sub>,&hellip;,x<sub>n</sub>) base de S<sub>H</sub></li>
+					<li>&exist;t&in;I, det<sub>B</sub>((x<sub>1</sub>(t),&hellip;,x<sub>n</sub>(t))) &ne; 0</li>
+					<li>&forall;t&in;I, det<sub>B</sub>((x<sub>1</sub>(t),&hellip;,x<sub>n</sub>(t))) &ne; 0</li>
+				</ul>
+				On dit alors que (x<sub>1</sub>,&hellip;,x<sub>n</sub>) est un <em>système fondamental de solutions</em> de (EH)
+			</div>
+		</div>
+
+		<div class="prop">Variation des constantes
+			<p class="tl">blabla
+			</p>
+		</div>
+		<div class="prop">Version matricielle
+			<p class="tl">blabla
+			</p>
+		</div>
+		<h3>2) Exponentielle d'endormorphisme, de matrice</h3>
+		<div class="def">Définition
+			<div class="tl">
+				F de dimension finie<br/>
+				a&in;L(F)<br/>
+				e<sup>a</sup> = <div class="indexed"><span class="top">&infin;</span>&sum;<span class="bottom">n=0</span></div><div class="frac">a<sup>n</sup><span class="bottom">n!</span></div>
+			</div>
+		</div>
+		<p>Justification : car la somme esst absolument convergente (norme linéaire)</p>
+		<div class="prop">Rappel
+			<ul class="tl">
+				<li>a,b&in;L(F)</li>
+				<li>a&compfn;b = b&compfn;a</li>
+				<li class="then">e<sup>a</sup>e<sup>b</sup> = e<sup>a+b</sup></li>
+			</ul>
+		</div>
+		<div class="prop">Proposition
+			<div class="tl">
+				exp:<div class="funct">L(F) &rarr; L(F)<br/>a&mapsto;e<sup>a</sup></div> est continue
+			</div>
+		</div>
+		<div class="prop">Proposition
+			<div class="tl">
+				a&in;L(F)<br/>
+				f:<div class="funct">R&rarr;L(F)<br/>t&mapsto;e<sup>ta</sup></div><br/>
+				f est dérivable et &forall;t&in;R, f'(t) = ae<sup>ta</sup> = e<sup>ta</sup>a
+			</div>
+		</div>
+		<p>Version matricielle : ...</p>
+		<h3>3) Équation differentielle linéaire &agrave; coefficients constants</h3>
+		<div class="def">Définition
+			<p class="tl">
+				(E) x' = ax + b(t) où a&in;L(F), b:I&rarr;F continue<br/>
+				(EH) x' = ax
+			</p>
+		</div>
+		<div class="prop">Solutions de (EH)
+			<div class="tl">
+				Les solutions de (EH) sont les fonctions <div class="funct">R&rarr;F<br/>t&mapsto;e<sup>ta</sup>x<sub>0</sub>, x<sub>0</sub>&in;F</div>
+			</div>
+		</div>
+		<div class="prop">Base de (EH)
+			<p class="tl">
+				&epsilon; = (&epsilon;<sub>1</sub>,&hellip;,&epsilon;<sub>n</sub>) base de F<br/>
+				&forall;i, x<sub>i</sub>(t) = e<sup>ta</sup>&epsilon;<sub>i</sub><br/>
+				det<sub>&epsilon;</sub>(x<sub>1</sub>(0),&hellip;,x<sub>n</sub>(0)) = det<sub>&epsilon;</sub>(&epsilon;<sub>1</sub>,&hellip;,&epsilon;<sub>n</sub>) = 1 &ne; 0<br/>
+				On en déduit que (x<sub>1</sub>,&hellip;,x<sub>n</sub>) est une base de (SH)
+			</p>
+		</div>
+		<p class="rq">Remarque : det<sub>&epsilon;</sub>(e<sup>ta</sup>(&epsilon;<sub>1</sub>,&hellip;,e<sup>ta</sup>(&epsilon;<sub>n</sub>))) = det(e<sup>ta</sup>) (= e<sup>tr(ta)</sup>)</p>
+		<div class="prop">Solutions de (E)
+			<p class="tl">
+				...
+			</p>
+		</div>
+		<div class="prop">Version matricielle
+			<p class="tl">...
+			</p>
+		</div>
+		<div class="prop">Lien avec la réduction
+			<ul class="tl">
+				<li>A&in;M<sub>n</sub>(K)</li>
+				<li>A diagonalisable</li>
+				<li class="then">Alors les solutions de X' = AX sont les fonctions t&mapsto;<div class="indexed"><span class="top">n</span>&sum;<span class="bottom">i=1</span></div>&alpha;<sub>i</sub>e<sup>&lambda;<sub>i</sub>t</sup>C<sub>i</sub>,</li>
+				<li class="then">(&alpha;<sub>1</sub>,&hellip;,&alpha;<sub>n</sub>) &in;K<sup>n</sup></li>
+				<li class="then">où les &lambda;<sub>i</sub> sont les valeurs propres de A et (C<sub>1</sub>,&hellip;,C<sub>n</sub>) une base propre associée aux &lambda;<sub>i</sub></li>
+			</ul>
+		</div>
+		<p class="rq">Remarque : i.ii. iii. ...</p>
+		<div class="ex">Exemples
+			<p class="tl">
+				i. Résoudre système<br/>
+				ii.<br/>
+			</p>
+		</div>
+		<h2>III. Équations différentielles linéaires scalaires d'ordre 2</h2>
+		<div class="prop">Proposition
+			<p class="tl">
+			</p>
+		</div>
+		<h3>1) Problème de Cauchy</h3>
+		<h3>2) Variations des constantes</h3>
+		<h3>3) Wronskien</h3>
+		<h3>4) Cas particulier</h3>
+		<h3>5) Équations à coefficients constants</h3>
+		<h2>IV. Compléments</h2>
+		<h3>1) Équations différentielles linéaires scalaires d'ordre n</h3>
+		<h3>2) Équations à coefficients constants</h3>
+		<h3>3) Utilisation de séries entières</h3>
+		<h3>4) Changement de variable, de fonction</h3> 
 	</body>
 </html>
