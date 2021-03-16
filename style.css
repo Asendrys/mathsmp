@@ -80,16 +80,6 @@ nav:hover .but{
 	background-color:#005;
 }
 
-#home{
-	text-align:right;
-}
-
-#home a{
-	font-size:0.8em;
-	color:#fff;
-	text-decoration:underline;
-}
-
 .sommaire:visited {
 	color:#06F;
 }
