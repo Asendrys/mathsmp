@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 body {
-	font-family: "Arial";
+	font-family: 'Ubuntu', serif;
 	background-color:#5af; /*arrière plan bleu clair*/
 	color:#005; /*texte en bleu foncé*/
 }
@@ -260,4 +262,28 @@ li.then {
 
 .funct > span {
 	display:block;
+}
+
+.det {
+	display:inline-block;
+	border-left:solid 1px #005;
+	border-right:solid 1px #005;
+	padding-left:3px;
+	padding-right:3px;
+	vertical-align:middle;
+}
+.det div {
+}
+
+.matrix {
+	display:inline-block;
+	border-left:solid 1px #005;
+	border-right:solid 1px #005;
+	border-radius:5px;	
+	padding-left:3px;
+	padding-right:3px;
+}
+
+.matrix div {
+	display:inline-block;
 }
