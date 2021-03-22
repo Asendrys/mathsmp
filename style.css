@@ -272,8 +272,6 @@ li.then {
 	padding-right:3px;
 	vertical-align:middle;
 }
-.det div {
-}
 
 .matrix {
 	display:inline-block;
@@ -285,5 +283,4 @@ li.then {
 }
 
 .matrix div {
-	display:inline-block;
 }
