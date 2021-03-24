@@ -232,7 +232,7 @@ li.then {
 .indexed > span {display:block;}
 
 .indexed span.top, .indexed span.bottom {font-size:70%;}*/
-.indexed {
+/*.indexed {
     display: inline-block;
     position: relative;
     vertical-align: middle;
@@ -246,7 +246,7 @@ li.then {
 .indexed span.bottom {
 	position:relative;
 	padding-top:20%;
-}
+}*/
 
 .sqrt{
 	border-top:thin solid;
@@ -257,7 +257,7 @@ li.then {
 	border-top:thin solid #fff;
 }
 /**/
-
+/*
 .funct{
 	display:inline-block;
     position: relative;
@@ -285,4 +285,39 @@ li.then {
 	border-radius:5px;	
 	padding-left:3px;
 	padding-right:3px;
+}
+*/
+table.func{
+	display:inline-block;
+	vertical-align:middle;
+	border-collapse:collapse;
+	text-align:center;
+}
+table.func td{
+	padding:0px;
+}
+
+table.indexed{
+	display:inline-block;
+	vertical-align:middle;
+	border-collapse:collapse;
+	text-align:center;
+}
+table.indexed tr.index{
+	line-height:50%;
+	font-size:50%;
+	margin:2em;
+}
+
+table.det,table.matr{
+	border-left:solid black 1px;
+	border-right:solid black 1px;
+	display:inline-block;
+	vertical-align:middle;
+	border-collapse:collapse;
+	text-align:center;
+}
+table.matr{
+	border-radius:5px;
+	padding:3px;
 }

@@ -51,12 +51,12 @@
 			<div class="ex">Exemples de produits scalaires
 				<div class="tl">
 					<ol type="i">
-						<li>R<sup>n</sup>, B base canonique :<br/> (x|y)=<div class="indexed"><span class="top">n</span><span>&sum;</span><span class="bottom">i=1</span></div>x<sub>i</sub>y<sub>i</sub>=<sup>t</sup>XY</li>
-						<li>C<sup>0</sup>([a,b],R) :<br/> (f|g) = <div class="indexed"><span class="top">b</span><span>&int;</span><span class="bottom">a</span></div>f(t)g(t)dt</li>
+						<li>R<sup>n</sup>, B base canonique :<br/> (x|y)=<table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i=1</td></tr></table>x<sub>i</sub>y<sub>i</sub>=<sup>t</sup>XY</li>
+						<li>C<sup>0</sup>([a,b],R) :<br/> (f|g) = <table class="indexed"><tr class="index"><td>b</td></tr><tr><td>&int;</td></tr><tr class="index"><td>a</td></tr></table>f(t)g(t)dt</li>
 						<li>I un intervalle de R, L<sup>2</sup>(I)={f:I&rarr;R|f<sup>2</sup> intégrable et continue sur I} :<br/>
 						(f|g)=&int;<sub>I</sub> fg</li>
 						<li>I dénombrable, E = {(a<sub>i</sub>)<sub>i&in;I</sub>&in;R<sup>I</sup> | (a<sub>i</sub><sup>2</sup>)<sub>i&in;I</sub> sommable :<br/>
-							(a|b)=<div class="indexed"><span class="top">&nbsp;</span><span>&sum;</span><span class="bottom">i&in;I</span></div>a<sub>i</sub>b<sub>i</sub></li>
+							(a|b)=<table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>a<sub>i</sub>b<sub>i</sub></li>
 						<li>M<sub>n</sub>(R):<br/> (A|B)=Tr(<sup>t</sup>A&middot;B)</li>
 					</ol>
 				</div>
@@ -118,7 +118,7 @@
 					(F<sub>i</sub>)<sub>1&le;i&le;p</sub> sous-espaces de E
 					<ul class="tl">
 						<li>&forall;i&ne;j, &forall;x&in;F<sub>i</sub>, &forall;y&in;F<sub>j</sub>, (x|y) = 0 (ie. F<sub>i</sub>&perp;F<sub>j</sub>)
-						<li class="then">&sum;F<sub>i</sub> est directe, on dit que la somme est <em>directe orthogonale</em>, noté <div class="indexed"><span class="top">&perp;</span>&oplus;<span class="bottom">1&le;i&le;p</span></div>F<sub>i</sub></li>
+						<li class="then">&sum;F<sub>i</sub> est directe, on dit que la somme est <em>directe orthogonale</em>, noté <table class="indexed"><tr class="index"><td>&perp;</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>1&le;i&le;p</td></tr></table>F<sub>i</sub></li>
 					</ul>
 				</div>
 			</div>
@@ -126,7 +126,7 @@
 				<ul class="tl">
 					<li>On suppose que &sum;F<sub>i</sub> est directe orthogonale</li>
 					<li>Soit (x<sub>1</sub>,&hellip;,x<sub>p</sub>) &in; F<sub>1</sub> &times; &hellip; &times; F<sub>p</sub></li>
-					<li class="then">Alors &Vert; <div class="indexed"><span class="top">p</span>&sum;<span class="bottom">i</span></div>x<sub>i</sub>&Vert;<sup>2</sup> = <div class="indexed"><span class="top">p</span>&sum;<span class="bottom">i</span></div> &Vert;x<sub>i</sub>&Vert;<sup>2</sup></li>
+					<li class="then">Alors &Vert;<table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i</td></tr></table>x<sub>i</sub>&Vert;<sup>2</sup> = <table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i</td></tr></table>&Vert;x<sub>i</sub>&Vert;<sup>2</sup></li>
 				</ul>
 			</div>
 			<div class="def">Projection orthogonale
@@ -167,9 +167,9 @@
 			<h4>Calculs en base orthonormale</h4>
 			<p>
 				(e<sub>i</sub>)<sub>i&in;I</sub> base orthonormale de E<br/>
-				Soit x,y&in;E, x = <span class="indexed"><span class="top">&nbsp;</span>&sum;<span class="bottom">i&in;I</span></span>x<sub>i</sub>, y = <span class="indexed"><span class="top">&nbsp;</span>&sum;<span class="bottom">j&in;I</span></span>y<sub>j</sub><br/>
-				Alors (x|y) = <span class="indexed"><span class="top">&nbsp;</span>&sum;<span class="bottom">i&in;I</span></span>x<sub>i</sub>y<sub>i</sub><br/>
-				En particulier, &Vert;x<sub>i</sub>&Vert;<sup>2</sup> = <span class="indexed"><span class="top">&nbsp;</span>&sum;<span class="bottom">i&in;I</span></span>x<sub>i</sub><sup>2</sup>
+				Soit x,y&in;E, x = <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>x<sub>i</sub>, y = <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>j&in;I</td></tr></table>y<sub>j</sub><br/>
+				Alors (x|y) = <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>x<sub>i</sub>y<sub>i</sub><br/>
+				En particulier, &Vert;x<sub>i</sub>&Vert;<sup>2</sup> = <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>x<sub>i</sub><sup>2</sup>
 			</p>
 			<div class="prop">Orthonormalisation de Schmidt
 				<ul class="tl">
@@ -196,7 +196,7 @@
 			
 			<div class="ex">Exemple : Polynômes de Legendre
 				<div class="tl">
-					E = R[X], (P|Q) = <span class="indexed"><span class="top">1</span>&int;<span class="bottom">0</span></span> P(t)Q(t) dt<br/>
+					E = R[X], (P|Q) = <table class="indexed"><tr class="index"><td>1</td></tr><tr><td>&int;</td></tr><tr class="index"><td>0</td></tr></table> P(t)Q(t) dt<br/>
 					(X<sup>n</sup>)<sub>n&in;N</sub> base de E.<br/>
 					Il existe une unique famille (P<sub>n</sub>)<sub>n&in;N</sub> telle que
 					<ul>
@@ -212,14 +212,14 @@
 					<li>F s.e.v. de E, F de dimension finie</li>
 					<li class="then">E = F&oplus;F<sup>&perp;</sup></li>
 					<li class="then">si (&epsilon;<sub>1</sub>,&hellip;,&epsilon;<sub>p</sub>) est une base orthonormale de F,
-						<br/>alors &forall;x&in;E, p<sub>F</sub>(x) = <span class="indexed"><span class="top">p</span>&sum;<span class="bottom">i=1</span></span>(x|&epsilon;<sub>i</sub>)&epsilon;<sub>i</sub></li>
+						<br/>alors &forall;x&in;E, p<sub>F</sub>(x) = <table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i=1</td></tr></table>(x|&epsilon;<sub>i</sub>)&epsilon;<sub>i</sub></li>
 				</ul>
 			</div>
 			<div class="prop">Inégalité de Bessel
 				<ul class="tl">
 					<li>(e<sub>n</sub>)<sub>n&in;N</sub> orthonormale</li>
 					<li class="then">&forall;x&in;E, &sum;(e<sub>n</sub>|x)<sup>2</sup> converge</li>
-					<li class="then"><span class="indexed"><span class="top">&infin;</span>&sum;<span class="bottom">n=0</span></span>(e<sub>n</sub>|x)<sup>2</sup> &le; &Vert;x&Vert;<sup>2</sup>
+					<li class="then"><table class="indexed"><tr class="index"><td>&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=0</td></tr></table>(e<sub>n</sub>|x)<sup>2</sup> &le; &Vert;x&Vert;<sup>2</sup>
 				</ul>
 			</div>
 			<div class="def">Suite totale
@@ -232,13 +232,13 @@
 					<li>(e<sub>n</sub>)<sub>n&in;N</sub> orthonormale, totale</li>
 					<li>p<sub>n</sub> la projection orthogonale sur Vect(e<sub>0</sub>,&hellip;e<sub>n</sub>)</li>
 					<li class="then">&forall;x&in;E,<br/>
-						p<sub>n</sub><span class="indexed"><span class="top">&nbsp;</span>&rarr;<span class="bottom">n &rarr; &infin;</span></span> x dans (E,&Vert;&nbsp;&Vert;)</li>
-					<li class="then">&Vert;x&Vert;<sup>2</sup> = <span class="indexed"><span class="top">&infin;</span>&sum;<span class="bottom">n=0</span></span>(e<sub>n</sub>|x)<sup>2</sup></li>
+						p<sub>n</sub><table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&rarr;</td></tr><tr class="index"><td>n &rarr; &infin;</td></tr></table> x dans (E,&Vert;&nbsp;&Vert;)</li>
+					<li class="then">&Vert;x&Vert;<sup>2</sup> = <table class="indexed"><tr class="index"><td>&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=0</td></tr></table>(e<sub>n</sub>|x)<sup>2</sup></li>
 				</ul>
 			</div>
 			<p class="rq">Remarque :<br/>
-				p<sub>n</sub>(x) = <span class="indexed"><span class="top">n</span>&sum;<span class="bottom">k=1</span></span>(x|&epsilon;<sub>k</sub>)&epsilon;<sub>k</sub><br/>
-				Donc x = <span class="indexed"><span class="top">&infin;</span>&sum;<span class="bottom">i=0</span></span>(x|&epsilon;<sub>i</sub>)&epsilon;<sub>i</sub>
+				p<sub>n</sub>(x) = <table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>k=1</td></tr></table>(x|&epsilon;<sub>k</sub>)&epsilon;<sub>k</sub><br/>
+				Donc x = <table class="indexed"><tr class="index"><td>&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i=0</td></tr></table>(x|&epsilon;<sub>i</sub>)&epsilon;<sub>i</sub>
 			</p>
 			<div class="ex">La famille des polynômes de Legendre est-elle totale ?
 				<div class="tl">
@@ -335,9 +335,9 @@
 		<h3>4)Isomorphisme canonique entre E et E*</h3>
 			<p>a&in;E<br/>
 				<div></div>
-				&phi;<sub>a</sub> : <div class="funct">E &rarr;R<br/>x &mapsto; (a|x)</div><br/>
+				&phi;<sub>a</sub> : <table class="func"><tr><td>E</td><td>&rarr;</td><td>R</td><tr><td>x</td><td>&mapsto;</td><td>(a|x)</td></tr><br/>
 				&phi;<sub>a</sub>&in;E*<br/>
-				&theta; : <div class="funct">E &rarr; E*<br/>a &mapsto; &phi;<sub>a</sub></div>
+				&theta; : <table class="func"><tr><td>E</td><td>&rarr;</td><td>E*</td></tr><tr><td>a</td><td>&mapsto;</td><td>&phi;<sub>a</sub></td></tr></table>
 			</p>
 			<div class="prop">
 				<div class="tl">&theta; est un isomorphisme</div>
@@ -373,8 +373,21 @@
 			<div class="prop">Théorème : Réduction orthogonale
 				<div class="tl">u&in;O(E)<br/>
 					&exist;B une b.o.n. dans laquelle<br/>
-					M<sub>B</sub>(u) = <img style="max-width:20%;height:auto;vertical-align:middle;" src="reduction_orthogonale.png"/>, 
-					où R<sub>&theta;</sub> = <img style="max-width:12%;height:auto;vertical-align:middle;" src="matrice_rotation.png" /> avec &theta; &notin; &pi;&Zopf;
+					M<sub>B</sub>(u) = <table class="matr">
+						<tr><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr><td></td><td>&dtdot;</td><td></td><td></td><td></td><td></td><td></td><td>0</td><td></td></tr>
+						<tr><td></td><td></td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr><td></td><td></td><td></td><td>&minus;1</td><td></td><td></td><td></td><td></td><td></td></tr>
+						<tr><td></td><td></td><td></td><td></td><td>&dtdot;</td><td></td><td></td><td></td><td></td></tr>
+						<tr><td></td><td></td><td></td><td></td><td></td><td>&minus;1</td><td></td><td></td><td></td></tr>
+						<tr><td></td><td></td><td></td><td></td><td></td><td></td><td>R<sub>&theta;<sub>1</sub></sub></td><td></td><td></td></tr>
+						<tr><td></td><td>0</td><td></td><td></td><td></td><td></td><td></td><td>&dtdot;</td><td></td></tr>
+						<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>R<sub>&theta;<sub>p</sub></sub></td></tr>
+					</table>, 
+					où R<sub>&theta;</sub> = <table class="matr">
+						<tr><td>cos&theta;</td><td>&minus;sin&theta;</td></tr>
+						<tr><td>sin&theta;</td><td>cos&theta;</td></tr>
+					</table> avec &theta; &notin; &pi;&Zopf;
 				</div>
 			</div>
 			<div class="ex">Exercice : SO(n) est connexe par arcs
@@ -410,9 +423,7 @@
 					<li>Soit u&in;L(E) symétrique</li>
 					<li class="then">Alors u est diagonalisable</li>
 					<li class="then">
-						De plus, E = 
-						<div class="indexed"><span class="top">&perp;</span>&oplus;<span class="bottom">&lambda;&in;Sp(u)</span></div>
-						E<sub>&lambda;</sub>(u)
+						De plus, E =<table class="indexed"><tr class="index"><td>&perp;</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>&lambda;&in;Sp(u)</td></tr></table>E<sub>&lambda;</sub>(u)
 					</li>
 					<li class="then">En particulier, il existe une b.o.n. propre pour u</li>
 				</ul>

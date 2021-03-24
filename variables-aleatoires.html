@@ -46,20 +46,20 @@
 
 		<div class="def">Loi de probabilité de X
 			<div class="tl">
-				<div class="funct">
-					<span>X(&Omega;) &rarr;[0,1]</span>
-					<span>x &mapsto; P(X=x)</span>
-				</div>
+				<table class="func">
+					<tr><td>X(&Omega;)</td><td>&rarr;</td><td>[0,1]</td></tr>
+					<tr><td>x</td><td>&mapsto;</td><td>P(X=x)</td></tr>
+				</table>
 			</div>
 		</div>
 
 		<div class="prop">Proposition
 			<div class="tl">
 				P<sub>X</sub>:
-				<div class="funct">
-					<span>P(X(&Omega;)&rarr;[0,1]</span>
-					<span>A&mapsto;P(X&in;A)</span>
-				</div>
+				<table class="func">
+					<tr><td>P(X(&Omega;)</td><td>&rarr;</td><td>[0,1]</td></tr>
+					<tr><td>A</td><td>&mapsto;</td><td>P(X&in;A)</td></tr>
+				</table>
 				est une probabilité sur (X(&Omega;), P(X(&Omega;)))
 			</div>
 		</div>
@@ -73,11 +73,11 @@
 					&hArr;
 					<li>&forall;i&in;I, p<sub>i</sub> &ge; 0</li>
 					<li>
-						<div class="indexed">
-							<span class="top">&nbsp;</span>
-							&sum;
-							<span class="bottom">i&in;I
-						</div>
+						<table class="indexed">
+							<tr class="index"><td>&nbsp;</td></tr>
+							<tr><td>&sum;</td></tr>
+							<tr class="index"><td>i&in;I</td></tr>
+						</table>
 						p<sub>i</sub> = 1
 					</li>
 				</ul>
@@ -165,12 +165,11 @@
 		<div class="prop">Série génératrice (WIP)
 			<div class="tl">
 				G<sub>X</sub>(t) = E(t<sup>X</sup>) = 
-						<div class="indexed">
-							<span class="top">&infin;</span>
-							&sum;
-							<span class="bottom">n = 0
-						</div>
-				t<sup>n</sup>P(X=n)<br/>
+						<table class="indexed">
+							<tr class="index"><td>&infin;</td></tr>
+							<tr><td>&sum;</td></tr>
+							<tr class="index"><td>n=0</td></tr>
+						</table>t<sup>n</sup>P(X=n)<br/>
 				...<br/>
 				Sous réserve d'existence,<br/>
 				E(X) = G<sub>X</sub>'(1)<br/>
@@ -201,11 +200,11 @@
 				<li>(X<sub>n</sub>)<sub>n&in;N</sub> réelles discrètes, 2 à 2 indépendantes, de même loi, admettant un moment d'ordre 2</li>
 				<li>m = E(X<sub>i</sub>)</li>
 				<li>V = V(X<sub>i</sub>)</li>
-				<li>S<sub>n</sub> =<div class="indexed">
-							<span class="top">n</span>
-							&sum;
-							<span class="bottom">k = 1
-						</div>X<sub>k</sub>
+				<li>S<sub>n</sub> =<table class="indexed">
+							<tr class="index"><td>n</td></tr>
+							<tr><td>&sum;</td></tr>
+							<tr class="index"><td>k=1</td></tr>
+						</table>X<sub>k</sub>
 				<li class="then">&forall;&epsilon;>0, P(|<div class="frac">S<sub>n</sub><span class="bottom">n</span></div> &minus; m| &ge; &epsilon;) &le; <div class="frac">V<span class="bottom">n&epsilon;<sup>2</sup></span></div></li>
 
 			En particulier, P(|<div class="frac">S<sub>n</sub><span class="bottom">n</span></div> &minus; m| &ge; &epsilon;) &rarr; 0

@@ -83,11 +83,11 @@
 			<div class="tl">
 				x(t<sub>0</sub>) = &lambda;(t<sub>0</sub>)e<sup>&minus;F(t<sub>0</sub>)</sup><br/>
 				On veut x(t<sub>0</sub>) = x<sub>0</sub>, donc &lambda;(t<sub>0</sub>) = e<sup>F(t<sub>0</sub>)</sup>x<sub>0</sub><br/>
-				Finalement, la solution de P est x(t) = (e<sup>F(t<sub>0</sub>)</sup>x<sub>0</sub> + <div class="indexed">
-							<span class="top">t</span>
-							&int;
-							<span class="bottom">t<sub>0</sub>
-						</div>
+				Finalement, la solution de P est x(t) = (e<sup>F(t<sub>0</sub>)</sup>x<sub>0</sub> + <table class="indexed">
+							<tr class="index"><td>t</td></tr>
+							<tr><td>&int;</td></tr>
+							<tr class="index"><td>t<sub>0</sub></td></tr>
+						</table>
 				<div class="frac">c(u)<span class="bottom">a(u)</span></div>
 				e<sup>F(u)</sup>du)&middot;e<sup>&minus;F(t)</sup>
 			</div>
@@ -134,8 +134,8 @@
 				t&mapsto;B(t) continue<br/>
 				x est solution de (E) si et seulement si<br/>
 				&forall;t&in;I, X'(t) = A(t)X(t) + B(t)<br/>
-				X(t) = (<div style="display:inline-block;vertical-align:middle;">x<sub>1</sub>(t)<br/>x<sub>2</sub>(t)</div>)<br/>
-				x(t) = <div class="indexed"><span class="top">n</span>&sum;<span class="bottom">i=1</span></div>x<sub>i</sub>(t)e<sub>i</sub><br/>
+				X(t) = <table class="matr"><tr><td>x<sub>1</sub>(t)</tr><tr><td>x<sub>2</sub>(t)</td></tr></table><br/>
+				x(t) = <table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i=1</td></tr></table>x<sub>i</sub>(t)e<sub>i</sub><br/>
 				&forall;1&le;i&le;n, x'<sub>i</sub>(t) = a<sub>i,1</sub>(t)x<sub>1</sub>(t) + &hellip; + a<sub>1,n</sub>x<sub>n</sub>(t) + b<sub>i</sub>(t)<br/>
 				On obtient un système différentiel linéaire d'ordre 1
 			</div>
@@ -154,8 +154,8 @@
 		<div class="prop">&Phi;<sub>t<sub>1</sub></sub>
 			<div class="tl">
 				t<sub>1</sub>&in;I.<br/>
-				&Phi;<sub>t<sub>1</sub></sub> : {<div class="funct">S<sub>H</sub>&rarr;F<br/>
-					x&mapsto;x(t<sub>1</sub>)</div> est un isomorphisme d'espace vectoriel<br/>
+				&Phi;<sub>t<sub>1</sub></sub> : {<table class="func"><tr><td>S<sub>H</sub></td><td>&rarr;</td><td>F</td></tr>
+					<tr><td>x</td><td>&mapsto;</td><td>x(t<sub>1</sub>)</td></tr></table> est un isomorphisme d'espace vectoriel<br/>
 					En particulier, S<sub>H</sub> est un K-ev de dimension dimF
 			</div>
 		</div>
@@ -193,7 +193,7 @@
 			<div class="tl">
 				F de dimension finie<br/>
 				a&in;L(F)<br/>
-				e<sup>a</sup> = <div class="indexed"><span class="top">&infin;</span>&sum;<span class="bottom">n=0</span></div><div class="frac">a<sup>n</sup><span class="bottom">n!</span></div>
+				e<sup>a</sup> = <table class="indexed"><tr class="index"><td>&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=0</td></tr></table><div class="frac">a<sup>n</sup><span class="bottom">n!</span></div>
 			</div>
 		</div>
 		<p>Justification : car la somme esst absolument convergente (norme linéaire)</p>
@@ -206,13 +206,13 @@
 		</div>
 		<div class="prop">Proposition
 			<div class="tl">
-				exp:<div class="funct">L(F) &rarr; L(F)<br/>a&mapsto;e<sup>a</sup></div> est continue
+				exp:<table class="func"><tr><td>L(F)</td><td>&rarr;</td><td>L(F)</td></tr><tr><td>a</td><td>&mapsto;</td><td>e<sup>a</sup></td></tr></table> est continue
 			</div>
 		</div>
 		<div class="prop">Proposition
 			<div class="tl">
 				a&in;L(F)<br/>
-				f:<div class="funct">R&rarr;L(F)<br/>t&mapsto;e<sup>ta</sup></div><br/>
+				f:<table class="func"><tr><td>R</td><td>&rarr;</td><td>L(F)</td><tr><td>t</td><td>&mapsto;</td><td>e<sup>ta</sup></td></tr></table><br/>
 				f est dérivable et &forall;t&in;R, f'(t) = ae<sup>ta</sup> = e<sup>ta</sup>a
 			</div>
 		</div>
@@ -226,7 +226,7 @@
 		</div>
 		<div class="prop">Solutions de (EH)
 			<div class="tl">
-				Les solutions de (EH) sont les fonctions <div class="funct">R&rarr;F<br/>t&mapsto;e<sup>ta</sup>x<sub>0</sub></div>, x<sub>0</sub>&in;F
+				Les solutions de (EH) sont les fonctions {<table class="func"><tr><td>R</td><td>&rarr;</td><td>F</td></tr><tr><td>t</td><td>&mapsto;</td><td>e<sup>ta</sup>x<sub>0</sub></td></tr></table>, x<sub>0</sub>&in;F
 			</div>
 		</div>
 		<div class="prop">Base de (EH)
@@ -251,7 +251,7 @@
 			<ul class="tl">
 				<li>A&in;M<sub>n</sub>(K)</li>
 				<li>A diagonalisable</li>
-				<li class="then">Alors les solutions de X' = AX sont les fonctions t&mapsto;<div class="indexed"><span class="top">n</span>&sum;<span class="bottom">i=1</span></div>&alpha;<sub>i</sub>e<sup>&lambda;<sub>i</sub>t</sup>C<sub>i</sub>,</li>
+				<li class="then">Alors les solutions de X' = AX sont les fonctions t&mapsto;<table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i=1</td></tr></table>&alpha;<sub>i</sub>e<sup>&lambda;<sub>i</sub>t</sup>C<sub>i</sub>,</li>
 				<li class="then">(&alpha;<sub>1</sub>,&hellip;,&alpha;<sub>n</sub>) &in;K<sup>n</sup></li>
 				<li class="then">où les &lambda;<sub>i</sub> sont les valeurs propres de A et (C<sub>1</sub>,&hellip;,C<sub>n</sub>) une base propre associée aux &lambda;<sub>i</sub></li>
 			</ul>
@@ -274,7 +274,7 @@
 			<div class="def">Définition
 				<div class="tl">
 					Soit (x<sub>1</sub>,x<sub>2</sub>) solution d'une équation différentielle d'ordre 2<br/>
-					On note le <em>Wronskien</em> de l'équation différentielle W:<div class="funct"><span>I&rarr;K</span><span>t&mapsto;<div class="det"><div>x<sub>1</sub> x<sub>2</sub></div><div>x'<sub>1</sub> x'<sub>2</sub></div></div>(t)</span></div>
+					On note le <em>Wronskien</em> de l'équation différentielle W:<table class="func"><tr><td>I</td><td>&rarr;</td><td>K</td></tr><tr><td>t</td><td>&mapsto;</td><td><table class="det"><tr><td>x<sub>1</sub></td><td>x<sub>2</sub></td></tr><tr><td>x'<sub>1</sub></td><td>x'<sub>2</sub></td></tr></table>(t)</td></tr></table>
 				</div>
 			</div>
 			<div class="prop">Proposition
