@@ -10,6 +10,7 @@ header{
 	position:sticky;
 	top:0px;
 	background:rgba(85, 170, 255,0.7);
+	max-height:5em;
 }
 
 #title { /*en haut de la page*/
@@ -20,7 +21,7 @@ header{
 	margin:0px;
 	position:absolute;
 	top:5px;
-	left:2em;
+	left:3em;
 	padding:0px;
 }
 
@@ -37,9 +38,9 @@ nav{ /*positionner le nav en haut a gauche*/
 
 nav .but{ /*boutton [o]*/
 	display:inline-block;
-	line-height:2em; /*centrer le o verticalement*/
-	width:2em;
-	height:2em;
+	line-height:3em; /*centrer le o verticalement*/
+	width:3em;
+	height:3em;
 	border:#005 solid 2px;
 	text-align:center;
 	vertical-align:middle;
