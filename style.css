@@ -32,7 +32,7 @@ header{
 header h1{
 	margin:0px;
 	text-align:right;
-	font-size:min(2vw,2em);
+	font-size:min(4vw,2em);
 }
 
 nav{ /*positionner le nav en haut a gauche*/
