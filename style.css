@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 body {
-	font-family: 'Ubuntu', Arial, serif;
+	font-family: 'Ubuntu', Arial, sans-serif;
 	background-color:#5af; /*arrière plan bleu clair*/
 	color:#005; /*texte en bleu foncé*/
 }
@@ -32,7 +32,7 @@ header{
 header h1{
 	margin:0px;
 	text-align:right;
-	font-size:max(2vw,1em);
+	font-size:2vw;
 }
 
 nav{ /*positionner le nav en haut a gauche*/
