@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 body {
-	font-family: 'Ubuntu', Arial, sans-serif;
+	font-family: 'Ubuntu', Arial, serif;
 	background-color:#5af; /*arrière plan bleu clair*/
 	color:#005; /*texte en bleu foncé*/
 }
@@ -32,7 +32,7 @@ header{
 header h1{
 	margin:0px;
 	text-align:right;
-	font-size:2vw;
+	font-size:min(2vw,2em);
 }
 
 nav{ /*positionner le nav en haut a gauche*/
@@ -100,7 +100,7 @@ nav:hover .but{
 }
 
 h1, .sommaire a{ /*Titres des chapitres*/
-	font:2em "Segoe UI Black","Arial Black",serif;
+	font:2em "Segoe UI Black","Arial Black",sans-serif;
 	color:#FF0;
 	text-decoration:underline;
 	}
