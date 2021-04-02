@@ -54,6 +54,7 @@ nav .bar{
 	background-color:#fff;
 	list-style-type:none;
 	padding:0px;
+	z-index:3;
 }
 
 nav:hover .bar{
@@ -102,6 +103,11 @@ h1, .sommaire a{ /*Titres des chapitres*/
 	}
 
 h1, .sommaire {text-align:center;}
+
+footer{
+	position:relative;
+	text-align:center;
+}
 /*index.html*/
 div.left, h1.right {
 	display:inline-block;
@@ -219,6 +225,7 @@ li.then {
     vertical-align: middle;
     letter-spacing: 0.001em;
     text-align: center;
+    z-index:1;
 }
 .frac > span {
     display: block;
@@ -296,6 +303,7 @@ table.func{
 	vertical-align:middle;
 	border-collapse:collapse;
 	text-align:center;
+    z-index:1;
 }
 table.func td{
 	padding:0px;
@@ -306,6 +314,7 @@ table.indexed{
 	vertical-align:middle;
 	border-collapse:collapse;
 	text-align:center;
+    z-index:1;
 }
 table.indexed tr.index{
 	line-height:50%;
@@ -320,6 +329,7 @@ table.det,table.matr{
 	vertical-align:middle;
 	border-collapse:collapse;
 	text-align:center;
+    z-index:1;
 }
 table.matr{
 	border-radius:5px;
