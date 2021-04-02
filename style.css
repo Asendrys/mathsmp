@@ -92,7 +92,7 @@ nav:hover .but{
 .sommaire>a:hover {
 	background-color:#000;
 	color:#fff;
-	padding:5px 1em 10px 1em;
+	padding:5px 0 10px 0;
 }
 
 h1, .sommaire a{ /*Titres des chapitres*/
@@ -102,7 +102,19 @@ h1, .sommaire a{ /*Titres des chapitres*/
 	}
 
 h1, .sommaire {text-align:center;}
+/*index.html*/
+div.left, h1.right {
+	display:inline-block;
+	vertical-align:middle;
+	font-size:1.5em;
+	max-width:50%;
+}
 
+h1.right {text-align:left;padding-left:1em;text-decoration:none;}
+img.logo{max-width:100%;}
+
+
+/**/
 .rq{
 	margin-left:10%;
 }
@@ -213,7 +225,7 @@ li.then {
     padding: 0.1em;
 }
 .frac span.bottom {
-    border-top: thin solid #005;
+    border-top: thin solid;
 }
 .frac span.symbol {
     display: none;
@@ -250,10 +262,6 @@ li.then {
 	border-top:thin solid;
 }
 
-.sqrt::before{
-	content:"√";
-	border-top:thin solid #fff;
-}
 /**/
 /*
 .funct{
@@ -308,14 +316,14 @@ table.indexed tr.index{
 }
 
 table.det,table.matr{
-	border-left:solid black 1px;
-	border-right:solid black 1px;
+	border-left:solid 1px;
+	border-right:solid 1px;
 	display:inline-block;
 	vertical-align:middle;
 	border-collapse:collapse;
 	text-align:center;
 }
 table.matr{
-	border-radius:5px;
+	border-radius:15px;
 	padding:3px;
 }
