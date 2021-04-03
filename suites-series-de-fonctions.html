@@ -33,181 +33,181 @@
 			<p id="title"><a href="sommaire.html">MATHS</a></p>
 			<h1>Suites et séries de fonctions</h1>
 		</header>
-			<h2>I. Suites de fonctions</h2>
-				<h3>A. Convergences</h3>
-
-				<p>
-					f<sub>n</sub>: A&sub;E &rarr; F <br />
-					f : A&sub;E &rarr; F
+		<h2>I. Suites de fonctions</h2>
+			<h3>A. Convergences</h3>
+			<p>
+				f<sub>n</sub>: A&sub;E &rarr; F <br />
+				f : A&sub;E &rarr; F
+			</p>
+			<div class="def">Définition : Convergence Simple
+				<p class="tl">
+					On dit que (f<sub>n</sub>)<sub>n</sub> <em>converge simplement</em> vers f sur A si<br />
+					&forall;x&in;A, (fn(x)) converge vers f(x). <br /> &hArr;
+					&forall;ε>0, &exist;n<sub>x</sub> &in;N, &forall;n&in;N, n &ge; n<sub>x</sub> &rArr; &Vert;f<sub>n</sub>(x)-f(x)&Vert;&le;ε
 				</p>
-				<div class="def">Définition : Convergence Simple
-					<p class="tl">
-						On dit que (f<sub>n</sub>)<sub>n</sub> <em>converge simplement</em> vers f sur A si<br />
-						&forall;x&in;A, (fn(x)) converge vers f(x). <br /> &hArr;
-						&forall;ε>0, &exist;n<sub>x</sub> &in;N, &forall;n&in;N, n &ge; n<sub>x</sub> &rArr; &Vert;f<sub>n</sub>(x)-f(x)&Vert;&le;ε
-					</p>
-				</div>
+			</div>
 
-				<div class="def">Définition : Convergence Uniforme
-					<div class="tl">
-						On dit que (f<sub>n</sub>)<sub>n</sub> <em>converge uniformément</em> vers f sur A si<br/ >
-						&forall;ε>0, &exist;N&in;N, &forall;x&in;A, &forall;n&in;N, n &ge; N &rArr; &Vert;f<sub>n</sub>(x)-f(x)&Vert;&le;ε <br />
-						&hArr; &forall;ε>0, &exist;N&in;N, &forall;n&in;N, n &ge; N &rArr; <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>Sup</td></tr><tr class="index"><td>x&in;A</td></tr></table>&Vert;f<sub>n</sub>(x)-f(x)&Vert;&le;ε <br />
-						&hArr; <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>Sup</td></tr><tr class="index"><td>x&in;A</td></tr></table>&Vert;f<sub>n</sub>(x)-f(x)&Vert; <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&rarr;</td></tr><tr class="index"><td>n&rarr;&infin;</td></tr></table>0
-					</div>
+			<div class="def">Définition : Convergence Uniforme
+				<div class="tl">
+					On dit que (f<sub>n</sub>)<sub>n</sub> <em>converge uniformément</em> vers f sur A si<br/ >
+					&forall;ε>0, &exist;N&in;N, &forall;x&in;A, &forall;n&in;N, n &ge; N &rArr; &Vert;f<sub>n</sub>(x)-f(x)&Vert;&le;ε <br />
+					&hArr; &forall;ε>0, &exist;N&in;N, &forall;n&in;N, n &ge; N &rArr; <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>Sup</td></tr><tr class="index"><td>x&in;A</td></tr></table>&Vert;f<sub>n</sub>(x)-f(x)&Vert;&le;ε <br />
+					&hArr; <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>Sup</td></tr><tr class="index"><td>x&in;A</td></tr></table>&Vert;f<sub>n</sub>(x)-f(x)&Vert; <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&rarr;</td></tr><tr class="index"><td>n&rarr;&infin;</td></tr></table>0
 				</div>
-				<p class="rq">Remarque : Convergence uniforme &rArr; Convergence simple</p>
-				
-				<h3>B. Propriétés</h3>
+			</div>
+			<p class="rq">Remarque : Convergence uniforme &rArr; Convergence simple</p>
+			
+			<h3>B. Propriétés</h3>
 
-				<div class="prop">Théorème de continuité
-					<ul class="tl">
-						<li>a&in;A</li>
-						<li>Pour tout n&in;N, f<sub>n</sub> <em>continue</em> en a</li>
-						<li>(f<sub>n</sub>) <em>converge uniformément</em> vers f sur un voisinage de a</li>
-						<li class="then"> Alors f est <em>continue</em> en a.</li>
-					</ul>
-				</div>
+			<div class="prop">Théorème de continuité
+				<ul class="tl">
+					<li>a&in;A</li>
+					<li>Pour tout n&in;N, f<sub>n</sub> <em>continue</em> en a</li>
+					<li>(f<sub>n</sub>) <em>converge uniformément</em> vers f sur un voisinage de a</li>
+					<li class="then"> Alors f est <em>continue</em> en a.</li>
+				</ul>
+			</div>
 
-				<div class="prop">Théorème de la continuité dans un ensemble
-					<ul class="tl">
-						<li>Pour tout n&in;N, f<sub>n</sub> <em>continue</em> sur A</li>
-						<li>(f<sub>n</sub>) <em>converge uniformément</em> vers f sur A</li>
-						<li class="then">Alors f est <em>continue</em> sur A.</li>
-					</ul>
-				</div>
+			<div class="prop">Théorème de la continuité dans un ensemble
+				<ul class="tl">
+					<li>Pour tout n&in;N, f<sub>n</sub> <em>continue</em> sur A</li>
+					<li>(f<sub>n</sub>) <em>converge uniformément</em> vers f sur A</li>
+					<li class="then">Alors f est <em>continue</em> sur A.</li>
+				</ul>
+			</div>
 
-				<div class="prop">Théorème de la double limite
-					<ul class="tl">
-						<li>x<sub>0</sub> adhérent à A</li>
-						<li>Pour tout n&in;N, f<sub>n</sub>(x) <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&rarr;</td></tr><tr class="index"><td>x&rarr;x<sub>0</sub><br/>x&in;A</td></tr></table> &ell;<sub>n</sub></li>
-						<li>(f<sub>n</sub>) <em>converge uniformément</em> vers f sur A</li>
-						<li class="then">Alors (&ell;<sub>n</sub>)<sub>n</sub> converge vers &ell;, &ell;&in;F</li>
-						<li class="then">f(x)<table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&rarr;</td></tr><tr class="index"><td>x&rarr;x<sub>0</sub><br/>x&in;A</td></tr></table></sub>&ell;</li>
-					</ul>
-				</div>
+			<div class="prop">Théorème de la double limite
+				<ul class="tl">
+					<li>x<sub>0</sub> adhérent à A</li>
+					<li>Pour tout n&in;N, f<sub>n</sub>(x) <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&rarr;</td></tr><tr class="index"><td>x&rarr;x<sub>0</sub><br/>x&in;A</td></tr></table> &ell;<sub>n</sub></li>
+					<li>(f<sub>n</sub>) <em>converge uniformément</em> vers f sur A</li>
+					<li class="then">Alors (&ell;<sub>n</sub>)<sub>n</sub> converge vers &ell;, &ell;&in;F</li>
+					<li class="then">f(x)<table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&rarr;</td></tr><tr class="index"><td>x&rarr;x<sub>0</sub><br/>x&in;A</td></tr></table></sub>&ell;</li>
+				</ul>
+			</div>
 
-				<p class="rq">Remarque :...</p>
+			<p class="rq">Remarque :...</p>
 
-				<div class="prop">Théorème de la double limite, cas A&sub;R non-majoré et x<sub>0</sub>=+&infin;
-					<ul class="tl">
-						<li>Pour tout n&in;N, f<sub>n</sub>(x) <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&rarr;</td></tr><tr class="index"><td>x&rarr;&infin;<br/>x&in;A</td></tr></table> &ell;<sub>n</sub></li>
-						<li>(f<sub>n</sub>) <em>converge uniformément</em> vers f sur A</li>
-						<li class="then">Alors (&ell;<sub>n</sub>)<sub>n</sub> converge vers &ell;, &ell;&in;F</li>
-						<li class="then">f(x)<table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&rarr;</td></tr><tr class="index"><td>x&rarr;&infin;<br/>x&in;A</td></tr></table>&ell;</li>
-					</ul>
-				</div>
+			<div class="prop">Théorème de la double limite, cas A&sub;R non-majoré et x<sub>0</sub>=+&infin;
+				<ul class="tl">
+					<li>Pour tout n&in;N, f<sub>n</sub>(x) <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&rarr;</td></tr><tr class="index"><td>x&rarr;&infin;<br/>x&in;A</td></tr></table> &ell;<sub>n</sub></li>
+					<li>(f<sub>n</sub>) <em>converge uniformément</em> vers f sur A</li>
+					<li class="then">Alors (&ell;<sub>n</sub>)<sub>n</sub> converge vers &ell;, &ell;&in;F</li>
+					<li class="then">f(x)<table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&rarr;</td></tr><tr class="index"><td>x&rarr;&infin;<br/>x&in;A</td></tr></table>&ell;</li>
+				</ul>
+			</div>
 
-				<div class="prop">Intégration sur un segment
-					<p class="tl">...
-					</p>
-				</div>
+			<div class="prop">Intégration sur un segment
+				<p class="tl">...
+				</p>
+			</div>
 
-				<div class="prop">Théorème de dérivation
-					<p class="tl">...
-					</p>
-				</div>
+			<div class="prop">Théorème de dérivation
+				<p class="tl">...
+				</p>
+			</div>
 
-				<div class="prop">Extension C<sup>k</sup> du théorème de dérivation
-					<p class="tl">...
-					</p>
-				</div>
+			<div class="prop">Extension C<sup>k</sup> du théorème de dérivation
+				<p class="tl">...
+				</p>
+			</div>
 
-			<h2>II. Séries de fonctions</h2>
-				<h3>A. Convergences</h3>
-				<div class="def">Définition : Convergence Simple
-					<p class="tl">
-						On dit que &sum;f<sub>n</sub> <em>converge simplement</em> si<br />
-						sa somme partielle (S<sub>n</sub>)<sub>n</sub> converge simplement
-					</p>
-				</div>
+		<h2>II. Séries de fonctions</h2>
+			<h3>A. Convergences</h3>
+			<div class="def">Définition : Convergence Simple
+				<p class="tl">
+					On dit que &sum;f<sub>n</sub> <em>converge simplement</em> si<br />
+					sa somme partielle (S<sub>n</sub>)<sub>n</sub> converge simplement
+				</p>
+			</div>
 
-				<div class="def">Définition : Convergence Uniforme
-					<p class="tl">
-						On dit que &sum;f<sub>n</sub> <em>converge uniformément</em> sur A si<br/ >
-						sa somme partielle (S<sub>n</sub>)<sub>n</sub> converge uniformément
-					</p>
-				</div>
+			<div class="def">Définition : Convergence Uniforme
+				<p class="tl">
+					On dit que &sum;f<sub>n</sub> <em>converge uniformément</em> sur A si<br/ >
+					sa somme partielle (S<sub>n</sub>)<sub>n</sub> converge uniformément
+				</p>
+			</div>
 
-				<div class="def">Définition : Convergence Normale
-					<p class="tl">
-						On dit que &sum;f<sub>n</sub> <em>converge normalement</em> si<br/ >
-						&sum;&Vert;f<sub>n</sub>&Vert;<sub>&infin;</sub> converge
-					</p>
-				</div>
+			<div class="def">Définition : Convergence Normale
+				<p class="tl">
+					On dit que &sum;f<sub>n</sub> <em>converge normalement</em> si<br/ >
+					&sum;&Vert;f<sub>n</sub>&Vert;<sub>&infin;</sub> converge
+				</p>
+			</div>
+			<p class="rq">Remarque : Convergence normale &rArr; Convergence uniforme &rArr; Convergence simple</p>
+			<h3>B. Propriétés</h3>
+			<div class="prop">Théorème de continuité
+				<p class="tl">...
+				</p>
+			</div>
 
-				<div class="prop">Théorème de continuité
-					<p class="tl">...
-					</p>
-				</div>
+			<div class="prop">Théorème de continue dans un ensemble
+				<p class="tl">...
+				</p>
+			</div>
 
-				<div class="prop">Théorème de continue dans un ensemble
-					<p class="tl">...
-					</p>
-				</div>
+			<div class="ex">Exemples
+				<ul class="tl">
+					<li>...</li>
+					<li>...</li>
+				</p>
+			</div>
 
-				<div class="ex">Exemples
-					<ul class="tl">
-						<li>...</li>
-						<li>...</li>
-					</p>
-				</div>
+			<div class="prop">Théorème de la double limite
+				<p class="tl">...
+				</p>
+			</div>
 
-				<div class="prop">Théorème de la double limite
-					<p class="tl">...
-					</p>
-				</div>
+			<div class="prop">Théorème de la double limite, cas A&sub;R non-majoré et x<sub>0</sub>=+&infin;
+				<p class="tl">...
+				</p>
+			</div>
 
-				<div class="prop">Théorème de la double limite, cas A&sub;R non-majoré et x<sub>0</sub>=+&infin;
-					<p class="tl">...
-					</p>
-				</div>
+			<div class="prop">Intégration sur un segment
+				<p class="tl">...
+				</p>
+			</div>
 
-				<div class="prop">Intégration sur un segment
-					<p class="tl">...
-					</p>
-				</div>
+			<div class="ex">Exemple
+				<p class="tl">...
+				</p>
+			</div>
+			<div class="ex">Complément
+				<p class="tl">...
+				</p>
+			</div>
 
-				<div class="ex">Exemple
-					<p class="tl">...
-					</p>
-				</div>
-				<div class="ex">Complément
-					<p class="tl">...
-					</p>
-				</div>
+			<div class="prop">Théorème de dérivation
+				<p class="tl">...
+				</p>
+			</div>
 
-				<div class="prop">Théorème de dérivation
-					<p class="tl">...
-					</p>
-				</div>
+			<div class="prop">Extension C<sup>k</sup> du théorème de dérivation
+				<p class="tl">...
+				</p>
+			</div>
 
-				<div class="prop">Extension C<sup>k</sup> du théorème de dérivation
-					<p class="tl">...
-					</p>
-				</div>
-
-				<div class="ex">Exemple : Fonction &zeta;
-					<p class="tl">&zeta;(x) = 
-						<span class="indexed">
-							<span class="top">&infin;</span>
-							&sum;
-							<span class="bottom">n=1</span>
-						</span>
-						<span class="frac">
-							<span>1</span>
-							<span class="bottom">n<sup>x</sup></span>
-						</span>
-					</p>
-				</div>
-			<h2>III. Théorème de Weierstrass</h2>
-				<div class="prop">Théorème de Weierstrass
-					<ul class="tl">
-						<li>f: [a,b] &rarr; R continue</li>
-						<li class="then">&exist;(P<sub>n</sub>)<sub>n&in;N</sub> suite de fonctions polynômiales qui converge vers f uniformément sur [a,b]</li>
-					</ul>
-				</div>
-				<p class="rq">Remarque : Convergence normale &rArr; Convergence uniforme &rArr; Convergence simple</p>
+			<div class="ex">Exemple : Fonction &zeta;
+				<p class="tl">&zeta;(x) = 
+					<span class="indexed">
+						<span class="top">&infin;</span>
+						&sum;
+						<span class="bottom">n=1</span>
+					</span>
+					<span class="frac">
+						<span>1</span>
+						<span class="bottom">n<sup>x</sup></span>
+					</span>
+				</p>
+			</div>
+		<h2>III. Théorème de Weierstrass</h2>
+			<div class="prop">Théorème de Weierstrass
+				<ul class="tl">
+					<li>f: [a,b] &rarr; R continue</li>
+					<li class="then">&exist;(P<sub>n</sub>)<sub>n&in;N</sub> suite de fonctions polynômiales qui converge vers f uniformément sur [a,b]</li>
+				</ul>
+			</div>
+			<p class="txt">Servira pour montrer qu'une suite est totale</p>
 		<footer>
 			<img src="http://eclep.free.fr/smiley/dango_daikazoku0.gif" alt="Signature" />
 		</footer>

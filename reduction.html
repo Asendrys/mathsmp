@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>MP : X</title>
+		<title>Réduction</title>
 		<meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/png" href="favicon.png" />
 		<link rel="stylesheet" href="style.css" />
@@ -31,22 +31,362 @@
 					</ul>
 				</nav>
 			<p id="title"><a href="sommaire.html">MATHS</a></p>
-			<h1>Titre</h1>
+			<h1>Réduction des endomorphismes et des matrices carrées</h1>
 		</header>
-
+		<p>Soit u&in;L(E),<br/> A&in;M<sub>n</sub>(K), K = R ou C</p>
+		<h2>Sous-espaces stables</h2>
+		<div class="def">Endomorphisme induit
+			<div class="tl">F sous-espace de E stable par u si u(F) &sub; F.<br/>
+				On dispose de w&in;L(F) <em>induit par u<sub>&vert;F</sub></em>, w:<table class="indexed"><tr><td>F</td><td>&rarr;</td><td>F</td></tr><tr><td>x</td><td>&mapsto;</td><td>u(x)</td></tr></table>
+			</div>
+		</div>
+		<div class="txt">En dimension finie : B<sub>F</sub> = (e<sub>1</sub>,&hellip;,e<sub>p</sub>) base de F complétée en B = (e<sub>1</sub>,&hellip;,e<sub>n</sub>) base de E. u&in;L(E)</div>
 		<div class="prop">Proposition
+			<div class="tl">F stable par u &hArr; M<sub>B</sub>(u) = <table class="matr parbloc"><tr><td>A</td><td>B</td></tr><tr><td>0</td><td>C</td></tr></table>, A&in;M<sub>p</sub>(K)
+			</div>
+		</div>
+		<div class="rq">w&in;L(F) induit par u<sub>&vert;F</sub> : A = M<sub>B<sub>F</sub></sub>(w)</div>
+		<div class="prop">Généralisation
+			<div class="tl">E = <table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>i=1</td></tr></table>F<sub>i</sub>, B = <table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&cup;</td></tr><tr class="index"><td>i=1</td></tr></table> B<sub>i</sub> base adaptée<br/>
+				u&in;L(E)<br/>
+				(&forall;1&le;i&le;p, F<sub>i</sub> stable par u) &hArr; M<sub>B</sub>(u) = <table class="matr">
+					<tr><td>A<sub>1</sub></td><td></td><td></td><td>0</td></tr>
+					<tr><td></td><td>A<sub>2</sub></td><td></td><td></td></tr>
+					<tr><td></td><td></td><td>&dtdot;</td><td></td></tr>
+					<tr><td>0</td><td></td><td></td><td>A<sub>p</sub></td></tr></table>, A<sub>i</sub>&in;M<sub>p<sub>i</sub></sub>(K) avec p<sub>i</sub> = dim(F<sub>i</sub>)
+			</div>
+		</div>
+		<div class="rq">Remarque : B = (e<sub>1</sub>,&hellip;,e<sub>n</sub>) base de E, u&in;L(E)<br/>
+			M<sub>B</sub>(u) = <table class="matr">
+					<tr><td>a<sub>11</sub></td><td>a<sub>12</sub></td><td>&ctdot;</td><td>a<sub>1n</sub></td></tr>
+					<tr><td></td><td>&dtdot;</td><td></td><td>&vellip;</td></tr>
+					<tr><td></td><td></td><td>&dtdot;</td><td>&vellip;</td></tr>
+					<tr><td>0</td><td></td><td></td><td>a<sub>nn</sub></td></tr></table>, alors &forall;1&le;k&le;n, Vect(e<sub>1</sub>,&hellip;,e<sub>k</sub>) stable par u. La réciproque est vraie
+		</div>
+
+		<h2>Valeurs propres, vecteurs propres</h2>
+		<h3>Version endormorphisme</h3>
+		<div class="def">Valeur propre, Vecteur propre
+			<p class="tl">Soit &lambda;&in;K, x&in;E non-nul tel que &lambda;x = u(x)<br/>
+				On dit que &lambda; est une <em>valeur propre</em> de E, x est un <em>vecteur propre</em> associé à &lambda;
+			</p>
+		</div>
+		<div class="def">Spectre de u
+			<p class="tl">Sp(u) est l'ensemble des valeurs propres de u<br/>
+				Sp(u) = {&lambda;&in;K, &exist;x&in;E\{0}, &lambda;x = u(x)}
+			</p>
+		</div>
+		<div class="prop">Sous-espace propre associé à &lambda;
+			<p class="tl">Soit &lambda;&in;Sp(u), x un vecteur propre associé à &lambda;<br/>
+				&lambda;x = u(x)<br/>
+				u(x) &minus; &lambda;x = 0<br/>
+				x&in;Ker(u&minus;&lambda;id<sub>E</sub>) := E<sub>&lambda;</sub>(u) appelé <em>Espace propre</em> de &lambda;
+			</p>
+		</div>
+		<p class="rq">Ker(u&minus;&lambda;id) = {vecteurs propres associés à &lambda;} &cup; {0}</p>
+		<div class="ex">Exemples
 			<p class="tl">
 			</p>
 		</div>
-		<div class="def">Définition
-			<p class="tl">
+
+		<div class="prop">Somme directe des sous-espaces prorpes
+			<ul class="tl">
+				<li>u&in;L(E)</li>
+				<li>&lambda;<sub>1</sub>,&hellip;,&lambda;<sub>p</sub>&in;Sp(u), deux à  deux distincts</li>
+				<li class="then"><table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i = 1</td></tr></table>E<sub>&lambda;<sub>i</sub></sub> est directe</li>
+			</ul>
+		</div>
+
+		<h3>Version matricielle</h3>
+		<div class="def">Valeur propre, Vecteur propre, Spectre de A, Sous-espace propre associé à &lambda;
+			<p class="tl">&hellip;
 			</p>
 		</div>
+		<div class="prop">Spectre
+			<p class="tl">A, B&in;Mn(K) semblables &rArr; Sp(A) = Sp(B)
+			</p>
+		</div>
+		<div class="prop">Stabilité
+			<ul class="tl">
+				<li>E un K-e.v.</li>
+				<li>u,v&in;L(E)</li>
+				<li>u&compfn;v = v&compfn;u</li>
+				<li class="then">Tout sous-espace propre pour l'un des endormorphismes est stable par l'autre endomorphisme</li>
+			</p>
+		</div>
+
+		<div class="dem"><strong>Démonstration :</strong> Soit &lambda;&in;Sp(u). Montrons que E<sub>&lambda;</sub>(u) est stable par v.<br/>
+			Soit x&in;E<sub>&lambda;</sub>(u).<br/>
+			Alors <mark>u(v(x))</mark> = v(u(x)) = v(&lambda;x) = <mark>&lambda;v(x)</mark><br/>
+			v(x) &in; E<sub>&lambda;</sub>(u)<br/>
+			Donc E<sub>&lambda;</sub>(u) est stable par v
+		</div>
+
+		<h2>Polynôme caractéristique</h2>
+		<div class="def">Polynôme caractéristique
+			<p class="tl">&chi;<sub>A</sub>(X) := det(XI<sub>n</sub> &minus; A)&in;K[X] <em>Polynôme caractéristique de A</em>
+			</p>
+		</div>
+		<div class="txt">Le polynôme caractéristique est un invariant de similitude<br/>
+			Soit B une base de E, alors &chi;<sub>M<sub>B</sub>(u)</sub> ne dépend pas de la base choisie. On pose &chi;<sub>u</sub> le polynôme caractéristique de u</div>
+
+		<div class="prop">Lien polynôme caractéristique - valeurs propres
+			<p class="tl">Les racines du polynôme caractéristique de A sont les valeurs propres de A
+			</p>
+		</div>
+		<div class="dem">&lambda;&in;Sp(A)<br/>
+				&hArr;&exist;X&in;Mn(K)\{0}, AX = &lambda;X<br/>
+				&hArr;Ker(A&minus;&lambda;I<sub>n</sub>) &ne; 0 &rarr; A&minus;&lambda;I<sub>n</sub> n'est pas injective, donc pas inversible<br/>
+				&hArr;det(A &minus; &lambda;I<sub>n</sub>) = 0<br/>
+				&hArr;det(&lambda;I<sub>n</sub> &minus; A) = &chi;<sub>A</sub>(&lambda;) = 0</div>
+
+		<div class="prop">Version endomorphisme
+			<p class="tl">E de dimension finie n, u&in;L(E), Sp(u) = {racines de &chi;<sub>u</sub>}
+			</p>
+		</div>
+		<div class="dem">e base de E et A = M<sub>e</sub>(u). Alors Sp(u) = Sp(A) = {racines de &chi;<sub>A</sub>}. Or &chi;<sub>u</sub> = &chi;<sub>A</sub></div>
+		<div class="rq">
+			A&in;Mn(R) a au plus n valeurs propres<br/>
+			A&in;Mn(C) a au moins 1 valeur propre
+		</div>
+
+		<div class="prop">Coefficients de &chi;<sub>A</sub>
+			<p class="tl">&chi;<sub>A</sub> = X<sup>n</sup> &minus; Tr(A)X<sup>n-1</sup> + &hellip; + (&minus;1)<sup>n</sup>det(A)
+			</p>
+		</div>
+
+		<div class="prop">Stabilité
+			<ul class="tl">
+				<li>F sev de E, stable par u (ie u(F)&sub;F)</li>
+				<li>w&in;L(E) induit par u<sub>&vert;F</sub></li>
+				<li class="then">&chi;<sub>w</sub> divise &chi;<sub>u</sub></li>
+			</ul>
+		</div>
+		<div class="prop">Dimension du sep, ordre de multiplicité
+			<p class="tl">
+				m(&lambda;) ordre de multiplicité de &lambda; comme racine dans &chi;<sub>u</sub><br/>
+				1 &le; dim(E<sub>&lambda;</sub>(u)) &le; m(&lambda;)
+			</p>
+		</div>
+		<div class="rq">&chi;<sub>t<sub>A</sub></sub> = &chi;<sub>A</sub></div>
+		<h2>Polynôme annulateur, polynôme minimal</h2>
+		<div class="txt">u<sup>0</sup> = id, u<sup>i+1</sup> = u<sup>i</sup>&compfn;u<br/>
+			A<sup>0</sup> = I<sub>n</sub>, A<sup>i+1</sup> = A<sup>i</sup>&times;A</div>
+		<div class="def">Polynôme d'endomorphisme
+			<div class="tl">Soit P&in;K[X] de degré p<br/>
+				P(X) = <table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i=0</td></tr></table> a<sub>i</sub>X<sup>i</sup><br/>
+				On note P(u) le <em>polynôme d'endomorphisme de u</em> tel que P(u) :=<table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i=0</td></tr></table> a<sub>i</sub>u<sup>i</sup><br/>
+				On note P(A) le <em>polynôme d'endomorphisme de A</em> tel que P(A) :=<table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i=0</td></tr></table> a<sub>i</sub>A<sup>i</sup>
+			</div>
+		</div>
+
+		<div class="def">Algèbre K[u], K[A]
+			<p class="tl">u&in;L(E), K[u] = {P(u), P&in;K[X]}<br/>
+				A&in;M<sub>n</sub>(K), K[A] = {P(A), P&in;K[X]}
+			</p>
+		</div>
+
+		<div class="prop">K[u], K[A]
+			<div class="tl">K[u] est une sous-algèbre commutative de L(E) et &Phi;:<table class="func">
+				<tr><td>(K[X],+,&times;,&middot;)</td><td>&rarr;</td><td>(L(E),+,&compfn;,&middot;)</td></tr>
+				<tr><td>P</td><td>&mapsto;</td><td>P(u)</td></tr></table> est un morphisme d'algèbre d'image K[u]<hr/>
+				K[A] est une sous-algèbre commutative de M<sub>n</sub>(K) et &Psi;:<table class="func">
+				<tr><td>K[X]</td><td>&rarr;</td><td>M<sub>n</sub>(K)</td></tr>
+				<tr><td>P</td><td>&mapsto;</td><td>P(A)</td></tr></table> est un morphisme d'algèbre d'image K[A]
+			</div>
+		</div>
+		<div class="def">Idéal annulateur
+			<p class="tl">Ker&Phi; = {P&in;K[X], P(u) = 0} est un idéal
+			</p>
+		</div>
+		<div class="txt">Q&in;Ker&Phi; est un polynôme annulateur de u : Q(u) = 0</div>
 		<div class="ex">Exemple
 			<p class="tl">
 			</p>
 		</div>
+		<hr/>
+		<div class="prop">Polynôme minimal
+			<p class="tl">{P&in;K[X], P(u)=0} &ne; {0} idéal annulateur &rArr; &exist;!&mu;<sub>u</sub> tq {P&in;K[X], P(u)=0} = &mu;<sub>u</sub>K[X] appelé <em>Polynôme minimal</em> de u
+			</p>
+		</div>
+		<div class="dem"><strong>Démonstration :</strong> Tout idéal non-nul de K[X] est principal et admet un unique générateur unitaire</div>
+		<div class="ex">Exemples
+			<ol class="tl" type="i">
+				<li>Q&mapsto;Q', dérivée d'un polynôme de degré p : &mu;<sub>d</sub> = X<sup>p+1</sup></li>
+				<li>projection p : &mu;<sub>p</sub> = X(X-1)</li>
+				<li>symétrie s : &mu;<sub>s</sub> = X<sup>2</sup> &minus; 1</li>
+			</ol>
+		</div>
+
+		<div class="prop">Dimension finie
+			<p class="tl">E de dimension finie sur K, u&in;L(E) &rArr; u admet un polynôme minimal</p>
+		</div>
+
+		<div class="prop">Degré du polynôme minimal
+			<p class="tl">
+				u admet un polynôme minimal &rArr; K[u] de dimension finie et dim(K[u]) = deg(&mu;<sub>u</sub>)
+			</p>
+		</div>
+
+		<div class="prop">Matriciel : Polynôme minimal
+			<p class="tl">(I<sub>n</sub>,A,&hellip;,A<sup>n+1</sup>) est liée donc Ker&Psi;&ne;0 et admet un polynôme minimal &mu;<sub>A</sub>
+			</p>
+		</div>
+		<div class="prop">Base de K[A]
+			<p class="tl">deg &mu;<sub>A</sub> = d &rArr; (I<sub>n</sub>, A, &hellip;, A<sup>d&minus;1</sup>) base de K[A]
+			</p>
+		</div>
+		<hr/>
+		<div class="prop">Lien valeurs propres polynôme annulateur
+			<div class="tl">Soit P&in;K[X]\{0} tq P(u)=0 &rArr; Sp(u) &sub; {racines de P}<hr/>
+				Soit P&in;K[X] tq P(A) = 0 &rArr; Sp(A) &sub; {racines de P}
+			</div>
+		</div>
+		<div class="txt">Soit x vecteur propre de P(u), associé à la valeur propre P(&lambda;). On suppose P(u)=0 alors P(u)(x)=0=P(&lambda;x) donc P(&lambda;)=0. ie. &lambda;&in;{racines de P}</div>
+
+		<div class="prop">Lemme de décomposition des noyaux
+			<ul class="tl">
+				<li>u&in;L(E)</li>
+				<li>P,Q&in;K[X], P&wedge;Q=1</li>
+				<li class="then">Ker(PQ)(u) = Ker(P)(u) &oplus; Ker(Q)(u)</li>
+			</ul>
+		</div>
+		<div class="prop">Généralisation : Lemme de décomposition des noyaux
+			<ul class="tl">
+				<li>u&in;L(E)</li>
+				<li>P<sub>1</sub>,&hellip;,P<sub>n</sub>&in;K[X]</li>
+				<li>&forall;(i,j)&in;[[1,n]]<sup>2</sup>, i&ne;j&rArr; P<sub>i</sub> &wedge; P<sub>j</sub> = 1</li>
+				<li class="then">Ker(<table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&prod;</td></tr><tr class="index"><td>i=1</td></tr></table>P<sub>i</sub>)(u) = <table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>i=1</td></tr></table>Ker(P<sub>i</sub>)(u)</li>
+			</ul>
+		</div>
+		<div class="prop">Théorème de Cayley-Hamilton
+			<div class="tl">
+				E un Kev de dimension n, u&in;L(E) : &chi;<sub>u</sub>(u) = 0<hr/>
+				A&in;Mn(K) : &chi;<sub>A</sub>(A) = 0
+			</div>
+		</div>
+		<div class="prop">Lien Polynôme minimal, Valeurs propres
+			<div class="tl">
+				Sp(u) = {racines de &mu;<sub>u</sub>}<hr/>
+				Sp(A) = {racines de &mu;<sub>A</sub>}
+			</div>
+		</div>
+		<div class="dem"><strong>Démonstration :</strong> &mu;<sub>u</sub>(u) = 0 donc Sp(u) &sub; {racines de &mu;<sub>u</sub>}<br/>
+			Or Sp(u) = {racines de &chi;<sub>u</sub>} donc {racines de &chi;<sub>u</sub>}&sub;{racines de &mu;<sub>u</sub>}<br/>
+			Or &mu;<sub>u</sub> divise &chi;<sub>u</sub>, donc {racines de &mu;<sub>u</sub>}&sub;{racines de &chi;<sub>u</sub>}<br/>
+			Donc {racines de &mu;<sub>u</sub>}&sub;{racines de &chi;<sub>u</sub>} = Sp(u)
+		</div>
+
+		<h2>Diagonalisabilité</h2>
+		<div class="def">Diagonalisabilité
+			<div class="tl">&hellip;<hr/>
+				&hellip;
+			</div>
+		</div>
+
+		<div class="prop">Proposition
+			<p class="tl">A=M<sub>B</sub>(u) &rArr; A diagonalisable ssi u diagonalisable
+			</p>
+		</div>
+
+		<div class="prop">Caractérisations de la diagonalisabilité
+			<div class="tl">u diagonalisable<br/>
+				&hArr;E = <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>&lambda;&in;Sp(u)</td></tr></table>E<sub>&lambda;</sub>(u)<br/>
+				&hArr;dim E = <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>&lambda;&in;Sp(u)</td></tr></table>dim(E<sub>&lambda;</sub>(u))</br>
+				&hArr;&chi;<sub>u</sub> est scindé et &forall;&lambda;&in;Sp(u), dimE<sub>&lambda;</sub>(u) = m(&lambda;)<br/>
+				&hArr;&exist;Q&in;K[X] scindé à racines simples tel que Q(u) = 0<br/>
+				&hArr;&mu;<sub>u</sub> est scindé à racines simples
+				<hr/>
+
+				A diagonalisable<br/>
+				&hArr;A semblable à une matrice diagonale<br/>
+				&hArr;&chi;<sub>u</sub> est scindé et &forall;&lambda;&in;Sp(A), rg(A&minus;&lambda;I<sub>n</sub>) = n&minus;m(&lambda;)<br/>
+				<div class="rq">dim E<sub>&lambda;</sub>(A) = dim Ker(A&minus;&lambda;I<sub>n</sub>) &le; m(&lambda;)<br/>
+					n&minus;rg(A&minus;&lambda;I<sub>n</sub>)&le;m(&lambda;)<br/>
+					rg(A&minus;&lambda;I<sub>n</sub>)&ge;n-m(&lambda;)</div>
+				&hArr;&chi;<sub>u</sub> est scindé et &forall;&lambda;&in;Sp(A), dimE<sub>&lambda;</sub>(A) = m(&lambda;)<br/>
+				&hellip;
+			</div>
+		</div>
+		<div class="ex">Diagonalisation d'une matrice 3&times;3
+			<p class="tl">
+			</p>
+		</div>
 		
+		<div class="prop">Sous-espaces stables
+			<ul class="tl">
+				<li>E K-ev de dimension n</li>
+				<li>u&in;L(E) diagonalisable</li>
+				<li>F sev de E, stable par u</li>
+				<li>w&in;L(F), induit par u<sub>&vert;F</sub></li>
+				<li class="then">Alors w est diagonalisable et &mu;<sub>w</sub> divise &mu;<sub>u</sub>
+			</ul>
+		</div>
+		<div class="dem"><strong>Démonstration :</strong>&hellip;</div>
+
+		<h2>Trigonalisabilité</h2>
+		<div class="def">Trigonalisabilité
+			<div class="tl">&hellip;<hr/>&hellip;
+			</div>
+		</div>
+		<div class="rq">
+		</div>
+		<div class="prop">Caractérisation de la trigonalisabilité
+			<div class="tl">
+				u trigonalisable &hArr; &chi;<sub>u</sub> est scindé
+				<hr/>
+				A trigonalisable &hArr; &chi;<sub>A</sub> est scindé
+			</div>
+		</div>
+		<div class="rq">Tout élément de M<sub>n</sub>(C) est trigonalisable</div>
+
+		<h2>Nilpotence</h2>
+		<div class="def">Nilpotence
+			<p class="tl">u est <em>nilpotent d'indice p</em> si u<sup>p</sup> = 0 et u<sup>p&minus;1</sup> &ne; 0</p>
+		</div>
+
+		<div class="prop">Caractérisation de la nilpotence
+			<p class="tl">u est nilpotent &hArr; (u est trigonalisable et Sp(u) = {0})
+			</p>
+		</div>
+		<div class="prop">Csq
+			<p class="tl">u&in;L(E) nilpotent &rArr; l'indice de nilpotence de u &le; n</p>
+		</div>
+		<div class="dem">u<sup>n</sup> = 0</div>
+
+		<div class="prop">Proposition
+			<ul class="tl">
+				<li>&exist;P&in;K[X]\{0} scindé tel que P(u) = 0</li>
+				<li class="then">u est trigonalisable,<br/> de plus, il existe une base de E dans laquelle la matrice de u est diagonale par blocs chaque bloc étant de la forme &alpha;I+N, N nilpotente</li>
+			</ul>
+		</div>
+		<div class="rq">En pratique, on prend souvent P=&chi;<sub>u</sub> lorsque &chi;<sub>u</sub> est scindé</div>
+
+		<h2>Matrices symétriques</h2>
+		<div class="prop">Théorème spectral
+			<ul class="tl">
+				<li>Soit u&in;L(E) symétrique</li>
+				<li class="then">Alors u est diagonalisable</li>
+				<li class="then">
+					De plus, E =<table class="indexed"><tr class="index"><td>&perp;</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>&lambda;&in;Sp(u)</td></tr></table>E<sub>&lambda;</sub>(u)
+				</li>
+				<li class="then">En particulier, il existe une b.o.n. propre pour u</li>
+			<hr/>
+				<li>Soit A&in;M<sub>n</sub>(R) symétrique</li>
+				<li class="then">Alors A est diagonalisable</li>
+				<li class="then">A est orthogonalement semblable à une matrice diagonale, ie.<br/>
+					&exist;P&in;O(n), D diagonale telle que A = PDP<sup>&minus;1</sup> = PD<sup>t</sup>P
+				</li>
+			</ul>
+		</div>
+		<div class="txt">cf. chapitre <a href="espaces-prehilbertiens-reels.html#ee">Espaces euclidiens</a></div>
+		<h2>Exercices classiques</h2>
+		<h3>Commutant d'un endomorphisme</h3>
+			<div class="txt"></div>
+		<h3>Diagonalisation simultannée</h3>
+			<div class="txt"></div>
+		<h3>Trigonalisation simultannée</h3>
+			<div class="txt"></div>
 		<footer>
 			<img src="http://eclep.free.fr/smiley/dango_daikazoku0.gif" alt="Signature" />
 		</footer>
