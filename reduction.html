@@ -251,6 +251,13 @@
 				<li class="then">Ker(PQ)(u) = Ker(P)(u) &oplus; Ker(Q)(u)</li>
 			</ul>
 		</div>
+		<div class="dem"><br/>
+			>Utiliser le théorème de Bezout<br/>
+			>Appliquer les polynômes en polynôme d'endomorphisme u. 1=id<sub>E</sub><br/>
+			>Évaluer les polynômes d'endomorphisme en x<br/>
+			>Mq KerPQ(u) &sub; KerP(u) &oplus; KerQ(u)<br/>
+			>Mq l'inclusion inverse
+		</div>
 		<div class="prop">Généralisation : Lemme de décomposition des noyaux
 			<ul class="tl">
 				<li>u&in;L(E)</li>
@@ -259,6 +266,10 @@
 				<li class="then">Ker(<table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&prod;</td></tr><tr class="index"><td>i=1</td></tr></table>P<sub>i</sub>)(u) = <table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>i=1</td></tr></table>Ker(P<sub>i</sub>)(u)</li>
 			</ul>
 		</div>
+		<div class="dem">
+			Par récurrence sur n
+		</div>
+
 		<div class="prop">Théorème de Cayley-Hamilton
 			<div class="tl">
 				E un Kev de dimension n, u&in;L(E) : &chi;<sub>u</sub>(u) = 0<hr/>
@@ -272,7 +283,7 @@
 			Or les (&lambda;<sub>i</sub>&minus;x)<sub>i&in;[[1,p]]</sub> sont premiers entre eux<br/>
 			Par le lemme de décomposition des noyaux, Ker(<table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&prod;</td></tr><tr class="index"><td>i=1</td></tr></table>(&lambda;<sub>i</sub>&minus;u))=<table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>i=1</td></tr></table>Ker(&lambda;<sub>i</sub>&minus;u)<br/>
 			Ker(&chi;<sub>u</sub>(u))=<table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>i=1</td></tr></table>E<sub>&lambda;<sub>i</sub></sub>(u)<br/>
-			Par le théorème de Cayley-Hamilton, Ker(&chi;<sub>u</sub>(u)) = Ker(0) = E<br/>
+			Par le théorème de Cayley-Hamilton, Ker(&chi;<sub>u</sub>(u)) = Ker(0<sub>E</sub>) = E<br/>
 			D'où E = <table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>i=1</td></tr></table>E<sub>&lambda;<sub>i</sub></sub>(u)
 		</div>
 
@@ -289,9 +300,9 @@
 		</div>
 
 		<h2>Diagonalisabilité</h2>
-		<div class="def">Diagonalisabilité
-			<div class="tl">&hellip;<hr/>
-				&hellip;
+		<div class="def">Diagonalisabilité, base propre
+			<div class="tl">On dit que u&in;L(E) est diagonalisable s'il existe une B base de E telle que M<sub>B</sub>(u) soit diagonale. Une telle base (si elle existe) est formée de vecteurs propres. On dit que c'est une <em>base propre</em> pour u<hr/>
+				A&in;Mn(K) est diagonalisable si u:<table class="func"><tr><td>M<sub>n,1</sub>(K)</td><td>&rarr;</td><td>M<sub>n,1</sub>(K)</td></tr><tr><td>X</td><td>&mapsto;</td><td>AX</td></tr></table> est diagonalisable
 			</div>
 		</div>
 
@@ -315,13 +326,17 @@
 				<div class="rq">dim E<sub>&lambda;</sub>(A) = dim Ker(A&minus;&lambda;I<sub>n</sub>) &le; m(&lambda;)<br/>
 					n&minus;rg(A&minus;&lambda;I<sub>n</sub>)&le;m(&lambda;)<br/>
 					rg(A&minus;&lambda;I<sub>n</sub>)&ge;n-m(&lambda;)</div>
-				&hArr;&chi;<sub>u</sub> est scindé et &forall;&lambda;&in;Sp(A), dimE<sub>&lambda;</sub>(A) = m(&lambda;)<br/>
-				&hellip;
+				&hArr;&chi;<sub>u</sub> est scindé et &forall;&lambda;&in;Sp(A), dimE<sub>&lambda;</sub>(A) = m(&lambda;)
 			</div>
 		</div>
-		<div class="ex">Diagonalisation d'une matrice 3&times;3
-			<p class="tl">
-			</p>
+		<div class="ex">Diagonalisation d'une matrice 3&times;3 A
+			<ul class="tl">
+				<li>Calculer le polynôme caractéristique pour trouver ses valeurs propres</li>
+				<li>Résoudre les systèmes linéaires AX = &lambda;X &rArr; (A&minus;&lambda;I<sub>n</sub>)X = 0 avec X=<table class="matr"><tr><td>x</td></tr><tr><td>y</td></tr><tr><td>z</td></tr></table></li>
+				<li>Déterminer les sous-espaces propres. E<sub>&lambda;</sub> = Vect(&hellip;) (selon la dimension du sep)</li>
+				<li>A = PDP<sup>&minus;1</sup> Construire la matrice de passage avec les vecteurs propres et la matrice diagonale avec les valeurs propres sur la diagonale</li>
+				<li>Vérifier AP = PD</li>
+			</ul>
 		</div>
 		
 		<div class="prop">Sous-espaces stables
@@ -343,7 +358,7 @@
 
 		<h2>Trigonalisabilité</h2>
 		<div class="def">Trigonalisabilité
-			<div class="tl">&hellip;<hr/>&hellip;
+			<div class="tl">u&in;L(E) est trigonalisable s'il existe B une base de E telle que M<sub>B</sub>(u) est triangilaire supérieure<hr/>A&in;M<sub>n</sub>(K) est trigonalisable si A est semblable à une matrice triangulaire supérieure
 			</div>
 		</div>
 		<div class="rq">
@@ -355,7 +370,7 @@
 				A trigonalisable &hArr; &chi;<sub>A</sub> est scindé
 			</div>
 		</div>
-		<div class="rq">Tout élément de M<sub>n</sub>(C) est trigonalisable</div>
+		<div class="rq">Tout élément de M<sub>n</sub>(C) est trigonalisable (D'Alembert-Gauss)</div>
 
 		<h2>Nilpotence</h2>
 		<div class="def">Nilpotence
