@@ -56,7 +56,7 @@
 					<tr><td>0</td><td></td><td></td><td>A<sub>p</sub></td></tr></table>, A<sub>i</sub>&in;M<sub>p<sub>i</sub></sub>(K) avec p<sub>i</sub> = dim(F<sub>i</sub>)
 			</div>
 		</div>
-		<div class="rq">Remarque : B = (e<sub>1</sub>,&hellip;,e<sub>n</sub>) base de E, u&in;L(E)<br/>
+		<div class="rq">B = (e<sub>1</sub>,&hellip;,e<sub>n</sub>) base de E, u&in;L(E)<br/>
 			M<sub>B</sub>(u) = <table class="matr">
 					<tr><td>a<sub>11</sub></td><td>a<sub>12</sub></td><td>&ctdot;</td><td>a<sub>1n</sub></td></tr>
 					<tr><td></td><td>&dtdot;</td><td></td><td>&vellip;</td></tr>
@@ -115,7 +115,7 @@
 			</p>
 		</div>
 
-		<div class="dem"><strong>Démonstration :</strong> Soit &lambda;&in;Sp(u). Montrons que E<sub>&lambda;</sub>(u) est stable par v.<br/>
+		<div class="dem">Soit &lambda;&in;Sp(u). Montrons que E<sub>&lambda;</sub>(u) est stable par v.<br/>
 			Soit x&in;E<sub>&lambda;</sub>(u).<br/>
 			Alors <mark>u(v(x))</mark> = v(u(x)) = v(&lambda;x) = <mark>&lambda;v(x)</mark><br/>
 			v(x) &in; E<sub>&lambda;</sub>(u)<br/>
@@ -134,7 +134,7 @@
 			<p class="tl">Les racines du polynôme caractéristique de A sont les valeurs propres de A
 			</p>
 		</div>
-		<div class="dem">&lambda;&in;Sp(A)<br/>
+		<div class="dem"><br/>&lambda;&in;Sp(A)<br/>
 				&hArr;&exist;X&in;Mn(K)\{0}, AX = &lambda;X<br/>
 				&hArr;Ker(A&minus;&lambda;I<sub>n</sub>) &ne; 0 &rarr; A&minus;&lambda;I<sub>n</sub> n'est pas injective, donc pas inversible<br/>
 				&hArr;det(A &minus; &lambda;I<sub>n</sub>) = 0<br/>
@@ -209,7 +209,7 @@
 			<p class="tl">{P&in;K[X], P(u)=0} &ne; {0} idéal annulateur &rArr; &exist;!&mu;<sub>u</sub> tq {P&in;K[X], P(u)=0} = &mu;<sub>u</sub>K[X] appelé <em>Polynôme minimal</em> de u
 			</p>
 		</div>
-		<div class="dem"><strong>Démonstration :</strong> Tout idéal non-nul de K[X] est principal et admet un unique générateur unitaire</div>
+		<div class="dem">Tout idéal non-nul de K[X] est principal et admet un unique générateur unitaire</div>
 		<div class="ex">Exemples
 			<ol class="tl" type="i">
 				<li>Q&mapsto;Q', dérivée d'un polynôme de degré p : &mu;<sub>d</sub> = X<sup>p+1</sup></li>
@@ -265,13 +265,24 @@
 				A&in;Mn(K) : &chi;<sub>A</sub>(A) = 0
 			</div>
 		</div>
+
+		<div class="txt">LN+TCH :<br/>
+			Soit u&in;L(E), soit (&lambda;<sub>1</sub>,&hellip;,&lambda;<sub>p</sub>) les valeurs propres distinctes de u.<br/>
+			&forall;i&in;[[1,p]], E<sub>&lambda;<sub>i</sub></sub> = Ker(&lambda;<sub>i</sub>id&minus;u) = Ker(&lambda;<sub>i</sub>id&minus;x)(u)<br/>
+			Or les (&lambda;<sub>i</sub>&minus;x)<sub>i&in;[[1,p]]</sub> sont premiers entre eux<br/>
+			Par le lemme de décomposition des noyaux, Ker(<table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&prod;</td></tr><tr class="index"><td>i=1</td></tr></table>(&lambda;<sub>i</sub>&minus;u))=<table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>i=1</td></tr></table>Ker(&lambda;<sub>i</sub>&minus;u)<br/>
+			Ker(&chi;<sub>u</sub>(u))=<table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>i=1</td></tr></table>E<sub>&lambda;<sub>i</sub></sub>(u)<br/>
+			Par le théorème de Cayley-Hamilton, Ker(&chi;<sub>u</sub>(u)) = Ker(0) = E<br/>
+			D'où E = <table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>i=1</td></tr></table>E<sub>&lambda;<sub>i</sub></sub>(u)
+		</div>
+
 		<div class="prop">Lien Polynôme minimal, Valeurs propres
 			<div class="tl">
 				Sp(u) = {racines de &mu;<sub>u</sub>}<hr/>
 				Sp(A) = {racines de &mu;<sub>A</sub>}
 			</div>
 		</div>
-		<div class="dem"><strong>Démonstration :</strong> &mu;<sub>u</sub>(u) = 0 donc Sp(u) &sub; {racines de &mu;<sub>u</sub>}<br/>
+		<div class="dem">&mu;<sub>u</sub>(u) = 0 donc Sp(u) &sub; {racines de &mu;<sub>u</sub>}<br/>
 			Or Sp(u) = {racines de &chi;<sub>u</sub>} donc {racines de &chi;<sub>u</sub>}&sub;{racines de &mu;<sub>u</sub>}<br/>
 			Or &mu;<sub>u</sub> divise &chi;<sub>u</sub>, donc {racines de &mu;<sub>u</sub>}&sub;{racines de &chi;<sub>u</sub>}<br/>
 			Donc {racines de &mu;<sub>u</sub>}&sub;{racines de &chi;<sub>u</sub>} = Sp(u)
@@ -322,7 +333,13 @@
 				<li class="then">Alors w est diagonalisable et &mu;<sub>w</sub> divise &mu;<sub>u</sub>
 			</ul>
 		</div>
-		<div class="dem"><strong>Démonstration :</strong>&hellip;</div>
+		<div class="dem"><br/>
+			&forall;x&in;E, &mu;<sub>u</sub>(u)(x) = 0<br/>
+			En particulier, &forall;x&in;F, &mu;<sub>u</sub>(u)(x) = 0. Donc &mu;<sub>u</sub>(w) = 0, puis &mu;<sub>w</sub> divise &mu;<sub>u</sub><br/>
+			Or u est diagonalisable donc &mu;<sub>u</sub> est scindé à racines simples.<br/>
+			&mu;<sub>w</sub> divise &mu;<sub>u</sub> donc &mu;<sub>w</sub> est aussi scindé à racines simples.<br/>
+			Donc w est diagonalisable
+		</div>
 
 		<h2>Trigonalisabilité</h2>
 		<div class="def">Trigonalisabilité
