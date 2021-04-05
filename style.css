@@ -1,7 +1,7 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');*/
 
 body {
-	font-family: /*'Ubuntu',*/ Arial, serif;
+	font-family: /*'Ubuntu', Arial,*/ serif;
 	background-color:#5af; /*arrière plan bleu clair*/
 	color:#005; /*texte en bleu foncé*/
 }
@@ -188,6 +188,17 @@ img.logo{max-width:100%;}
 	margin: 1px 0 1px 2em;
 	background-color:#eff;
 	color:#000;
+}
+
+.dem::before{
+	content:"Démonstration : ";
+	font-weight:bold;
+}
+
+.rq::before{
+	content:"Remarque : ";
+	font-weight:bold;
+	color:blue;
 }
 
 .rq {
