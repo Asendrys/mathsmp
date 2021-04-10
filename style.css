@@ -1,6 +1,6 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');*/
 @media print{
-	header nav, a, footer{
+	header nav, a, footer, .noprint{
 		display:none;
 	}
 }
