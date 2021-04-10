@@ -1,0 +1,69 @@
+@media print{
+	a,.noprint{display:none;}
+	h1{text-align:center;}
+}
+
+body{margin-left:4em;font-family:"Liberation Serif";}
+
+em{font-weight: bold;font-style:normal;}
+
+
+p, div.prop{border-left:solid 1px;padding:0.5em;}
+
+.sqrt{border-top:thin solid;}
+.barre{text-decoration:overline;}
+
+/*Fractions, source : https://stackoverflow.com/questions/7525977/how-to-write-fraction-value-using-html */
+.frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+    z-index:1;
+}
+.frac > span {
+    display: block;
+    padding: 0.1em;
+}
+.frac span.bottom {
+    border-top: thin solid;
+}
+.frac span.symbol {
+    display: none;
+}
+
+table.func{
+	display:inline-block;
+	vertical-align:middle;
+	border-collapse:collapse;
+	text-align:center;
+}
+
+table.func td{padding:0px;}
+
+table.indexed{
+	display:inline-block;
+	vertical-align:middle;
+	border-collapse:collapse;
+	text-align:center;
+}
+table.indexed tr.index{
+	line-height:50%;
+	font-size:50%;
+	margin:2em;
+}
+
+table.det,table.matr{
+	border-left:solid 1px;
+	border-right:solid 1px;
+	display:inline-block;
+	vertical-align:middle;
+	border-collapse:collapse;
+	text-align:center;
+}
+
+table.matr{
+	border-radius:5px;
+	padding:3px;
+}

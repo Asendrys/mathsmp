@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diagonalisation</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="resume-style.css"/>
+</head>
+<body>
+	<a href="../reduction.html">retour</a>
+	<h1>Résumé : Diagonalisation, Trigonalisation</h1>
+	<span>Soit E un &Kopf;-e.v., u&in;L(E), A&in;&Mscr;<sub>n</sub>(&Kopf;), &Kopf; = &Ropf; ou &Copf;</span>
+	<p><em>Somme directe</em><br/>La somme des sous-espaces propres deux-à-deux distincts est directe.
+	</p>
+	<p><em>Polynôme caractéristique</em><br/>
+		Le polynôme caractéristique est un invariant de similitude<br/>
+		&chi;<sub>A</sub>(X) = X<sup>n</sup> &minus; Tr(A) X<sup>n&minus;1</sup> + &ctdot; + (&minus;1)<sup>n</sup> det(A)<br/>
+		Le polynôme caractéristique est un polynôme annulateur (<em>Théorème de Cayley-Hamilton</em>)
+	</p>
+	<p><em>Valeurs propres</em><br/>
+		Les valeurs propres sont :<br/>
+		-les racines du polynôme caractéristique<br/>
+		-les racines du polynôme minimal<br/>
+		-contenues dans les racines des polynômes annulateurs
+	</p>
+	<p><em>Dimensions, degrés</em><br/>
+		1 &le; dim(E<sub>&lambda;</sub>(u)) &le; multiplicité de &lambda; dans &chi;<sub>u</sub><br/>
+		dim(&Kopf;[u]) = deg(&mu;<sub>u</sub>)
+	</p>
+	<div class="prop"><em>Lemme de décomposition des noyaux</em><br/>
+		(P<sub>i</sub>)<sub>i&in;&LeftDoubleBracket;1,n&RightDoubleBracket;</sub> famille de polynômes deux-à-deux premiers entre eux &rArr; Ker(<table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&prod;</td></tr><tr class="index"><td>i=1</td></tr></table>P<sub>i</sub>)(u) = <table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&oplus;</td></tr><tr class="index"><td>i=1</td></tr></table>Ker(P<sub>i</sub>)(u)</li>
+	</div>
+<br/>
+	<div class="prop"><em>Diagonalisabilité</em><br/>
+		<span class="blank">u diagonalisable<br/>
+		&hArr; E = <table class="indexed"><tr><td>&oplus;</td></tr><tr class="index"><td>&lambda;&in;Sp(u)</td></tr></table>E<sub>&lambda;</sub>(u)<br/>
+		&hArr; dim(E) = <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>&lambda;&in;Sp(u)</td></tr></table>dim(E<sub>&lambda;</sub>(u))</br>
+		&hArr; &chi;<sub>u</sub> est scindé et pour tout &lambda;&in;Sp(u), dim(E<sub>&lambda;</sub>(u)) = m(&lambda;)<br/>
+		&hArr; il existe un polynôme annulateur de u scindé à racines simples<br/>
+		&hArr; &mu;<sub>u</sub> est scindé à racines simples<br/>
+		&hArr; A diagonalisable<br/>
+		&hArr; A semblable à une matrice diagonale<br/>
+		&hArr; &chi;<sub>A</sub> est scindé et pour tout &lambda;&in;Sp(A), rg(A&minus;&lambda;I<sub>n</sub>) = n&minus;m(&lambda;)<br/>
+		&hArr; &chi;<sub>A</sub> est scindé et pour tout &lambda;&in;Sp(A), dim(E<sub>&lambda;</sub>(A)) = m(&lambda;)
+	</div>
+	<p><em>Théorème spectral</em><br/>
+		Si u est symétrique, alors u est diagonalisable dans une base orthonormale, de valeurs propres réelles<br/>
+		Si A est symétrique réelle, alors A est orthogonalement diagonalisable
+	</p>
+	<p><em>Trigonalisabilité</em><br/>
+		u trigonalisable &hArr; &chi;<sub>u</sub> est scindé<br/>
+		&hArr; A trigonalisable &hArr;&chi;<sub>A</sub> est scindé
+	</p>
+
+	<p><em>Nilpotence</em><br/>
+		u est nilpotent &hArr; u est trigonalisable et Sp(u) = {0}
+	</p>
+</body>
+</html>
