@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dénombrabilité</title>
+	<meta charset="utf-8" />
+	<style>
+		/*Fractions, source : https://stackoverflow.com/questions/7525977/how-to-write-fraction-value-using-html */
+		body{margin-left:4em;}
+
+		em{font-weight: bold;font-style:normal;}
+
+		p, div.prop{border-left:solid 1px;padding:0.5em;margin:1em;}
+
+		table.func{
+			display:inline-block;
+			vertical-align:middle;
+			border-collapse:collapse;
+			text-align:center;
+		    z-index:1;
+		}
+		table.func td{padding:0px;}
+
+		table.indexed{
+			display:inline-block;
+			vertical-align:middle;
+			border-collapse:collapse;
+			text-align:center;
+		    z-index:1;
+		}
+		table.indexed tr.index{
+			line-height:50%;
+			font-size:50%;
+			margin:2em;
+		}
+
+		.barre{text-decoration:overline;}
+	</style>
+</head>
+<body>
+	<h1>Résumé : Dénombrabilité</h1>
+	<p><em>Équipotence</em><br/>
+	E, F deux ensembles. On dit que CardE = CardF s'il existe h:E&rarr;F bijective.</p>
+	<p><em>Comparaison de cardinaux</em><br/>
+	E, F deux ensembles. On dit que CardE &le; CardF s'il existe h:E&rarr;F injective.</p>
+	<span>E&ne;&empty;.</span>
+	<p><em>Théorème de Cantor</em><br/>
+	Il n'existe pas de surjection de E sur P(E)</p>
+	<p><em>Ensemble dénombrable</em><br/>
+		Un ensemble est dénombrable s'il est en bijection avec N<br/>
+		Un ensemble est fini ou dénombrable (ou au plus dénombrable) s'il est en bijection avec une partie de N</p>
+	<p><em>Parties de N</em><br/>
+	Toute partie infinie de N est dénombrable</p>
+	
+	
+
+	<div class="prop"><em>Caractérisation séquentielle</em><br/>
+	A est fini ou dénombrable &hArr; il existe une suite (J<sub>n</sub>)<sub>n&in;N</sub> croissante d'ensembles finis telle que <table class="indexed"><tr><td>&cup;</td></tr><tr class="index"><td>n&in;N</td></tr></table>J<sub>n</sub></div>
+
+	<div>Exemples<br/>
+	Z = <table class="indexed"><tr><td>&cup;</td></tr><tr class="index"><td>n&in;N</td></tr></table>&LeftDoubleBracket;&minus;n,n&RightDoubleBracket;<br/>
+	N<sup>2</sup> = <table class="indexed"><tr class='index'></tr><tr><td>&cup;</td></tr><tr class="index"><td>n&in;N</td></tr></table>&LeftDoubleBracket;0,n&RightDoubleBracket;<sup>2</sup></div>
+
+	<p><em>Image d'une application surjective</em><br/>
+	f : N&rarr;E surjective &rArr; E est fini ou dénombrable</p>
+
+	<p><em>Sous-ensemble</em><br/>
+		A est fini ou dénombrable, B&sub;A &rArr; B est fini ou dénombrable</p>
+
+	<p><em>Produit cartésien</em><br/>
+		A et B dénombrables &rArr; A&times;B dénombrable</p>
+
+	<p><em>Réunion</em><br/>
+	Une réunion finie ou dénombrable d'ensembles finis ou dénombrables est un ensemble fini ou dénombrable</p>
+
+	<div>Exemples
+	<ul type="a">
+		<li><table class="func">
+				<tr><td>Z&times;N*</td><td>&rarr;</td><td>Q</td></tr>
+				<tr><td>(p,q)</td><td>&mapsto;</td><td>p/q</td></tr>
+			</table> est surjective. On en déduit que Q est dénombrable
+		</li>
+		<li>P(N) n'est pas dénombrable. Card(N) &le; Card(P(N))</li>
+		<li>R n'est pas dénombrable</li>
+	</ul></div>
+</body>
+</html>

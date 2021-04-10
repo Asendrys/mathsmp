@@ -44,6 +44,9 @@ nav .but{ /*boutton [o]*/
 	height:3em;
 	border:#005 solid 2px;
 	text-align:center;
+	font-family:Arial,sans-serif;
+	font-weight:bold;
+	color:#fff;
 	vertical-align:middle;	
 	background-color:rgba(128,200,255,0.9);
 }
@@ -173,6 +176,9 @@ img.logo{max-width:100%;}
 	padding:10px 1em 10px 1em;
 	background-color:#CFF;
 	border-radius: 0 0 15px 15px;
+}
+
+.prop ul.tl{
 	list-style-type:">";
 }
 
@@ -362,4 +368,8 @@ table.det,table.matr{
 table.matr{
 	border-radius:5px;
 	padding:3px;
+}
+
+.barre{
+	text-decoration:overline;
 }

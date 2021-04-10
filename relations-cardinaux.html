@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Relations, Cardinaux</title>
+		<meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+				<nav>
+					<span class="but">O</span>
+					<ul class="bar">
+							<li><a href="relations-cardinaux.html">&nbsp;1 Relations, Cardinaux</a></li>
+							<li><a href="groupes.html">&nbsp;2 Groupes</a></li>
+							<li><a href="anneaux-corps.html">&nbsp;3 Anneaux, Corps</a></li>
+							<li><a href="espaces-vectoriels.html">&nbsp;4 Espaces vectoriels</a></li>
+							<li><a href="reduction.html">&nbsp;5 Reductions des endormorphismes et des matrices carrées</a></li>
+							<li><a href="evn.html">&nbsp;6 Espace vectoriel normé</a></li>
+							<li><a href="series.html">&nbsp;7 Séries</a></li>
+							<li><a href="fonction-var-reelle.html">&nbsp;8 Fonction à une variable réelle</a></li>
+							<li><a href="integration.html">&nbsp;9 Intégration sur un intervalle</a></li>
+							<li><a href="suites-series-de-fonctions.html">10 Suites et séries de fonctions</a></li>
+							<li><a href="integrales-a-parametres.html">11 Intégrales à paramètres</a></li>
+							<li><a href="series-entieres.html">12 Séries entières</a></li>
+							<li><a href="espaces-prehilbertiens-reels.html">13 Espaces préhilbertiens réels, espaces euclidiens</a></li>
+							<li><a href="denombrement.html">14 Dénombrements, Espaces probabilisés</a></li>
+							<li><a href="variables-aleatoires.html">15 Variables aléatoires</a></li>
+							<li><a href="equadiff.html">16 Équations différentielles linéaires</a></li>
+							<li><a href="calcul-diff.html">17 Calcul différentiel</a></li>
+					</ul>
+				</nav>
+			<p id="title"><a href="sommaire.html">MATHS</a></p>
+			<h1>Relations-cardinaux</h1>
+		</header>
+		<p><a href="resume/denombrabilite">Résumé : Dénombrabilité</a></p>
+		<p>E&ne;&empty;.</p>
+		<h2>Relations</h2>
+		<div class="def">Relation
+			<p class="tl">
+				Une relation R sur E est un sous-ensemble G&in; E&times;E<br/>
+				xRy signifie (x,y)&in;G
+			</p>
+		</div>
+		<div class="ex">Exemples
+			<ul class="tl">
+				<li>E=Z. n&in;N*<br/> x&equiv;y[n] si n divise x&minus;y.</li>
+				<li>E K-e.v.<br/>xRy s'il existe &lambda;&in;K* tel que y = &lambda;x
+			</ul>
+		</div>
+		<div class="def">Vocabulaire
+			<ul class="tl">R relation sur E est :
+				<li>réflexive si: &forall;x&in;E, xRx</li>
+				<li>symétrique si: &forall;x,y&in;E, xRy &rArr; yRx</li>
+				<li>transitive si: &forall;x,y,z&in;E, xRy et yRz &rArr; xRz</li>
+				<li>antisymétrique si: &forall;x,y&in;E, xRy et yRx &rArr; x=y</li>
+			</ul>
+		</div>
+		<h2>Relation d'équivalence</h2>
+		<div class="def">Relation d'équivalence
+			<ul class="tl">R, relation sur E, est une <em>relation d'équivalence</em> si elle est
+				<li>réflexive</li>
+				<li>symétrique</li>
+				<li>transitive</li>
+			</ul>
+		</div>
+		<div class="def">Classe d'équivalence
+			<p class="tl">x&in;E. <span class="barre">x</span> = {y&in;E, xRy} <em>Classe d'équivalence de x (selon R)</em><br/>
+				Noté également avec un point ou un ~ au dessus de x, ou bien cl(x)
+			</p>
+		</div>
+		<div class="prop">Non-contradiction
+			<p class="tl">Soit x,y&in;E. Alors <span class="barre">x</span> = <span class="barre">y</span> ou <span class="barre">x</span> &cap; <span class="barre">y</span> = &empty;
+			</p>
+		</div>
+		<div class="dem">
+			Supposons <span class="barre">x</span>&cap;<span class="barre">y</span> = &empty;.<br/>
+			Soit z&in;<span class="barre">x</span>&cap;<span class="barre">y</span>, t&in;<span class="barre">x</span>.<br/>
+			tRx et xRz donc tRz<br/>
+			Or zRy, donc tRy. c'est-à-dire t&in;<span class="barre">y</span>. Donc <span class="barre">x</span>&sub;<span class="barre">y</span>.<br/>
+			De même, <span class="barre">y</span>&sub;<span class="barre">x</span>. Donc <span class="barre">x</span> = <span class="barre">y</span>
+		</div>
+		<div class="def">Ensemble quotient
+			<div class="tl">E<sub>/R</sub> = {<span class="barre">x</span>, x&in;E} : Ensemble des classes d'équivalences
+			</div>
+		</div>
+		<div class="ex">Exemple
+			<p class="tl">Z/5Z
+			</p>
+		</div>
+		<div class="prop">Partition
+			<p class="tl">Les classes d'équivalences selon R forment une partition de E
+			</p>
+		</div>
+		<div class="dem">(X)<sub>X&in;E<sub>/R</sub></sub>.<br/>
+			&forall;X&in;E<sub>/R</sub>, X&ne;&empty;<br/>
+			&forall;X,Y&in;E<sub>/R</sub>, X&ne;Y &rArr; X&cap;Y &ne; &empty;<br/>
+			<table class="indexed"><tr><td>&cup;</td></tr><tr class="index"><td>X&in;E<sub>/R</sub></td></tr></table>X = E
+		</div>
+		<div class="prop">"Réciproque"
+			<p class="tl">On peut définir R par :<br/>
+				xRy s'il existe i&in;I, tel que x&in;A<sub>i</sub> et y&in;A<sub>i</sub><br/>
+				Alors R est une relation d'équivalence et les A<sub>i</sub> sont les classes d'équivalences selon R
+			</p>
+		</div>
+		<h2>Relation d'ordre</h2>
+		<div class="def">Relation d'ordre
+			<ul class="tl">R, relation sur E, est une <em>relation d'ordre</em> si elle est
+				<li>réflexive</li>
+				<li><em>anti</em>symétrique</li>
+				<li>transitive</li>
+			</ul>
+		</div>
+		<div class="ex">Exemple
+			<p class="tl">Relation d'ordre totale : (R,&le;)<br/>
+				Relation d'ordre partiel : (N*,&divide;), (P(E),&sub;)
+			</p>
+		</div>
+		<div class="txt">(E,&le;) A&sub;E. A&ne;&empty;</div>
+		<div class="def">Vocabulaire
+			<div class="tl">
+				M est un <em>majorant</em> de A si M&in;E, &forall;a&in;A, a&le;M<br/>
+				m est un <em>minorant</em> de A si m&in;E, &forall;a&in;A, m&le;a<br/>
+				x est <em>plus grand élément de A</em> si x est un majorant de A et x&in;A. Noté
+				<table class="indexed"><tr><td>max</td></tr><tr class="index"><td>a&in;A</td></tr></table> a<br/>
+				x est <em>plus petit élément de A</em> si x est un minorant de A et x&in;A. Noté
+				<table class="indexed"><tr><td>min</td></tr><tr class="index"><td>a&in;A</td></tr></table> a<br/>
+				y est <em>borne supérieure</em> de A si c'est le plus petit des majorants de A. Noté <table class="indexed"><tr><td>sup</td></tr><tr class="index"><td>a&in;A</td></tr></table> a<br/>
+				y est <em>borne inférieure</em> de A si c'est le plus grand des minorants de A. Noté <table class="indexed"><tr><td>inf</td></tr><tr class="index"><td>a&in;A</td></tr></table> a<br/>
+			</div>
+		</div>
+		<div class="txt">(E,&prop;)</div>
+		<div class="def">Élément maximal
+			<p class="tl">x&in;E est dit <em>maximal</em> si &forall;y&in;E, x &prop; y &rArr; x = y
+			</p>
+		</div>
+		<div class="def">Élément minimal
+			<p class="tl">x&in;E est dit <em>minimal</em> si &forall;y&in;E, y &prop; x &rArr; x = y
+			</p>
+		</div>
+
+		<div class="prop">Rappel : Caractérisation de R
+			<ol class="tl" type="i">
+				<li>Toute partie non-vide majorée de R admet une borne supérieure</li>
+				<li>Toute partie non-vide minorée de R admet une borne inférieure</li>
+			</ol>
+		</div>
+		<h2>Cardinal</h2>
+		<div class="def">Cardinal
+			<p class="tl">E, F deux ensembles. On dit que CardE = CardF s'il existe h:E&rarr;F bijective.<br/>
+				On dit que E et F sont équipotents
+			</p>
+		</div>
+
+		<div class="prop">Théorème de Cantor
+			<p class="tl">Il n'existe pas de surjection de E sur P(E)
+			</p>
+		</div>
+		<div class="dem">
+			Soit f:E&rarr;P(E).<br/>
+			Posons A:={x&in;E, x&notin;f(x)}<br/>
+			On suppose qu'il existe a&in;E tel que A=f(a)<br/>
+			Si a&in;A alors a&notin;f(a) ou encore a&notin;A<br/>
+			Si a&notin;A alors a&in;f(a), or f(a)=A donc a&in;A<br/>
+			Contradiction
+		</div>
+		<div class="ex">Exercice : Théorème de Cantor-Bernstein
+			<div class="tl">
+				...
+			</div>
+		</div>
+
+		<div class="def">Comparaison des cardinaux
+			<p class="tl">E, F deux ensembles. On dit que CardE &le; CardF s'il existe h:E&rarr;F injective.<br/>
+			</p>
+		</div>
+		<div class="ex">Exemple
+			<div class="tl">CardE &le; Card(P(E)). <table class="func"><tr><td>E</td><td>&rarr;</td><td>P(E)</td></tr><tr><td>x</td><td>&mapsto;</td><td>{x}</td></tr></table>
+			</div>
+		</div>
+		<p class="rq">Si f:E&rarr;F injective, alors il existe une surjection de F sur E. La réciproque nécessite l'axiome du choix</p>
+		<p class="rq">Il n'existe pas d'ensemble de tous les ensembles</p>
+		<h2>Dénombrabilité</h2>
+		<div class="def">Dénombrabilité
+			<ol class="tl">
+				<li>Un ensemble est <em>dénombrable</em> s'il est en bijection avec N</li>
+				<li>Un ensemble est <em>fini ou dénombrable</em> (ou <em>au plus dénombrable</em>) s'il est en bijection avec une partie de N</li>
+			</ol>
+		</div>
+		<div class="prop">Parties de N
+			<p class="tl">Toute partie infinie de N est dénombrable
+			</p>
+		</div>
+		<div class="prop">Caractérisation séquentielle
+			<div class="tl">A est fini ou dénombrable &hArr; il existe une suite (J<sub>n</sub>)<sub>n&in;N</sub> croissante d'ensembles finis telle que <table class="indexed"><tr><td>&cup;</td></tr><tr class="index"><td>n&in;N</td></tr></table>J<sub>n</sub>
+			</div>
+		</div>
+		<div class="ex">Exemples
+			<ul class="tl">
+				<li>Z = <table class="indexed"><tr><td>&cup;</td></tr><tr class="index"><td>n&in;N</td></tr></table>[[&minus;n,n]]. Donc Z est dénombrable</li>
+				<li>N<sup>2</sup> = <table class="indexed"><tr><td>&cup;</td></tr><tr class="index"><td>n&in;N</td></tr></table>[[0,n]]<sup>2</sup></li>
+			</ul>
+		</div>
+		<div class="rq"><table class="func">
+			<tr><td>N<sup>2</sup></td><td>&rarr;</td><td>N*</td></tr>
+			<tr><td>(p,q)</td><td>&mapsto;</td><td>2<sup>p</sup>(2p+1)</td></tr>
+		</table> est une bijection (décomposition en facteurs premiers)</div>
+		<div class="ex">Exercice
+			<div class="tl">Montrer que
+				<table class="func">
+					<tr><td>N<sup>2</sup></td><td>&rarr;</td><td>N</td></tr>
+					<tr><td>(p,q)</td><td>&mapsto;</td><td><div class="frac">(p+q)(p+q+1)<span class="bottom">2</span></div> +p</td></tr>
+				</table> est une bijection
+			</div>
+		</div>
+
+		<div class="prop">Image d'une application surjective
+			<ul class="tl">
+				<li>f : N&rarr;E surjective</li>
+				<li class="then">Alors E est fini ou dénombrable</li>
+			</ul>
+		</div>
+
+		<div class="prop">Sous-ensemble d'un ensemble fini ou dénombrable
+			<ul class="tl">
+				<li>A est fini ou dénombrable</li>
+				<li>B&sub;A</li>
+				<li class="then">Alors B est fini ou dénombrable</li>
+			</ul>
+		</div>
+
+		<div class="prop">Produit cartésien
+			<ul class="tl">
+				<li>A et B dénombrables</li>
+				<li class="then">Alors A&times;B dénombrable</li>
+			</ul>
+		</div>
+
+		<div class="prop">Une réunion finie ou dénombrable d'ensembles finis ou dénombrables est un ensemble fini ou dénombrable
+			<ul class="tl">
+				<li>(A<sub>i</sub>)<sub>i&in;I</sub>, I&ne;&empty;, fini ou dénombrable et &forall;i&in;I, A<sub>i</sub> est fini ou dénombrable</li>
+				<li class="then">Alors <table class="indexed">
+			<tr><td>&cup;</td></tr>
+			<tr class="index"><td>i&in;I</td></tr>
+		</table>A<sub>i</sub> est fini ou dénombrable</li>
+			</ul>
+		</div>
+
+		<div class="ex">Exemples
+			<ul class="tl" type="a">
+				<li><table class="func">
+						<tr><td>Z&times;N*</td><td>&rarr;</td><td>Q</td></tr>
+						<tr><td>(p,q)</td><td>&mapsto;</td><td>p/q</td></tr>
+					</table> est surjective. On en déduit que Q est dénombrable
+				</li>
+				<li>P(N) n'est pas dénombrable. Card(N) &le; Card(P(N)) (Hypothèse du continu généralisé)</li>
+				<li>R n'est pas dénombrable</li>
+			</ul>
+		</div>
+		
+		<footer>
+			<img src="http://eclep.free.fr/smiley/dango_daikazoku0.gif" alt="Signature" />
+		</footer>
+	</body>
+</html>
