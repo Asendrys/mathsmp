@@ -1,6 +1,7 @@
 @media print{
 	a,.noprint{display:none;}
 	h1{text-align:center;}
+	.breakpage{break-before:page;}
 }
 
 body{margin-left:4em;font-family:"Liberation Serif";}
@@ -20,7 +21,6 @@ p, div.prop{border-left:solid 1px;padding:0.5em;}
     vertical-align: middle;
     letter-spacing: 0.001em;
     text-align: center;
-    z-index:1;
 }
 .frac > span {
     display: block;
@@ -51,7 +51,9 @@ table.indexed{
 table.indexed tr.index{
 	line-height:50%;
 	font-size:50%;
-	margin:2em;
+}
+table.indexed tr.multlin{
+	line-height:100%;
 }
 
 table.det,table.matr{
