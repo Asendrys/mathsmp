@@ -113,6 +113,7 @@ h1, .sommaire a{ /*Titres des chapitres*/
 h1, .sommaire {text-align:center;}
 
 footer{
+	margin-top:1em;
 	position:relative;
 	text-align:center;
 }
