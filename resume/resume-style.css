@@ -1,14 +1,14 @@
 @media print{
 	a,.noprint{display:none;}
-	h1{text-align:center;}
+	h1{text-align:center;
+		margin-top:0;}
 	.breakpage{break-before:page;}
+	h2{margin:.4em;
+		break-after:avoid;}
 }
 
 body{margin-left:4em;font-family:"Liberation Serif";}
 
-h2{
-	margin:.4em;
-}
 
 em{font-weight: bold;font-style:normal;}
 

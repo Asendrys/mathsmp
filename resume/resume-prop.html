@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Propriétés</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="resume-style.css"/>
+</head>
+<body>
+	<a href="../index.html">retour</a>
+	<h1>Résumé : Opérateurs</h1>
+	<h2>Degré d'un polynôme</h2>
+	<div>Soit P,Q&in;&Kopf;[X], &lambda;&in;&Kopf;</div>
+	<p><em>Somme de polynôme</em><br/>
+		deg(P+Q) &le; max{deg(P) + deg(Q)}<br/>
+		deg(P) &ne; deg(Q) &rArr; deg(P+Q) = max{deg(P) + deg(Q)}
+	</p>
+	<p><em>Produit</em><br/>
+		si &lambda;&ne; 0, deg(&lambda;P) = &lambda;deg(P)<br/>
+		deg(PQ) = deg(P) + deg(Q)<br/>
+		n&in;&Nopf;*. deg(P<sup>n</sup>) = n&middot;deg(P)
+	</p>
+	<p><em>Composition</em><br/>
+		Si Q n'est pas constant (deg(Q) &le; 0) : deg(P&compfn;Q) = deg(P) &times; deg(Q)
+	</p>
+	<h2>Fraction rationnelle</h2>
+	<div>Soit F= <div class="frac"><span>A</span><span class="bottom">B</span></div>. (A,B)&in; &Kopf;[X] &times; &Kopf;[X]\{0}</div>
+	<p><em>Degré</em><br/>
+		deg(F) = deg(A) &minus; deg(B)<br/>
+		n&in;&Zopf; : deg(F<sub>1</sub>) &le; n, deg(F<sub>2</sub>) &le; n &rArr; deg(&lambda;F<sub>1</sub> + &mu;F<sub>2</sub>) &le; n<br/>
+		deg(F<sub>1</sub>F<sub>2</sub>) = deg(F<sub>1</sub>) + deg(F<sub>2</sub>)<br/>
+		deg(<span class="barre">F</span>) = deg(F)
+	</p>
+
+	<h2>Dimension</h2>
+	<div>E,F espaces vectoriels de dimension finie</div>
+
+	<p><em>Dimensions standards</em><br/>
+		dim(E&times;F) = dim(E) + dim(F)<br/>
+		dim(&Lscr;(E,F)) = dim(E) &times; dim(F)<br/>
+		dim(&Kopf;<sup>n</sup>) = n<br/>
+		dim(&Kopf;<sub>n</sub>[X]) = n+1<br/>
+		dim(&Mscr;<sub>n,p</sub>(&Kopf;)) = n&times;p
+	</p>
+
+	<p><em>Inclusion</em><br/>
+		F&sub;E &rArr; dim(F) &le; dim(E)<br/>
+		F&sub;E, dim(F) = dim(E) &rArr; F = E
+	</p>
+
+	<p><em>Somme</em><br/>
+		dim(E&oplus;F) = dim(E) + dim(F)<br/>
+		dim(E+F) = dim(E) + dim(F) &minus; dim(E&cap;F) (<em>Formule de Grassmann</em>)<br/>
+		dim(F<sub>1</sub>+&hellip;F<sub>p</sub>) &le; dim(F<sub>1</sub>) + &ctdot; + dim(F<sub>p</sub>) (&Eacute;galité ssi somme directe)<br/>
+	</p>
+
+	<h2>Rang</h2>
+	<p><em>de vecteurs</em><br/>
+		u<sub>1</sub>,&hellip;,u<sub>p</sub>&in;E<br/>
+		rg(u<sub>1</sub>,&hellip;,u<sub>p</sub>) = dim(Vect(u<sub>1</sub>,&hellip;,u<sub>p</sub>))<br/>
+		rg(u<sub>1</sub>,&hellip;,u<sub>p</sub>) &le; min(p,n)
+	</p>
+	<p><em>d'une application linéaire</em><br/>
+		rg(f) = dim(Im(f))<br/>
+		g,h inversibles : rg(f&compfn;g) = rg(f) = rg(h&compfn;f)
+	</p>
+
+	<p><em>d'une matrice</em><br/>
+		A = Mat<sub>&Bscr;</sub>(f) = (C<sub>1</sub> &ctdot; C<sub>n</sub>)<br/>
+		rg(A) = rg(f) = rg(C<sub>1</sub>,&ctdot;,C<sub>n</sub>)
+	</p>
+
+	<h2>Transposée, Trace d'une matrice</h2>
+	<div>M&in;&Mscr;<sub>n</sub>(&Kopf;)</div>
+	<p><em>Transposée</em><br/>
+		<em>Involution</em> : <sup>t</sup>(<sup>t</sup>M) = M<br/>
+		<em>Linéarité</em> : <sup>t</sup>(A+&lambda;B) = <sup>t</sup>A + &lambda;<sup>t</sup>B<br/>
+		<em>Produit</em> : <sup>t</sup>(AB) = <sup>t</sup>B &times; <sup>t</sup>A<br/> ( (AB<sup>&minus;1</sup>) = B<sup>&minus;1</sup>A<sup>&minus;1</sup> )<br/>
+		<em>Inverse</em> : (<sup>t</sup>A)<sup>&minus;1</sup> = <sup>t</sup>(A<sup>&minus;1</sup>)
+	</p>
+
+	<p><em>Trace</em><br/>
+		<em>Linéarité</em> : tr(A+&lambda;B) = tr(A) + &lambda;tr(B)<br/>
+		<em>Produit</em> : tr(AB) = tr(BA)
+	</p>
+
+	<h2>Déterminant</h2>
+
+	<p><em>Propriétés algébriques</em><br/>
+		&lambda;&in;&Kopf;, det(&lambda;M) = &lambda;<sup>n</sup>det(M)<br/>
+		det(AB) = det(A)&middot;det(B)<br/>
+		det(M<sup>&minus;1</sup>) = det(M)<sup>&minus;1</sup><br/>
+		det(<sup>t</sup>M) = det(M)
+	</p>
+
+	<div class="prop"><em>Propriétés de calcul</em><br/>
+		T triangulaire supérieure : det(T) = le produit des coefficients de sa diagonale<br/>
+		det <table class="matr"><tr><td>&lambda;</td><td>L</td></tr><tr><td>0</td><td>M</td></tr></table> = &lambda; det(M)
+	</div>
+
+	<p><em>Opérations élémentaires</em><br/>
+		Multiplication d'une colonne de M par &lambda; &rarr; det(M)&times;&lambda;<br/>
+		&Eacute;change de deux colonnes :&rarr; &minus;1&times;det(M)<br/>
+		Ajouter à une colonne une combinaison linéaire des autres colonnes &rarr; det(M)&times;1 
+	</p>
+
+	<h2>Cardinal</h2>
+	<div>E,F ensembles finis</div>
+	<p>	<em>Union</em> : |E&cup;F| = |E| + |F| &minus; |E&cap;F|<br/>
+		<em>Produit cartésien</em> : |E&times;F| = |E| &times; |F|, n&in;&Nopf;* : |E<sup>n</sup>| =|E|<sup>n</sup><br/>
+		<em>&Fscr;(E,F) = F<sup>E</sup></em> : |&Fscr;(E,F)| = |F<sup>E</sup>| = |F|<sup>|E|</sup><br/>
+		<em>&Pscr;(E)</em> : |&Pscr;(E)| = 2<sup>|E|</sup>
+	</p>
+	<div class="prop"><em>Injections, Bijections</em><br/>
+		Card({injections de E&rarr;F}) = <div class="frac"><span>|F|!</span><span class="bottom">(|F|&minus;|E|)!</span></div><br/>
+		Card({bijections de E&rarr;F}) = |E|! = |F|!
+	</div>
+
+	<h2>Espérance, Variance</h2>
+	<div>X,Y : &Omega;&rarr;&Ropf;</div>
+	<p><em>Espérance</em><br/>
+		<em>Linéarité</em> : &Eopf;(&lambda;X+Y) = &lambda;&Eopf;(X) + &Eopf;(Y)<br/>
+		<em>Positivité</em> : X &ge; 0 &rArr; &Eopf;(X) &ge; 0<br/>
+		<em>Croissance</em> : X &le; Y &rArr; &Eopf;(X) &le; &Eopf;(Y)<br/>
+		<em>Constante</em> : &Eopf;({a&in;&Ropf;}) = a
+	</p>
+
+	<p><em>Covariance</em><br/>
+		Cov(X,Y) = &Eopf;( (X&minus;&Eopf;(X)) (Y&minus;&Eopf;(Y)) ) = &Eopf;(XY) &minus; &Eopf;(X)&Eopf;(Y)
+	</p>
+
+	<div class="prop"><em>Variance</em><br/>
+		<em>Définition / König-Huygens</em> : &Vopf;(X) = &Eopf;((X&minus;&Eopf;(X))<sup>2</sup>) = &Eopf;(X<sup>2</sup>) &minus; &Eopf;(X)<sup>2</sup><br/>
+		<em>Affinité</em> : &forall;(a,b)&in;&Ropf;<sup>2</sup>, &Vopf;(aX+b) = a<sup>2</sup>&Vopf;(X)<br/>
+		<em>Somme</em> : &Vopf;(X+Y) = &Vopf;(X) + 2Cov(X,Y) + &Vopf;(Y)<br/>
+		&Vopf;(<table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i=0</td></tr></table>X<sub>i</sub>) = <table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>i=0</td></tr></table> &Vopf;(X<sub>i</sub>) + 2<table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>0&le;i&le;j&le;n</td></tr></table>Cov(X<sub>i</sub>,X<sub>j</sub>)
+	</div>
+	
+</body>
+</html>
