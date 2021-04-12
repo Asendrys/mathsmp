@@ -5,6 +5,7 @@
 	.breakpage{break-before:page;}
 	h2{margin:.4em;
 		break-after:avoid;}
+
 }
 
 body{margin-left:4em;font-family:"Liberation Serif";}
