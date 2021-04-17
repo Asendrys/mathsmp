@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Titre</title>
+		<meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+				<nav>
+					<span class="but">O</span>
+					<ul class="bar">
+							<li><a href="relations-cardinaux.html">&nbsp;1 Relations, Cardinaux</a></li>
+							<li><a href="groupes.html">&nbsp;2 Groupes</a></li>
+							<li><a href="anneaux-corps.html">&nbsp;3 Anneaux, Corps</a></li>
+							<li><a href="espaces-vectoriels.html">&nbsp;4 Espaces vectoriels</a></li>
+							<li><a href="reduction.html">&nbsp;5 Reductions des endormorphismes et des matrices carrées</a></li>
+							<li><a href="evn.html">&nbsp;6 Espace vectoriel normé</a></li>
+							<li><a href="series.html">&nbsp;7 Séries</a></li>
+							<li><a href="fonction-var-reelle.html">&nbsp;8 Fonction à une variable réelle</a></li>
+							<li><a href="integration.html">&nbsp;9 Intégration sur un intervalle</a></li>
+							<li><a href="suites-series-de-fonctions.html">10 Suites et séries de fonctions</a></li>
+							<li><a href="integrales-a-parametres.html">11 Intégrales à paramètres</a></li>
+							<li><a href="series-entieres.html">12 Séries entières</a></li>
+							<li><a href="espaces-prehilbertiens-reels.html">13 Espaces préhilbertiens réels, espaces euclidiens</a></li>
+							<li><a href="denombrement.html">14 Dénombrements, Espaces probabilisés</a></li>
+							<li><a href="variables-aleatoires.html">15 Variables aléatoires</a></li>
+							<li><a href="equadiff.html">16 Équations différentielles linéaires</a></li>
+							<li><a href="calcul-diff.html">17 Calcul différentiel</a></li>
+					</ul>
+				</nav>
+			<p id="title"><a href="sommaire.html">MATHS</a></p>
+			<h1>Fonctions à une variable réelle</h1>
+		</header>
+		<p>E evn de dimension finie. I&sub;&Ropf;</p>
+		<div class="rq">wip</div>
+		<p>f:I&rarr;E</p>
+		<h2>I. Dérivation</h2>
+		<h2>II. Intégration sur un segment</h2>
+
+		<div class="prop">Inégalité des accroissements finis
+			<ul class="tl">
+				<li>f:I&rarr;E de classe &Cscr;<sup>1</sup></li>
+				<li>a,b&in;I</li>
+				<li class="then">&Vert;f(b) &minus; f(a) &Vert; &le; |b&minus;a|<table class="indexed"><tr><td>sup</td></tr><tr class="index"><td>t&in;[a,b]</td></tr></table>&Vert;f'(t)&Vert;</li>
+			</ul>
+		</div>
+		<div class="dem">
+			f est une primitive de f' donc f(b) &minus; f(a) = <table class="indexed"><tr class="index"><td>b</td></tr><tr><td>&int;</td></tr><tr class="index"><td>a</td></tr></table>f'(t)dt<br/>
+			Donc &Vert;f(b) &minus; f(a)&Vert; &le; |<table class="indexed"><tr class="index"><td>b</td></tr><tr><td>&int;</td></tr><tr class="index"><td>a</td></tr></table>&Vert;f'(t)&Vert;dt| &le; |b&minus;a|<table class="indexed"><tr><td>sup</td></tr><tr class="index"><td>t&in;[a,b]</td></tr></table>&Vert;f'(t)&Vert;
+		</div>
+
+		<h2>III. Formules de Taylor</h2>
+		<div class="prop">Formule de Taylor avec reste intégral
+			<ul class="tl">
+				<li>f:I&rarr;E de classe &Cscr;<sup>n+1</sup></li>
+				<li>a,b&in;I</li>
+				<li class="then">Alors f(b) = <table class="indexed">
+						<tr class="index"><td>n</td></tr>
+						<tr><td>&sum;</td></tr>
+						<tr class="index"><td>k=0</td></tr>
+					</table><div class="frac"><span>(b&minus;a)<sup>k</sup></span><span class="bottom">k!</span></div>f<sup>(k)</sup>(a) + <table class="indexed">
+						<tr class="index"><td>b</td></tr>
+						<tr><td>&int;</td></tr>
+						<tr class="index"><td>a</td></tr>
+					</table><div class="frac"><span>(b&minus;t)<sup>n</sup></span><span class="bottom">n!</span></div>f<sup>(n+1)</sup>(t)dt
+				</li>
+			</ul>
+		</div>
+		<div class="dem">Par récurrence sur n</div>
+		<div class="rq">Autre expression du reste...</div>
+
+		<div class="prop">Inégalité de Taylor-Lagrange
+			<ul class="tl">
+				<li>f:I&rarr;E de classe &Cscr;<sup>n+1</sup></li>
+				<li>a,b&in;I</li>
+				<li class="then">Alors &Vert;f(b) &minus; <table class="indexed">
+						<tr class="index"><td>n</td></tr>
+						<tr><td>&sum;</td></tr>
+						<tr class="index"><td>k=0</td></tr>
+					</table><div class="frac"><span>(b&minus;a)<sup>k</sup></span><span class="bottom">k!</span></div>f<sup>(k)</sup>(a)&Vert; &le; <div class="frac"><span>(&vert;b&minus;a&vert;)<sup>n+1</sup></span><span class="bottom">(n+1)!</span></div><table class="indexed"><tr><td>sup</td></tr><tr class="index"><td>t&in;[a,b]</td></tr></table>&Vert;f<sup>n+1</sup>(t)&Vert;
+				</li>
+			</ul>
+		</div>
+
+		<div class="dem">
+			D'après la formule de Taylor avec reste intégral, &Vert;f(b) &minus; <table class="indexed">
+				<tr class="index"><td>n</td></tr>
+				<tr><td>&sum;</td></tr>
+				<tr class="index"><td>k=0</td></tr>
+			</table><div class="frac"><span>(b&minus;a)<sup>k</sup></span><span class="bottom">k!</span></div>f<sup>(k)</sup>(a)&Vert; = &Vert;<table class="indexed">
+				<tr class="index"><td>b</td></tr>
+				<tr><td>&int;</td></tr>
+				<tr class="index"><td>a</td></tr>
+			</table><div class="frac"><span>(b&minus;t)<sup>n</sup></span><span class="bottom">n!</span></div>f<sup>(n+1)</sup>(t)dt&Vert;<br/>
+
+			&Vert;f(b) &minus; <table class="indexed">
+						<tr class="index"><td>n</td></tr>
+						<tr><td>&sum;</td></tr>
+						<tr class="index"><td>k=0</td></tr>
+					</table><div class="frac"><span>(&vert;b&minus;a&vert;)<sup>k</sup></span><span class="bottom">k!</span></div>f<sup>(k)</sup>(a)&Vert; &le; &vert;<table class="indexed">
+						<tr class="index"><td>b</td></tr>
+						<tr><td>&int;</td></tr>
+						<tr class="index"><td>a</td></tr>
+					</table><div class="frac"><span>(b&minus;t)<sup>n</sup></span><span class="bottom">n!</span></div>&Vert;f<sup>(n+1)</sup>(t)&Vert;dt&vert;<br/>
+
+			Cas a&le;b,<br/>
+			&vert;<table class="indexed">
+						<tr class="index"><td>b</td></tr>
+						<tr><td>&int;</td></tr>
+						<tr class="index"><td>a</td></tr>
+					</table><div class="frac"><span>(b&minus;t)<sup>n</sup></span><span class="bottom">n!</span></div>&Vert;f<sup>(n+1)</sup>(t)&Vert;dt&vert; &le; <table class="indexed"><tr><td>sup</td></tr><tr class="index"><td>t&in;[a,b]</td></tr></table>&Vert;f<sup>n+1</sup>(t)&Vert;<table class="indexed">
+				<tr class="index"><td>b</td></tr>
+				<tr><td>&int;</td></tr>
+				<tr class="index"><td>a</td></tr>
+			</table><div class="frac"><span>(b&minus;t)<sup>n</sup></span><span class="bottom">n!</span></div>dt = <table class="indexed"><tr><td>sup</td></tr><tr class="index"><td>t&in;[a,b]</td></tr></table>&Vert;f<sup>n+1</sup>(t)&Vert;<div class="frac"><span>(b&minus;a)<sup>n+1</sup></span><span class="bottom">(n+1)!</span></div><br/>
+
+			De même pour b&le;a. D'où le résultat
+		</div>
+
+		<div class="prop">Lemme (Formule de Taylor-Young)
+			<ul class="tl">
+				<li>a&in;I</li>
+				<li>f:I&rarr;E continue par morceaux</li>
+				<li>g:I&rarr;&Ropf; continue par morceaux</li>
+				<li>f(x) = <table class="indexed"><tr><td>&oscr;</td></tr><tr class="index"><td>x&rarr;a</td></tr></table>(|g(x)|)</li>
+				<li class="then">
+					<table class="indexed"><tr class="index"><td>x</td></tr><tr><td>&int;</td></tr><tr class="index"><td>a</td></tr></table>f(t)dt = &oscr;(<table class="indexed"><tr class="index"><td>x</td></tr><tr><td>&int;</td></tr><tr class="index"><td>a</td></tr></table>|g(t)|dt)
+				</li></ul>
+		</div>
+		<div class="dem">
+			Soit &epsilon;>0<br/>
+			Il existe &alpha;>0 tel que &forall;x&in;I, |x&minus;a|&le;&alpha; &rArr; &Vert;f(x)&Vert; &le; &epsilon;|g(x)|<br/>
+			Soit x&in;I tel que |x&minus;a|&le;&alpha;<br/>
+			Alors &forall;t&in;[a,x] (ou [x,a]), |t&minus;a|&le;&alpha;<br/>
+			Alors &Vert;<table class="indexed"><tr class="index"><td>x</td></tr><tr><td>&int;</td></tr><tr class="index"><td>a</td></tr></table>f(t)dt&Vert; &le; |<table class="indexed"><tr class="index"><td>x</td></tr><tr><td>&int;</td></tr><tr class="index"><td>a</td></tr></table>&Vert;f(t)&Vert;dt| &le; &epsilon;|<table class="indexed"><tr class="index"><td>x</td></tr><tr><td>&int;</td></tr><tr class="index"><td>a</td></tr></table>f(t)dt|
+		</div>
+
+		<div class="prop">Formule de Taylor-Young
+			<ul class="tl">
+				<li>a&in;I</li>
+				<li>f:I&rarr;E de classe &Cscr;<sup>n&minus;1</sup></li>
+				<li>f admet en a une dérivée d'ordre n</li>
+				<li class="then">f(x) &minus; <table class="indexed">
+						<tr class="index"><td>n</td></tr>
+						<tr><td>&sum;</td></tr>
+						<tr class="index"><td>k=0</td></tr>
+					</table><div class="frac"><span>(b&minus;a)<sup>k</sup></span><span class="bottom">k!</span></div>f<sup>(k)</sup>(a) = <table class="indexed"><tr><td>&oscr;</td></tr><tr class="index"><td>x&rarr;a</td></tr></table>((x&minus;a)<sup>n</sup>)</li>
+			</ul>
+		</div>
+
+		<div class="dem">Par récurrence sur n</div>
+		<div class="ex">f(x) = <div class="frac"><span>arctan x</span><span class="bottom">1&minus;x</span></div>
+			<div class="tl">
+				Montrer qu'il existe &alpha;>0 tel que f<sup>~</sup> = f<sub>|[&minus;&alpha;,&alpha;]</sub> soit une bijection de classe &Cscr;<sup>n</sup> et f<sup>~&minus;1</sup> soit &Cscr;<sup>n</sup><br/>...<br/>
+				DL en 0 à l'ordre 3 de f<sup>~&minus;1</sup> ?<br/>...
+			</div>
+		</div>
+		
+		<h2>IV. Arcs paramétrés</h2>
+		<!--
+		<div class="frac">1<span class="bottom">2</span></div>
+
+		<table class="func">
+			<tr><td>E</td><td>&rarr;</td><td>F</td></tr>
+			<tr><td>x</td><td>&mapsto;</td><td>f(x)</td></tr>
+		</table>
+	
+		<table class="indexed">
+			<tr class="index"><td>&nbsp;&infin;</td></tr>
+			<tr><td>&sum;</td></tr>
+			<tr class="index"><td>n=0</td></tr>
+		</table>
+		-->
+		
+		<footer>
+			<img src="http://eclep.free.fr/smiley/dango_daikazoku0.gif" alt="Signature" />
+		</footer>
+	</body>
+</html>
