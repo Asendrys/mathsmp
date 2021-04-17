@@ -34,10 +34,245 @@
 			<h1>Séries</h1>
 		</header>
 		<p><a href="resume/resume-serie.html">Résumé : Séries</a><br/>
-			<a href="resume/resume-famille-sommable.html">Résumé : Familles sommables</a>
+			<a href="resume/resume-famille-sommable.html">Résumé : Familles sommables</a><br/>
+			<a href="#famso">Voir II. Familles sommables</a>
 		</p>
-		<div class="txt">wip</div>
 		
+		<h2>I. Séries</h2>
+		<p>E evn de dimension finie<br/>
+		u<sub>n</sub>&in;E<sup>&Nopf;</sup></p>
+		<div class="def">Convergence d'une série
+			<p class="tl">&sum;u<sub>n</sub> converge si (S<sub>n</sub>)<sub>n&in;&Nopf;</sub> converge, vers la somme de la série 
+			</p>
+		</div>
+		<h3>Résultats</h3>
+		<div class="prop">Série géométrique
+			<div class="tl">z&in;&Copf;. &sum;z<sup>n</sup> converge si et seulement si |z|<1. Dans ce cas, <table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=0</td></tr></table>z<sup>n</sup> = <div class="frac"><span>1</span><span class="bottom">1&minus;z</span></div>
+			</div>
+		</div>
+
+		<div class="prop">Série harmonique, Série harmonique alternée
+			<div class="tl">&sum;<div class="frac"><span>1</span><span class="bottom">n</span></div> diverge<br/>
+			<table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=1</td></tr></table><div class="frac"><span>(&minus;1)<sup>n&minus;1</sup></span><span class="bottom">n</span></div> = ln(2)
+			</div>
+		</div>
+		<h3>Convergence</h3>
+		<div class="prop">Reste d'une série convergente
+			<div class="tl">R<sub>n</sub> =<table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>k=n+1</td></tr></table>u<sub>k</sub> le reste de &sum;u<sub>n</sub>. Si la série est convergente, alors R<sub>n</sub> &rarr; 0
+			</div>
+		</div>
+
+		<div class="prop">Lien suite-série téléscopique
+			<p class="tl">(u<sub>n</sub>) et &sum;(u<sub>n+1</sub>&minus;u<sub>n</sub>)<sub>n&in;&Nopf;</sub> sont de même nature
+			</p>
+		</div>
+
+		<div class="prop">Divergence grossière
+			<p class="tl">Si u<sub>n</sub>&nrarr;0 alors &sum;u<sub>n</sub> diverge grossièrement
+			</p>
+		</div>
+
+		<div class="prop">Convergence absolue
+			<p class="tl">&sum;u<sub>n</sub> converge absolument &rArr; &sum;u<sub>n</sub> converge
+			</p>
+		</div>
+
+		<h3>Séries à termes positifs</h3>
+		<p>&forall;n&in;&Nopf;, u<sub>n</sub>&in;&Ropf;<sup>+</sup></p>
+		<div class="prop">Majoration
+			<p class="tl">&sum;u<sub>n</sub> converge si et seulement si (S<sub>n</sub>)<sub>n&in;&Nopf;</sub> est majorée
+			</p>
+		</div>
+		<div class="txt">Conséquence :
+		<div class="prop">Relations de comparaison
+			<ul class="tl">
+				<li>Si 0&le;u<sub>n</sub>&le;v<sub>n</sub> (apcr), ou u<sub>n</sub> = O(v<sub>n</sub>).<br/>
+				Alors &sum;v<sub>n</sub> converge &rArr; &sum;u<sub>n</sub> converge, &sum;u<sub>n</sub> diverge &rArr; v<sub>n</sub> diverge</li>
+				<li>Si u<sub>n</sub> ~ v<sub>n</sub><br/>
+					Alors &sum;u<sub>n</sub> = &sum;v<sub>n</sub> de même nature</li>
+			</ul>
+		</div>
+
+		<div class="prop">Sommation des relations de comparaison (wip)
+			<p class="tl">Dans le cas de convergence, on a la relation sur le reste.<br/>En cas de divergence, on a la relation sur la somme partielle.
+			</p>
+		</div>
+		</div>
+
+		<div class="prop">Règle de d'Alembert
+			<div class="tl">u<sub>n</sub>>0 apcr.<br/>
+		<div class="frac"><span>u<sub>n+1</sub></span><span class="bottom">u<sub>n</sub></span></div>&rarr;&ell;&in;[0,+&infin;[&cup;{+&infin;}<br/>
+		Si &ell;<1, &sum;u<sub>n</sub> converge<br/>
+		Si &ell;>1, &sum;u<sub>n</sub> diverge grossièrement
+			</div>
+		</div>
+
+		<div class="prop">Comparaison série-intégrale
+			<ul class="tl">
+				<li>Soit f:&Ropf;<sup>+</sup>&rarr;&Ropf;<sup>+</sup> continue par morceaux, décroissante</li>
+				<li class="then"><table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>n&ge;1</td></tr></table>(<table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&int;</td></tr><tr class="index"><td>n&minus;1</td></tr></table>f(t)dt &minus; f(n)) converge</li>
+			</ul>
+		</div>
+		<div class="txt">Conséquence : &sum;f(n) converge &hArr; (<table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&int;</td></tr><tr class="index"><td>0</td></tr></table>f(t)dt)<sub>n&in;&Nopf;</sub> converge &hArr; (<table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&int;</td></tr><tr class="index"><td>0</td></tr></table>f(t)dt)<sub>n&in;&Nopf;</sub> majorée</div>
+
+		<div class="prop">Séries de Riemann
+			<div class="tl">
+		<table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>n&ge;1</td></tr></table><div class="frac"><span>1</span><span class="bottom">n<sup>&alpha;</sup></span></div> converge si et seulement si &alpha;>1
+			</div>
+		</div>
+
+		<div class="prop">Comparaison à une série de Riemann
+			<p class="tl">u<sub>n</sub>>0 apcr.<br/>
+		Si &exist;&alpha;>1 tel que n<sup>&alpha;</sup>u<sub>n</sub>&rarr;&ell;&in;[0,+&infin;[ alors &sum;u<sub>n</sub> converge<br/>
+		Si &exist;&alpha;&le;1 tel que n<sup>&alpha;</sup>u<sub>n</sub>&rarr;&ell;&in;]0,+&infin;[&cup;{+&infin;} alors &sum;u<sub>n</sub> diverge
+			</p>
+		</div>
+		<h3>Autres théorèmes</h3>
+		<div class="def">Série alternée
+			<p class="tl">&sum;u<sub>n</sub> est dite <em>alternée</em> si pour tout n&in;&Nopf;, u<sub>n</sub>&middot;u<sub>n+1</sub> < 0
+			</p>
+		</div>
+
+		<div class="prop">Critère de convergence des séries alternées
+			<ul class="tl">
+				<li>Si &sum;u<sub>n</sub> est réelle alternée</li>
+				<li>(&vert;u<sub>n</sub>&vert;)<sub>n&in;&Nopf;</sub> est décroissante</li>
+				<li>u<sub>n</sub>&rarr;0</li>
+				<li class="then">&sum;u<sub>n</sub> converge</li>
+			Dans ce cas, <table class="indexed"><tr class="index"><td>q</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=p</td></tr></table>u<sub>n</sub> est du signe de u<sub>p</sub> et &vert;<table class="indexed"><tr class="index"><td>q</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=p</td></tr></table>u<sub>n</sub>&vert; &le; &vert;u<sub>p</sub>&vert;
+			</ul>
+		</div>
+
+		<div class="txt">A &Kopf;-algèbre de dimension finie munie d'une norme &Vert;&Vert; telle que &forall;a,b&in;A, &Vert;ab&Vert;&le;&Vert;a&Vert;&Vert;b&Vert;</div>
+		<div class="def">Produit de Cauchy
+			<div class="tl">
+		&sum;a<sub>n</sub> et &sum;b<sub>n</sub> séries d'éléments de A<br/>
+		&sum;c<sub>n</sub> <em>produit de Cauchy</em>, où &forall;n&in;&Nopf;, c<sub>n</sub> = &sum;a<sub>k</sub>b<sub>n&minus;k</sub> = <table class="indexed"><tr class="index"><td>&nbsp;</td></tr><tr><td>&sum;</td></tr><tr class="index multlin"><td>0&le;p,q&le;n<br/>p+q=n</td></tr></table>a<sub>p</sub>b<sub>q</sub>
+			</div>
+		</div>
+		<div class="prop">Produit de Cauchy
+			<ul class="tl">
+				<li>&sum;a<sub>n</sub> et &sum;b<sub>n</sub> absolument convergentes</li>
+				<li class="then">&sum;c<sub>n</sub> est absolument convergente, et <table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=0</td></tr></table>c<sub>n</sub> = <table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=0</td></tr></table>a<sub>n</sub>&times;<table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=0</td></tr></table>b<sub>n</sub></li>
+			</ul>
+		</div>
+
+		<div class="prop">Constante d'Euler-Mascheroni
+			<div class="tl">&gamma; := lim<table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>k=1</td></tr></table><div class="frac"><span>1</span><span class="bottom">k</span></div> &minus; ln(n).<br/>
+		<table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>k=1</td></tr></table><div class="frac"><span>1</span><span class="bottom">k</span></div> = ln(n) + &gamma; + <div class="frac"><span>1</span><span class="bottom">2n</span></div> + o(<div class="frac"><span>1</span><span class="bottom">n</span></div>)
+			</div>
+		</div>
+		<h2 id="famso">II. Familles sommables</h2>
+
+		<p>I ensemble dénombrable. (u<sub>i</sub>)<sub>i&in;I</sub> &in; &Kopf;<sup>I</sup>. J&sub;I. J fini.</p>
+
+		<h3>Familles réelles positives</h3>
+		<p>(u<sub>i</sub>)<sub>i&in;I</sub>, (v<sub>i</sub>)<sub>i&in;I</sub> &in; (&Ropf;<sub>+</sub>)<sup>I</sup></p>
+
+		<div class="def">Sommabilité, familles réelles positives
+			<div class="tl">(u<sub>i</sub>)<sub>i&in;I</sub> est <em>sommable</em> si {<table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>u<sub>i</sub>, J&sub;I, J fini} est majoré<br/>
+			Dans ce cas, on pose <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>u<sub>i</sub> = <table class="indexed"><tr class="index"><td>&nbsp;<br/>&nbsp;</td></tr><tr><td>sup</td></tr><tr class="index multlin"><td>J&sub;I<br/>J fini</td></tr></table>(<table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>u<sub>i</sub>)</div>
+		</div>
+
+		<div class="prop">Caractérisation des familles sommables réelles positives
+			<div class="tl">(u<sub>i</sub>)<sub>i</sub> est sommable si et seulement si <br/>
+				<ul>
+					<li>&exist;(J<sub>n</sub>)<sub>n&in;&Nopf;</sub> croissante telle que &forall;n, J<sub>n</sub>&sub;I</li>
+					<li>J<sub>n</sub> fini</li>
+					<li><table class="indexed"><tr><td>&cup;</td></tr><tr class="index"><td>n&in;&Nopf;</td></tr></table>J<sub>n</sub> = I</li>
+					<li>(<table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;J<sub>n</sub></td></tr></table>u<sub>i</sub>)<sub>n</sub> est majorée.</li>
+				</ul>
+				Dans ce cas, <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>u<sub>i</sub> = <table class="indexed"><tr><td>sup</td></tr><tr class="index"><td>n&in;&Nopf;</td></tr></table><table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;J<sub>n</sub></td></tr></table>u<sub>i</sub> = lim<table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;J<sub>n</sub></td></tr></table>u<sub>i</sub><br/>
+				Alors pour toute suite (K<sub>n</sub>)<sub>n</sub> croissante telle que <table class="indexed"><tr><td>&cup;</td></tr><tr class="index"><td>n&in;&Nopf;</td></tr></table>K<sub>n</sub> = I<br/>
+				<table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>u<sub>i</sub> = lim<table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;K<sub>n</sub></td></tr></table>u<sub>i</sub>
+			</div>
+		</div>
+
+		<div class="ex">Exemple
+			<div class="tl">I = &Nopf;<br/>
+				On prend J<sub>n</sub> = &LeftDoubleBracket;0,n&RightDoubleBracket;<br/> <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;J<sub>n</sub></td></tr></table>u<sub>i</sub> = <table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=0</td></tr></table>u<sub>i</sub>
+			</div>
+		</div>
+
+		<div class="prop">Comparaison
+			<ul class="tl">&forall;i&in;I, 0&le;u<sub>i</sub>&le;v<sub>i</sub>.
+				<li>Si (v<sub>i</sub>)<sub>i&in;I</sub> est sommable</li>
+				<li class="then">(u<sub>i</sub>)<sub>i&in;I</sub> est sommable</li>
+				<li class="then">De plus &sum;<sub>i&in;I</sub>u<sub>i</sub> &le; &sum;<sub>i&in;I</sub>v<sub>i</sub></li>
+			</ul>
+		</div>
+
+		<h3>Familles réelles ou complexes</h3>
+		<p>(u<sub>i</sub>)<sub>i&in;I</sub> &in; &Kopf;<sup>I</sup></p>
+
+		<div class="def">Sommabilité
+			<p class="tl">(u<sub>i</sub>)<sub>i&in;I</sub> est <em>sommable</em> si (&vert;u<sub>i</sub>&vert;)<sub>i&in;I</sub> est sommable
+			</p>
+		</div>
+
+		<div class="ex">Cas I = &Nopf;
+			<div class="tl">(u<sub>n</sub>)<sub>n&in;&Nopf;</sub> est sommable ssi &sum;u<sub>n</sub> absolument convergente</div>
+		</div>
+
+		<div class="prop">Cas I = &Ropf;
+			<div class="tl">u<sub>i</sub><sup>+</sup> = sup(0,u<sub>i</sub>). u<sub>i</sub><sup>&minus;</sup> = sup(0,&minus;u<sub>i</sub>)<br/>
+			(u<sub>i</sub>)<sub>i&in;I</sub> sommable ssi (u<sub>i</sub><sup>+</sup>)<sub>i&in;I</sub> et (u<sub>i</sub><sup>&minus;</sup>)<sub>i&in;I</sub> sont sommables.<br/>
+			Dans ce cas, <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>u<sub>i</sub> = <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>u<sub>i</sub><sup>+</sup> &minus; <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>u<sub>i</sub><sup>&minus;</sup></div>
+		</div>
+
+		<div class="prop">Cas I = &Copf;
+			<div class="tl">(u<sub>i</sub>)<sub>i&in;I</sub> sommable ssi (Re(u<sub>i</sub>))<sub>i&in;I</sub> et (Im(u<sub>i</sub>))<sub>i&in;I</sub> sont sommables.<br/>
+			Dans ce cas, <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>u<sub>i</sub> = <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>Re(u<sub>i</sub>) + i<table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>Im(u<sub>i</sub>)
+			</div>
+		</div>
+
+		<div class="prop">Caractérisation séquentielle
+			<ul class="tl">
+				<li>(u<sub>i</sub>)<sub>i&in;I</sub> sommable</li>
+				<li>(J<sub>n</sub>)<sub>n</sub> croissante, tous finis, formant une partition de I</li>
+				<li class="then"><table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>u<sub>i</sub> = <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;J<sub>n</sub></td></tr></table>u<sub>i</sub></li>
+			</ul>
+		</div>
+
+		<div class="prop">Linéarité
+			<ul class="tl">
+				<li>(u<sub>i</sub>)<sub>i&in;I</sub>, (v<sub>i</sub>)<sub>i&in;I</sub> sommables, &lambda;&in;&Kopf;</li>
+				<li class="then">(&lambda;u<sub>i</sub>+v<sub>i</sub>)<sub>i&in;I</sub> sommable et <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>&lambda;u<sub>i</sub>+v<sub>i</sub> = &lambda;<table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>u<sub>i</sub> + <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>v<sub>i</sub></li>
+			</ul>
+		</div>
+		
+		<div class="prop">Inégalité triangulaire
+			<ul class="tl">
+				<li>(u<sub>i</sub>)<sub>i&in;I</sub> sommable</li>
+				<li class="then">&vert;<table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>u<sub>i</sub>&vert; &le; <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>&vert;u<sub>i</sub>&vert;</li>
+			</ul>
+		</div>
+
+		<div class="prop">Sommation par paquets
+			<div class="tl">
+				(u<sub>i</sub>)<sub>i&in;I</sub> sommable &hArr; (&forall;n&in;&Nopf;, (u<sub>i</sub>)i&in;I<sub>n</sub> sommable et <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>n&in;&Nopf;</td></tr></table>(<table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I<sub>n</sub></td></tr></table>&vert;u<sub>i</sub>&vert;) converge)<br/>
+				Dans ce cas, <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I</td></tr></table>u<sub>i</sub> = <table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=0</td></tr></table>(<table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>i&in;I<sub>n</sub></td></tr></table>u<sub>i</sub>)
+			</div>
+		</div>
+
+		<div class="prop">Cas &Nopf;&times;&Nopf;
+			<div class="tl">(a<sub>p,n</sub>)<sub>(p,n)&in;&Nopf;<sup>2</sup></sub> sommable<br/>
+			&hArr; &forall;n&in;&Nopf; <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>p&in;&Nopf;</td></tr></table>a<sub>p,n</sub> converge et <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>n&in;&Nopf;</td></tr></table>(<table class="indexed"><tr class="index"><td>n</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>p=0</td></tr></table>&vert;a<sub>p,n</sub>&vert;) converge<br/>
+
+			&hArr; &forall;p&in;&Nopf; <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>n&in;&Nopf;</td></tr></table>a<sub>p,n</sub> converge et <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>p&in;&Nopf;</td></tr></table>(<table class="indexed"><tr class="index"><td>p</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=0</td></tr></table>&vert;a<sub>p,n</sub>&vert;) converge<br/>
+
+			Dans ce cas, <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>(n,p)&in;&Nopf;<sup>2</sup></td></tr></table>a<sub>p,n</sub> = <table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=0</td></tr></table>(<table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>p=0</td></tr></table>a<sub>p,n</sub>) = <table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>p=0</td></tr></table>(<table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=0</td></tr></table>a<sub>p,n</sub>)
+			</div>
+		</div>
+
+		<div class="prop">Produit de Cauchy
+			<ul class="tl">
+				<li>(a<sub>p</sub>)<sub>p&in;N</sub>, (b<sub>q</sub>)<sub>q&in;N</sub> sommables (ie. &sum;a<sub>p</sub> et &sum;b<sub>q</sub> absolument convergentes).</li>
+				<li class="then">(a<sub>p</sub>b<sub>q</sub>)<sub>(p,q)&in;&Nopf;<sup>2</sup></sub> est sommable puis <table class="indexed"><tr><td>&sum;</td></tr><tr class="index"><td>(p,q)&in;&Nopf;<sup>2</sup></td></tr></table>a<sub>p</sub>b<sub>q</sub> = <table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>p=0</td></tr></table>a<sub>p</sub>&times;<table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>q=0</td></tr></table>b<sub>q</sub></li>
+
+				On a le produit de Cauchy &sum;c<sub>n</sub> absolument convergente avec <table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>n=0</td></tr></table>c<sub>n</sub> = <table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>p=0</td></tr></table>a<sub>p</sub>&times;<table class="indexed"><tr class="index"><td>+&infin;</td></tr><tr><td>&sum;</td></tr><tr class="index"><td>q=0</td></tr></table>b<sub>q</sub>
+			</ul>
+		</div>
 		<!--
 		<div class="frac">1<span class="bottom">2</span></div>
 

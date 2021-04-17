@@ -1,4 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @media print{
 	header nav, a, footer, .noprint{
 		display:none;
@@ -6,7 +6,7 @@
 }
 
 body {
-	font-family: /*'Ubuntu', Arial,*/ serif;
+	font-family: 'Ubuntu', Arial, sans-serif;
 	background-color:#5af; /*arrière plan bleu clair*/
 	color:#005; /*texte en bleu foncé*/
 }
@@ -362,6 +362,10 @@ table.indexed tr.index{
 	margin:2em;
 }
 
+table.indexed tr.multlin{
+	line-height:100%;
+}
+
 table.det,table.matr{
 	border-left:solid 1px;
 	border-right:solid 1px;
@@ -379,3 +383,7 @@ table.matr{
 .barre{
 	text-decoration:overline;
 }
+
+/*.frac, .sqrt, table.func, table.indexed, table.det, table.matr, .barre {
+	font-family:serif;
+}*/
