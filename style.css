@@ -384,6 +384,10 @@ table.matr{
 	text-decoration:overline;
 }
 
+.frac, .indexed {
+	white-space:nowrap;
+}
+
 /*.frac, .sqrt, table.func, table.indexed, table.det, table.matr, .barre {
 	font-family:serif;
 }*/
