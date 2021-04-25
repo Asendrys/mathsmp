@@ -1,16 +1,28 @@
 @media print{
+
 	a,.noprint{display:none;}
+
 	h1{text-align:center;
 		margin-top:0px;}
+
 	.breakpage{break-before:page;}
+
 	h2{margin:.4em;
 		break-after:avoid;}
+
+	p, .prop{
+		padding-left:0.5em;
+	}
 }
 
 @media not print{
-	body{margin-left:4em;}
-}
 
+	body{margin-left:4em;}
+
+	p, .prop{	
+		padding:0.5em;
+	}
+}
 
 body{font-family:"Liberation Serif";}
 
@@ -18,7 +30,9 @@ body{font-family:"Liberation Serif";}
 em{font-weight: bold;font-style:normal;}
 
 
-p, .prop{border-left:solid 1px;padding:0.5em;}
+p, .prop{
+	border-left:solid 1px;
+}
 
 .sqrt{border-top:thin solid;}
 .barre{text-decoration:overline;}
@@ -28,6 +42,7 @@ ul.tab{
 	list-style-type:none;
 	padding:5px;
 	max-width:max-content;
+	margin:0;
 }
 
 hr.simple{
@@ -72,7 +87,7 @@ table.indexed{
 	text-align:center;
 }
 table.indexed tr.index{
-	line-height:50%;
+	line-height:60%;
 	font-size:70%;
 }
 table.indexed tr.multlin{
