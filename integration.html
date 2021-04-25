@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Intégration sur un intervalle</title>
+		<meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+				<nav>
+					<span class="but">O</span>
+					<ul class="bar">
+							<li><a href="relations-cardinaux.html">&nbsp;1 Relations, Cardinaux</a></li>
+							<li><a href="groupes.html">&nbsp;2 Groupes</a></li>
+							<li><a href="anneaux-corps.html">&nbsp;3 Anneaux, Corps</a></li>
+							<li><a href="espaces-vectoriels.html">&nbsp;4 Espaces vectoriels</a></li>
+							<li><a href="reduction.html">&nbsp;5 Reductions des endormorphismes et des matrices carrées</a></li>
+							<li><a href="evn.html">&nbsp;6 Espace vectoriel normé</a></li>
+							<li><a href="series.html">&nbsp;7 Séries</a></li>
+							<li><a href="fonction-var-reelle.html">&nbsp;8 Fonction à une variable réelle</a></li>
+							<li><a href="integration.html">&nbsp;9 Intégration sur un intervalle</a></li>
+							<li><a href="suites-series-de-fonctions.html">10 Suites et séries de fonctions</a></li>
+							<li><a href="integrales-a-parametres.html">11 Intégrales à paramètres</a></li>
+							<li><a href="series-entieres.html">12 Séries entières</a></li>
+							<li><a href="espaces-prehilbertiens-reels.html">13 Espaces préhilbertiens réels, espaces euclidiens</a></li>
+							<li><a href="denombrement.html">14 Dénombrements, Espaces probabilisés</a></li>
+							<li><a href="variables-aleatoires.html">15 Variables aléatoires</a></li>
+							<li><a href="equadiff.html">16 Équations différentielles linéaires</a></li>
+							<li><a href="calcul-diff.html">17 Calcul différentiel</a></li>
+					</ul>
+				</nav>
+			<p id="title"><a href="sommaire.html">MATHS</a></p>
+			<h1>Intégration sur un intervalle</h1>
+		</header>
+		<p><a href="resume/resume-integration_intervalle.html">Résumé : Intégration sur un intervalle</a></p>
+		<p class="txt">Soit I un intervalle de &Ropf;<br/>
+		f:I&rarr;&Kopf; continue par morceaux</p>
+		<h2>I. Intégrale généralisée sur [a,b[</h2>
+
+		<p> a&in;&Ropf;, I = [a,b[<br/>
+		b&in;&Ropf;&cup;{+&infin;}</p>
+
+		<h3>1.Opérations sur les intégrales</h3>
+
+		<div class="def">Intégrale convergente
+			<div class="tl">
+				<table class="indexed">
+					<tr class="index"><td>b</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+				</table>f <em>converge</em> si
+				
+				<table class="indexed">
+					<tr class="index"><td>x</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+					</table>f admet une limite finie quand x&rarr;b noté
+				<table class="indexed">
+					<tr class="index"><td>b</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+				</table>f
+			</div>
+		</div>
+
+		<div class="prop">Propriétés de l'intégrale convergente
+			<p class="tl">Linéarité, Positivité, Définie
+			</p>
+		</div>
+
+		<div class="prop">Dérivabilité de l'intégrale
+			<ul class="tl">
+				<li>Soit f continue sur [a,&infin;[</li>
+				<li><table class="indexed">
+					<tr class="index"><td>&infin;</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+				</table>f converge</li>
+				<li class="then"> {
+					<table class="func">
+						<tr><td>[a,&infin;[</td><td>&rarr;</td><td>&Kopf;</td></tr>
+						<tr><td>x</td><td>&mapsto;</td><td><table class="indexed">
+					<tr class="index"><td>&infin;</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+				</table>f</td></tr>
+					</table> est dérivable sur [a,&infin;[ de dérivée (&minus;f)
+				</li>
+			</ul>
+		</div>
+
+		<h3>2.Intégrabilité d'une fonction positive sur [a,b[</h3>
+
+		<div class="def">Intégabilité d'une fonction positive sur [a,b[
+			<div class="tl">
+				f positive<br/>
+				f intégrable sur [a,b[ si x&mapsto; <table class="indexed">
+			<tr class="index"><td>b</td></tr>
+			<tr><td>&int;</td></tr>
+			<tr class="index"><td>a</td></tr>
+		</table>f est majorée
+			</div>
+		</div>
+
+		<div class="prop">Intégrales de référence
+			<div class="tl">
+				<table class="func"><tr><td>[1,+&infin;[</td><td>&rarr;</td><td>&Ropf;</td></tr><tr><td>x</td><td>&mapsto;</td><td><div class="frac">1<span class="bottom">x<sup>&alpha;</sup></span></div></td></tr></table> intégrable &hArr; &alpha;>1
+			</div>
+		</div>
+
+		<div class="dem">Calculer 
+			x&mapsto;<table class="indexed">
+				<tr class="index"><td>x</td></tr>
+				<tr><td>&int;</td></tr>
+				<tr class="index"><td>1</td></tr>
+			</table><div class="frac">dt<span class="bottom">t<sup>&alpha;</span></div>.
+			Vérifier si l'intégrale est majorée si &alpha; >1, <1, =1.</div>
+
+		<div class="rq">
+			<table class="func"><tr><td>[a,b[</td><td>&rarr;</td><td>&Ropf;</td></tr><tr><td>x</td><td>&mapsto;</td><td><div class="frac">1<span class="bottom">(b&minus;x)<sup>&alpha;</sup></span></div></td></tr></table> intégrable &hArr; &alpha;<1
+		</div>
+
+		<div class="prop">Relations de comparaison
+			<div class="tl">
+				f,g positives continues par morceaux sur [a,b[
+				<ul>
+					<li>f &le; g &rArr; (g intégrable sur [a,b[ &rArr; f intégrable)</li>
+					<li>f(x) = <table class="indexed"><tr><td>&Oscr;</td></tr><tr class="index"><td>x&rarr;b</td></tr></table>(g(x)) &rArr; (g intégrable sur [a,b[ &rArr; f intégrable)</li>
+					<li><table class="indexed"><tr><td>f(x) ~ g(x)</td></tr><tr class="index"><td>x&rarr;b</td></tr></table> &rArr; (g intégrable sur [a,b[ &hArr; f intégrable)</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="dem">Utiliser la définition avec la majoration</div>
+
+		<div class="prop">Intégration des relations de comparaison
+			<div class="tl">
+				Si divergence, alors intégration des relations sur [a,x[ (sommes partielles)<br/>
+				Si convergence, alors intégration des relations sur ]x,b] (restes)
+			</div>
+		</div>
+
+		<h3>3.Intégrabilité sur [a,b[</h3>
+
+		<div class="def">Intégrabilité d'une fonction sur [a,b[
+			<div class="tl">
+				f <em>intégrable</em> sur [a,b[ si <table class="indexed">
+					<tr class="index"><td>b</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+				</table>|f| convergente
+			</div>
+		</div>
+
+		<div class="rq">On dit que f est intégrable sur [a,b[ si son intégrale est absolument convergente</div>
+
+		<div class="prop">Intégrable &rArr; Convergence de l'intégrale
+			<div class="tl">
+				f intégrable sur [a,b[ &rArr; <table class="indexed">
+					<tr class="index"><td>b</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+				</table>f converge
+			</div>
+		</div>
+
+		<div class="rq">
+			Intégrale semi-convergente &rArr; Intégrale convergente<br/>
+			La réciproque est fausse<br/>
+			Une intégrale convergente non absolument convergente est dite semi-convergente
+		</div>
+
+		<div class="ex">Exemple
+			<p class="tl">
+			</p>
+		</div>
+		
+		<h2>II. Intégrale généralisée sur ]a,b]</h2>
+		<p> b&in;&Ropf;, I = [a,b[<br/>
+		a&in;&Ropf;&cup;{+&infin;}</p>
+
+		<p>C'est la même chose wsh</p>
+		<div class="prop">Intégrales de référence
+			<div class="tl">
+				<table class="func"><tr><td>]a,b]</td><td>&rarr;</td><td>&Ropf;</td></tr><tr><td>x</td><td>&mapsto;</td><td><div class="frac">1<span class="bottom">(x&minus;a)<sup>&alpha;</sup></span></div></td></tr></table> intégrable &hArr; &alpha;<1
+			</div>
+		</div>
+		<div class="dem">
+			Calculer 
+			x&mapsto;<table class="indexed">
+				<tr class="index"><td>b</td></tr>
+				<tr><td>&int;</td></tr>
+				<tr class="index"><td>x</td></tr>
+			</table><div class="frac">dt<span class="bottom">(t&minus;a)<sup>&alpha;</span></div>.
+			Vérifier si l'intégrale est majorée si &alpha; >1, <1, =1.
+		</div>
+
+		<h2>III. Intégrale généralisée sur ]a,b[</h2>
+		<p>I = ]a,b[<br/>
+		a,b&in;&Ropf;&cup;{+&infin;}</p>
+		<div class="def">Intégrale convergente
+			<div class="tl">
+				<table class="indexed">
+					<tr class="index"><td>b</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+				</table>f converge si &exist;c&in;]a,b[ tq
+				<table class="indexed">
+					<tr class="index"><td>c</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+				</table>f et
+				<table class="indexed">
+					<tr class="index"><td>b</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>c</td></tr>
+				</table>f convergent<br/>
+				Dans ce cas, vrai pour tout c<br/>
+				On pose <table class="indexed">
+					<tr class="index"><td>b</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+				</table>f :=
+				<table class="indexed">
+					<tr class="index"><td>c</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+				</table>f +
+				<table class="indexed">
+					<tr class="index"><td>b</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>c</td></tr>
+				</table>f
+			</div>
+		</div>
+
+		<div class="def">Intégrabilité d'une fonction sur ]a,b[
+			<div class="tl">
+				f <em>intégrable</em> sur ]a,b[ si <table class="indexed">
+					<tr class="index"><td>b</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+				</table>|f| convergente
+			</div>
+		</div>
+		<div class="prop">Propriétés de l'intégrale convergente
+			<div class="tl">
+				Linéarité, Positivité, Relation de Chasles, Changement de variable, Intégration par parties
+			</div>
+		</div>
+
+		<h2>IV. Autres propriétés</h2>
+
+		<div class="prop">Inégalité de Cauchy-Schwarz
+			<ul class="tl">
+				<li>f,g:I&rarr;&Ropf; de carré intégrable (|f|<sup>2</sup> et |g|<sup>2</sup> intégrables sur I)</li>
+				<li class="then">(&int;<sub>I</sub> fg)<sup>2</sup> &le; &int;<sub>I</sub> f<sup>2</sup> &int;<sub>I</sub> g<sup>2</sup></li>
+				<li>Si f,g continues sur I : Égalité si et seulement si f,g colinéaires</li>
+			</ul>
+		</div>
+
+		<div class="prop">Théorème de Convergence Dominée
+			<p class="tl">
+				Voir le chapitre <a href="integrales-a-parametres.html">intégrales à paramètres</a>
+			</p>
+		</div>
+		<div class="prop">Théorème d'intégration terme à terme
+			<p class="tl">
+				Voir le chapitre <a href="integrales-a-parametres.html">intégrales à paramètres</a>
+			</p>
+		</div>
+		<!--
+
+		<table class="indexed">
+			<tr class="index"><td>b</td></tr>
+			<tr><td>&int;</td></tr>
+			<tr class="index"><td>a</td></tr>
+		</table>
+
+		<div class="frac">1<span class="bottom">2</span></div>
+
+		<table class="func">
+			<tr><td>E</td><td>&rarr;</td><td>F</td></tr>
+			<tr><td>x</td><td>&mapsto;</td><td>f(x)</td></tr>
+		</table>
+	
+		<table class="indexed">
+			<tr class="index"><td>&nbsp;b</td></tr>
+			<tr><td>&sum;</td></tr>
+			<tr class="index"><td>n=0</td></tr>
+		</table>
+		-->
+		
+		<footer>
+			<img src="http://eclep.free.fr/smiley/dango_daikazoku0.gif" alt="Signature" />
+		</footer>
+	</body>
+</html>

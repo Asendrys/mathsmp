@@ -18,10 +18,24 @@ body{font-family:"Liberation Serif";}
 em{font-weight: bold;font-style:normal;}
 
 
-p, div.prop{border-left:solid 1px;padding:0.5em;}
+p, .prop{border-left:solid 1px;padding:0.5em;}
 
 .sqrt{border-top:thin solid;}
 .barre{text-decoration:overline;}
+
+ul.tab{
+	border:1px solid black;
+	list-style-type:none;
+	padding:5px;
+	max-width:max-content;
+}
+
+hr.simple{
+	border-bottom: 1px solid black;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+}
 
 /*Fractions, source : https://stackoverflow.com/questions/7525977/how-to-write-fraction-value-using-html */
 .frac {
@@ -59,7 +73,7 @@ table.indexed{
 }
 table.indexed tr.index{
 	line-height:50%;
-	font-size:50%;
+	font-size:70%;
 }
 table.indexed tr.multlin{
 	line-height:100%;

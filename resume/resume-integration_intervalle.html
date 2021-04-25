@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intégration sur un intervalle</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="resume-style.css"/>
+</head>
+<body>
+	<a href="../integration.html">retour</a><br/>
+	<a href="" onclick="window.print();return false;">imprimer</a>
+	<h1>Résumé : Intégration sur un intervalle</h1>
+	<div>Soit a,b&in;&Ropf;. I = [a,b[ ou ]a,b] ou [a,+&infin;[ ou ]&minus;&infin;,b]<br/>
+	f:I&rarr;&Ropf;</div>
+
+	<div class="prop"><em>Intégrale convergente sur [a,b[ ou [a,+&infin;[</em><br/>
+			<div class="tl">
+				<table class="indexed">
+					<tr class="index"><td>b</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+				</table>f converge si
+				
+				<table class="indexed">
+					<tr class="index"><td>&#x1D465;</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+					</table>f admet une limite finie quand &#x1D465;&rarr;b noté
+				<table class="indexed">
+					<tr class="index"><td>b</td></tr>
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>a</td></tr>
+				</table>f
+		</div>
+	</div>
+<br/>
+	<div class="prop"><em>Intégrale convergente sur ]a,b] ou ]&minus;&infin;,b]</em><br/>
+		<div class="tl">
+			<table class="indexed">
+				<tr class="index"><td>b</td></tr>
+				<tr><td>&int;</td></tr>
+				<tr class="index"><td>a</td></tr>
+			</table>f converge si
+			
+			<table class="indexed">
+				<tr class="index"><td>b</td></tr>
+				<tr><td>&int;</td></tr>
+				<tr class="index"><td>&#x1D465;</td></tr>
+				</table>f admet une limite finie quand &#x1D465;&rarr;a noté
+			<table class="indexed">
+				<tr class="index"><td>b</td></tr>
+				<tr><td>&int;</td></tr>
+				<tr class="index"><td>a</td></tr>
+			</table>f
+		</div>
+	</div>
+<br/>
+	<div class="prop"><em>Intégrabilité sur I</em><br/>
+		f intégrable sur I &hArr; <table class="indexed">
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>I</td></tr>
+				</table>|f| convergente
+	</div>
+<br/>
+	<div class="prop"><em>Intégrabilité &rArr; Convergence</em><br/>
+		f intégrable sur I &rArr; <table class="indexed">
+					<tr class="index">
+					<tr><td>&int;</td></tr>
+					<tr class="index"><td>I</td></tr>
+				</table>f converge
+	</div>
+<br/>
+	<div class="prop"><em>Relations de comparaison</em><br/>
+		f, g: [a,b[&rarr;&Ropf; positives, continues par morceaux
+		<ul>
+			<li>f &le; g &rArr; (g intégrable sur [a,b[ &rArr; f intégrable)</li>
+			<li>f(&#x1D465;) = <table class="indexed"><tr><td>&Oscr;</td></tr><tr class="index"><td>&#x1D465;&rarr;b</td></tr></table>(g(&#x1D465;)) &rArr; (g intégrable sur [a,b[ &rArr; f intégrable)</li>
+			<li><table class="indexed"><tr><td>f(&#x1D465;) ~ g(&#x1D465;)</td></tr><tr class="index"><td>&#x1D465;&rarr;b</td></tr></table> &rArr; (g intégrable sur [a,b[ &hArr; f intégrable)</li>
+		</ul>
+		&#x1D4E1;&in;{&le;, &Oscr;, ~}<br/>
+		Si divergence, alors <table class="indexed">
+			<tr class="index"><td>&#x1D465;</td></tr>
+			<tr><td>&int;</td></tr>
+			<tr class="index"><td>a</td></tr>
+		</table>f &#x1D4E1; <table class="indexed">
+			<tr class="index"><td>&#x1D465;</td></tr>
+			<tr><td>&int;</td></tr>
+			<tr class="index"><td>a</td></tr>
+		</table>g  (sommes partielles)<br/>
+		Si convergence, alors <table class="indexed">
+			<tr class="index"><td>b</td></tr>
+			<tr><td>&int;</td></tr>
+			<tr class="index"><td>&#x1D465;</td></tr>
+		</table>f &#x1D4E1; <table class="indexed">
+			<tr class="index"><td>b</td></tr>
+			<tr><td>&int;</td></tr>
+			<tr class="index"><td>&#x1D465;</td></tr>
+		</table>g (restes)
+	</div>
+<br/>
+	<div class="prop"><em>Intégrales de référence</em><br/>
+		<ul class="prop tab">
+			<li>
+				<table class="func"><tr><td>[1,+&infin;[</td><td>&rarr;</td><td>&Ropf;</td></tr><tr><td>&#x1D465;</td><td>&mapsto;</td><td><div class="frac">1<span class="bottom">&#x1D465;<sup>&alpha;</sup></span></div></td></tr></table> intégrable &hArr; &alpha;>1
+			</li><hr class="simple"/>
+			<li>
+				<table class="func"><tr><td>]a,b]</td><td>&rarr;</td><td>&Ropf;</td></tr><tr><td>&#x1D465;</td><td>&mapsto;</td><td><div class="frac">1<span class="bottom">(&#x1D465;&minus;a)<sup>&alpha;</sup></span></div></td></tr></table> intégrable &hArr; &alpha;<1
+			</li><hr class="simple"/>
+			<li>
+				<table class="func"><tr><td>[a,b[</td><td>&rarr;</td><td>&Ropf;</td></tr><tr><td>&#x1D465;</td><td>&mapsto;</td><td><div class="frac">1<span class="bottom">(b&minus;&#x1D465;)<sup>&alpha;</sup></span></div></td></tr></table> intégrable &hArr; &alpha;<1
+			</li>
+		</ul>
+	</div>
+<br/>
+	<div>I = ]a,b[ ou ]&minus;&infin;,+&infin;[</div>
+<br/>
+	<div class="prop"><em>Intégrale convergente sur ]a,b[ ou sur ]&minus;&infin;,+&infin;[</em><br/>
+		<table class="indexed">
+			<tr class="index"><td>b</td></tr>
+			<tr><td>&int;</td></tr>
+			<tr class="index"><td>a</td></tr>
+		</table>f converge si &exist;c&in;]a,b[ tq
+		<table class="indexed">
+			<tr class="index"><td>c</td></tr>
+			<tr><td>&int;</td></tr>
+			<tr class="index"><td>a</td></tr>
+		</table>f et
+		<table class="indexed">
+			<tr class="index"><td>b</td></tr>
+			<tr><td>&int;</td></tr>
+			<tr class="index"><td>c</td></tr>
+		</table>f convergent<br/>
+		On pose <table class="indexed">
+			<tr class="index"><td>b</td></tr>
+			<tr><td>&int;</td></tr>
+			<tr class="index"><td>a</td></tr>
+		</table>f :=
+		<table class="indexed">
+			<tr class="index"><td>c</td></tr>
+			<tr><td>&int;</td></tr>
+			<tr class="index"><td>a</td></tr>
+		</table>f +
+		<table class="indexed">
+			<tr class="index"><td>b</td></tr>
+			<tr><td>&int;</td></tr>
+			<tr class="index"><td>c</td></tr>
+		</table>f
+	</div>
+
+<!--
+	<p><em> </em><br/>
+	</p>
+
+	<div class="prop"><em> </em><br/>
+	</div>
+-->
+</body>
+</html>
