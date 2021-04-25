@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>On(R) compact</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../resume/resume-style.css"/>
+</head>
+<body>
+	<a href="sommaire.html">retour</a><br/>
+	<a href="" onclick="window.print();return false;">imprimer</a>
+
+	<h1>Exercice classique : O<sub>n</sub>(&Ropf;) est compact</h1>
+	<p>Montrer que O<sub>n</sub>(&Ropf;) est compact</p>
+	<ol type="1">
+		<li>Remarquer que l'on est en dimension finie</li>
+		<li>Montrer que O<sub>n</sub>(&Ropf;) est fermé</li>
+		<li>Montrer que O<sub>n</sub>(&Ropf;) est borné</li>
+		<li>Conclure.</li>
+	</ol>
+
+	<div>1.
+		O<sub>n</sub>(&Ropf;) &sub; &Mscr;<sub>n</sub>(&Ropf;) de dimension n<sup>2</sup>.
+	</div>
+<br/>
+	<div>2.
+		Soit f:<table class="func"><tr><td>&Mscr;<sub>n</sub>(&Ropf;)</td><td>&rarr;</td><td>&Mscr;<sub>n</sub>(&Ropf;)</td></tr><tr><td>M</td><td>&mapsto;</td><td>M<sup>t</sup>M</td></tr></table><br/>
+		g:M&mapsto;(M,<sup>t</sup>M) est linéaire en dimension finie donc continue<br/>
+		h:(M,N)&mapsto;MN est bilinéaire en dimension finie donc continue<br/>
+		f = h&compfn;g donc f continue<br/>
+		Donc O<sub>n</sub>(&Ropf;) = f<sup>&minus;1</sup>({I<sub>n</sub>}). Image réciproque d'un fermé par une application continue. Donc fermé.
+	</div>
+<br/>
+	<div>3.
+		Soit M&in;O<sub>n</sub>(&Ropf;). Les normes en dimension finie sont équivalentes.<br/>
+		M = [m<sub>i,j</sub>]<sub>(i,j)&in;&LeftDoubleBracket;1,n&RightDoubleBracket;<sup>2</sup></sub><br/>
+
+		&forall;(i,j)&in;&LeftDoubleBracket;1,n&RightDoubleBracket;<sup>2</sup>, [<sup>t</sup>MM]<sub>i,j</sub> = <table class="indexed">
+			<tr class="index"><td>n</td></tr>
+			<tr><td>&sum;</td></tr>
+			<tr class="index"><td>k=1</td></tr>
+		</table>m<sub>k,i</sub>m<sub>k,j</sub> = &delta;<sub>i,j</sub> = [I<sub>n</sub>]<sub>i,j</sub><br/>
+		&forall;1&le;i&le;n, <table class="indexed">
+			<tr class="index"><td>n</td></tr>
+			<tr><td>&sum;</td></tr>
+			<tr class="index"><td>k=1</td></tr>
+		</table>m<sub>k,i</sub><sup>2</sup> = 1<br/>
+		
+		&forall;(i,j)&in;&LeftDoubleBracket;1,n&RightDoubleBracket;<sup>2</sup>, &vert;m<sub>i,j</sub>&vert; &le; 1<br/>
+		&Vert;M&Vert;<sub>&infin;</sub> &le; 1.<br/>
+		Donc O<sub>n</sub>(&Ropf;) est borné.
+	</div>
+<br/>
+	<div>4.
+		O<sub>n</sub>(&Ropf;) est fermé, borné dans &Mscr;<sub>n</sub>(&Ropf;) de dimension finie. Donc O<sub>n</sub>(&Ropf;) est compact.
+	</div>
+
+</body>
+</html>

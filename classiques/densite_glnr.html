@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Densité de GLn(R)</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../resume/resume-style.css"/>
+</head>
+<body>
+	<a href="sommaire.html">retour</a><br/>
+	<a href="" onclick="window.print();return false;">imprimer</a>
+	<h1>Exercice classique : Densité de GL<sub>n</sub>(&Ropf;)</h1>
+	<p>Montrer que GL<sub>n</sub>(&Ropf;) est dense dans &Mscr;<sub>n</sub>(&Ropf;)</p>
+	<ol type="1">
+		<li>Montrer que GL<sub>n</sub>(&Ropf;) est un ouvert de &Mscr;<sub>n</sub>(&Ropf;)</li>
+		<li>Soit A&in;&Mscr;<sub>n</sub>(&Ropf;). Montrer que &chi;<sub>A</sub>(<div class="frac"><span>1</span><span class="bottom">p</span></div>) ne s'annule pas à partir d'un certain rang</li>
+		<li>Montrer A est la limite d'une suite de GL<sub>n</sub>(&Ropf;)</li>
+		<li>Conclure.</li>
+	</ol>
+	<div>1. 
+		det est une application polynômiale donc continue<br/>
+		GL<sub>n</sub>(&Ropf;) = det<sup>-1</sup>(&Ropf;*)<br/>
+		&Ropf;* est un ouvert (réunion de deux ouverts)<br/>
+		Donc GL<sub>n</sub>(&Ropf;) est l'image réciproque d'un ouvert par une application continue<br/>
+		D'où GL<sub>n</sub>(&Ropf;) ouvert de &Mscr;<sub>n</sub>(&Ropf;)
+	</div>
+<br/>
+	<div>2. 
+		&chi;<sub>A</sub> n'a qu'un nombre fini de racines<br/>
+		&chi;<sub>A</sub>(x) = det(A &minus; xI)<br/>
+		&exist;p<sub>0</sub> &in; &Nopf;. &forall;p&ge;p<sub>0</sub>, det(A &minus; <div class="frac"><span>1</span><span class="bottom">p</span></div>) &ne; 0
+	</div>
+	<div>3. 
+		Donc (A &minus; <div class="frac"><span>1</span><span class="bottom">p</span></div>)<sub>p&ge;p<sub>0</sub></sub> est une suite de GL<sub>n</sub>(&Ropf;), et (A &minus; <div class="frac"><span>1</span><span class="bottom">p</span></div>) &rarr;<sub>p&rarr;&infin;</sub> A<br/>
+		Donc A est une valeur d'adhérence d'une suite de GL<sub>n</sub>(&Ropf;)
+	</div>
+<br/>
+	<div>4. 
+		Vrai pour toute matrice de &Mscr;<sub>n</sub>(&Ropf;). Donc l'adhérence de &Mscr;<sub>n</sub>(&Ropf;) est GL<sub>n</sub>(&Ropf;). Donc GL<sub>n</sub>(&Ropf;) est dense dans &Mscr;<sub>n</sub>(&Ropf;)
+	</div>
+</body>
+</html>
