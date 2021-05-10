@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dn connexe par arcs</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../resume/resume-style.css"/>
+</head>
+<body>
+	<a href="sommaire.html">retour</a><br/>
+	<a href="" onclick="window.print();return false;">imprimer</a>
+
+	<h1>Exercice classique : L'ensemble des matrices diagonales est connexe par arcs</h1>
+	<p>Soit &Dscr;<sub>n</sub> = {M&in;&Mscr;<sub>n</sub>(&Ropf;), M diagonalisable}<br/>
+	Montrer que &Dscr;<sub>n</sub> est connexe par arcs</p>
+
+	<ol type="1">
+		<li>Montrer que toute matrice de &Dscr;<sub>n</sub> peut être reliée par un chemin continu à I<sub>n</sub></li>
+		<li>Conclure</li>
+	</ol>
+	<div>
+		Soit A&in;&Dscr;<sub>n</sub>. &exist;P&in;GL<sub>n</sub>(&Ropf;) tel que A = PDP<sup>&minus;1</sup>, D diagonale<br/>
+		Soit &gamma;:{<table class="func"><tr><td>[0,1]</td><td>&rarr;</td><td>&Mscr;<sub>n</sub>(&Ropf;)</td></tr><tr><td>t</td><td>&mapsto;</td><td>PD(t)P<sup>&minus;1</sup></td></tr></table> avec D(t) = (1&minus;t)D + tI<sub>n</sub><br/>
+		Alors &gamma; est continue à valeurs dans &Dscr;<sub>n</sub> et &gamma;(0) = A; &gamma;(1) = I<sub>n</sub><br/>
+		<br/>
+		Donc il existe un chemin continu entre toute matrice de &Dscr;<sub>n</sub> et I<sub>n</sub>.<br/>
+		Donc &Dscr;<sub>n</sub> est connexe par arcs.
+	</div>
+</body>
+</html>
